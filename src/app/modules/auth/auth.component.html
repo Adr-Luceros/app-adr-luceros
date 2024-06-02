@@ -1,3 +1,5 @@
+<app-notify></app-notify>
+
 <section class="container-login">
     <div id="logo-header">
         <img src="../../../assets/img/logo-adr-luceros.png" alt="Logo adr luceros">
@@ -10,12 +12,27 @@
         <form [formGroup]="formLogin" (ngSubmit)="sendUser()">
             <strong class="titulo">INICIAR SESION</strong>
             <label>
-                <span class="op">Usuario:</span>
+                <span>Usuario:</span>
                 <input type="text" placeholder="example@gmail.com" formControlName="user">
+                <ng-container *ngIf="formLogin.get('user')?.touched">
+                    <span class="error" *ngIf="formLogin.get('user')?.errors?.['required']; else emailInvalid">
+                        El usuario es requerido
+                    </span>
+                    <ng-template #emailInvalid>
+                        <span class="error" *ngIf="formLogin.get('user')?.errors?.['invalidEmail']">
+                            El correo no es valido
+                        </span>
+                    </ng-template>
+                </ng-container>
             </label>
             <label>
                 <span>Contraseña:</span>
                 <input type="password" placeholder="*********" formControlName="password">
+                <ng-container *ngIf="formLogin.get('password')?.touched">
+                    <span class="error" *ngIf="formLogin.get('password')?.errors?.['required']">
+                        La contraseña es requerida
+                    </span>
+                </ng-container>
             </label>
             <div>
                 <button [disabled]="!formLogin.valid">Ingresar</button>

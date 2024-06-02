@@ -1,0 +1,1 @@
+export { Notification, NotificationInterative } from './model/notification.model'
