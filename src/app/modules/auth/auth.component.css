@@ -1,0 +1,170 @@
+section {
+    height: 100vh;
+    font-size: 24px;
+}
+
+#logo-header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+#logo-header img {
+    height: 48px;
+    aspect-ratio: 88/48;
+}
+
+#logo-header p:first-child {
+    font-size: 10px;
+    font-style: italic;
+    color: var(--color-800);
+}
+
+#logo-header p:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-800);
+}
+
+#container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo {
+    margin-bottom: 20px;
+}
+
+form {
+    position: absolute;
+    width: 80%;
+    display: grid;
+    gap: 10px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+form input {
+    font-size: 24px;
+    outline: none;
+    margin-bottom: 22px;
+    background: transparent;
+    width: 100%;
+    padding: 10px 15px;
+    color: var(--color-800);
+    border: solid 0.8px #0a4eeba8;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+form label:has(.error) input {
+    border-color: red;
+    margin-bottom: 0;
+}
+
+form label:has(.error) input::placeholder {
+    color: #ff0000b6;
+}
+
+form input::placeholder {
+    color: var(--color-500);
+}
+
+form button {
+    cursor: pointer;
+    background-color: var(--color-800);
+    color: var(--color-50);
+    padding: 11px 17px;
+    border: 1px solid transparent;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: background-color .3s ease-in-out;
+    -webkit-transition: background-color .3s ease-in-out;
+    -moz-transition: background-color .3s ease-in-out;
+    -ms-transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+}
+
+form button:disabled {
+    background-color: var(--color-400);
+    cursor: not-allowed;
+}
+
+form button:not(:disabled):hover {
+    background-color: var(--color-700);
+}
+
+form button:not(button:disabled):active {
+    background-color: var(--color-600);
+}
+
+@media (min-width: 500px) {
+    #logo-header {
+        top: 20px;
+        left: 20px;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../../../assets/img/fondo-login.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+    }
+
+    #container {
+        background-color: var(--color-50);
+        box-shadow: 0 4px 4px #11245a31;
+        height: auto;
+        padding: 0;
+        max-width: 522px;
+        text-align: center;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    form {
+        position: relative;
+        width: 100%;
+        padding: 50px;
+    }
+}

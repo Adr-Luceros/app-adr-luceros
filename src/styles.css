@@ -1,7 +1,27 @@
 @import '@fontsource-variable/inter';
 
-* { margin: 0; box-sizing: border-box; }
+:root {
+    --color-50: #edf7ff;
+    --color-100: #d7ebff;
+    --color-200: #b9ddff;
+    --color-300: #88c9ff;
+    --color-400: #50abff;
+    --color-500: #2886ff;
+    --color-600: #1f6fff;
+    --color-700: #0a4feb;
+    --color-800: #0f40be;
+    --color-900: #133b95;
+    --color-950: #11255a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Inter Variable', sans-serif;
+    background-color: var(--color-50);
+    color: var(--color-950);
 }

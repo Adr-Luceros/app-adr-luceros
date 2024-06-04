@@ -5,7 +5,6 @@ import { HomeComponent } from './home.component';
 import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.component';
 
 
-
 @NgModule({
   declarations: [
     HomeComponent,    
