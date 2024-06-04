@@ -1,0 +1,9 @@
+<section [ngClass]="{
+    'activate':activateSidebar,
+    'no-activate':!activateSidebar,
+    }">
+    <app-sidebar id="sidebar"></app-sidebar>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</section>

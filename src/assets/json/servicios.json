@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Curaciones",
+    "costo": "50",
+    "descripcion": "Tratamiento de lesiones dentales"
+  },
+  {
+    "id": 2,
+    "nombre": "Prótesis",
+    "costo": "80",
+    "descripcion": "Reemplazo de dientes faltantes"
+  },
+  {
+    "id": 3,
+    "nombre": "Restauraciones",
+    "costo": "100",
+    "descripcion": "Reparación de dientes dañados"
+  },
+  {
+    "id": 4,
+    "nombre": "Ortodoncia",
+    "costo": "200",
+    "descripcion": "Corrección de la posición de los dientes"
+  },
+  {
+    "id": 5,
+    "nombre": "Odontopediatría",
+    "costo": "50",
+    "descripcion": "Atención dental para niños"
+  },
+  {
+    "id": 6,
+    "nombre": "Endodoncia",
+    "costo": "300",
+    "descripcion": "Tratamiento de conductos radiculares"
+  },
+  {
+    "id": 7,
+    "nombre": "Rehabilitación",
+    "costo": "200",
+    "descripcion": "Restauración completa de la dentadura"
+  }
+]

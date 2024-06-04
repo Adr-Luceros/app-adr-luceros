@@ -1,0 +1,180 @@
+nav#sidebar {
+    padding: 1rem 1rem;
+}
+
+#user>div>p {
+    color: white;
+    max-width: 80px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+hr {
+    border: solid 1.5px white;
+}
+
+article#user > label:has(input:not(:checked)) {
+    position: inherit;
+}
+
+article#user > label:has(input:checked) {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.2rem;
+    
+    & li {
+        display: grid;
+        cursor: pointer;
+    }
+
+    & li a {
+        color: #fff;
+        padding: 0.3rem 0.8rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+ul li {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+ul li a:not(.activate):hover {
+    background: #177EE015;
+}
+
+li:has(.activate) {
+    background: #177EE0;
+}
+
+li a.activate {
+    color: #fff;
+}
+
+a.activate svg path,
+a.activate svg rect {
+    fill: white;
+}
+
+a.activate svg path[stroke] {
+    fill: transparent;
+    stroke: white;
+}
+
+#user, #user div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user div {
+    position: relative;
+    gap: 0.5rem;
+    margin-bottom: 5px;
+}
+
+#user label#profile {
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    background-color: #f9fbfc;
+    border: 1px solid blue;    
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#user svg {
+    padding: 0.2rem 0.4rem 0.4rem 0.2rem;
+    background: white;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+#user svg:hover {
+    cursor: pointer;
+    background: #dfedfd;
+}
+
+#contenedor-btn {
+    margin-top: 5px;
+}
+
+#user div:has(label#profile input:checked) #menu {
+    display: none;
+}
+
+#menu {
+    width: max-content;
+    position: absolute;
+    background-color: #dfedfd;
+    padding: 0.5rem;
+    bottom: -130%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+#menu::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #dfedfd;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+#cerrar-sesion{
+    background: #be0404;
+}
+
+#cerrar-sesion a {
+    font-size: 12px;
+    color: #fff;
+}
+#sidebar {
+    z-index: 10;
+    position: fixed;
+    height: 100vh;
+    background-color: #0A4FEB;
+    transition: margin-left .5s;
+    -webkit-transition: margin-left .5s;
+    -moz-transition: margin-left .5s;
+    -ms-transition: margin-left .5s;
+    -o-transition: margin-left .5s;
+}

@@ -1,0 +1,245 @@
+[
+  {
+    "id_person": 1,
+    "name": "Juan",
+    "lastname": "Perez",
+    "DNI": "12345678",
+    "cellphone": "987654321",
+    "direccion": "Calle A #123",
+    "sexo": "M"
+  },
+  {
+    "id_person": 2,
+    "name": "Maria",
+    "lastname": "Gomez",
+    "DNI": "87654321",
+    "cellphone": "654321987",
+    "direccion": "Avenida B #456",
+    "sexo": "F"
+  },
+  {
+    "id_person": 3,
+    "name": "Carlos",
+    "lastname": "Rodriguez",
+    "DNI": "45678901",
+    "cellphone": "123987654",
+    "direccion": "Calle C #789",
+    "sexo": "M"
+  },
+  {
+    "id_person": 4,
+    "name": "Ana",
+    "lastname": "Lopez",
+    "DNI": "23456789",
+    "cellphone": "876543210",
+    "direccion": "Avenida D #012",
+    "sexo": "F"
+  },
+  {
+    "id_person": 5,
+    "name": "Luis",
+    "lastname": "Gonzalez",
+    "DNI": "34567890",
+    "cellphone": "765432109",
+    "direccion": "Calle E #345",
+    "sexo": "M"
+  },
+  {
+    "id_person": 6,
+    "name": "Laura",
+    "lastname": "Martinez",
+    "DNI": "56789012",
+    "cellphone": "654321098",
+    "direccion": "Avenida F #678",
+    "sexo": "F"
+  },
+  {
+    "id_person": 7,
+    "name": "Javier",
+    "lastname": "Fernandez",
+    "DNI": "67890123",
+    "cellphone": "543210987",
+    "direccion": "Calle G #901",
+    "sexo": "M"
+  },
+  {
+    "id_person": 8,
+    "name": "Elena",
+    "lastname": "Diaz",
+    "DNI": "78901234",
+    "cellphone": "432109876",
+    "direccion": "Avenida H #234",
+    "sexo": "F"
+  },
+  {
+    "id_person": 9,
+    "name": "Miguel",
+    "lastname": "Ramirez",
+    "DNI": "89012345",
+    "cellphone": "321098765",
+    "direccion": "Calle I #567",
+    "sexo": "M"
+  },
+  {
+    "id_person": 10,
+    "name": "Silvia",
+    "lastname": "Hernandez",
+    "DNI": "90123456",
+    "cellphone": "210987654",
+    "direccion": "Avenida J #890",
+    "sexo": "F"
+  },
+  {
+    "id_person": 11,
+    "name": "Ricardo",
+    "lastname": "Gutierrez",
+    "DNI": "12301234",
+    "cellphone": "109876543",
+    "direccion": "Calle K #567",
+    "sexo": "M"
+  },
+  {
+    "id_person": 12,
+    "name": "Sofia",
+    "lastname": "Perez",
+    "DNI": "23412345",
+    "cellphone": "098765432",
+    "direccion": "Avenida L #890",
+    "sexo": "F"
+  },
+  {
+    "id_person": 13,
+    "name": "Pedro",
+    "lastname": "Lopez",
+    "DNI": "34523456",
+    "cellphone": "987654321",
+    "direccion": "Calle M #234",
+    "sexo": "M"
+  },
+  {
+    "id_person": 14,
+    "name": "Carmen",
+    "lastname": "Martinez",
+    "DNI": "45634567",
+    "cellphone": "876543210",
+    "direccion": "Avenida N #567",
+    "sexo": "F"
+  },
+  {
+    "id_person": 15,
+    "name": "Alberto",
+    "lastname": "Fernandez",
+    "DNI": "56745678",
+    "cellphone": "765432109",
+    "direccion": "Calle O #901",
+    "sexo": "M"
+  },
+  {
+    "id_person": 16,
+    "name": "Isabel",
+    "lastname": "Diaz",
+    "DNI": "67856789",
+    "cellphone": "654321098",
+    "direccion": "Avenida P #234",
+    "sexo": "F"
+  },
+  {
+    "id_person": 17,
+    "name": "Gabriel",
+    "lastname": "Ramirez",
+    "DNI": "78967890",
+    "cellphone": "543210987",
+    "direccion": "Calle Q #567",
+    "sexo": "M"
+  },
+  {
+    "id_person": 18,
+    "name": "Adriana",
+    "lastname": "Hernandez",
+    "DNI": "89078901",
+    "cellphone": "432109876",
+    "direccion": "Avenida R #890",
+    "sexo": "F"
+  },
+  {
+    "id_person": 19,
+    "name": "Fernando",
+    "lastname": "Gutierrez",
+    "DNI": "90189012",
+    "cellphone": "321098765",
+    "direccion": "Calle S #234",
+    "sexo": "M"
+  },
+  {
+    "id_person": 20,
+    "name": "Lorena",
+    "lastname": "Perez",
+    "DNI": "01290123",
+    "cellphone": "210987654",
+    "direccion": "Avenida T #567",
+    "sexo": "F"
+  },
+  {
+    "id_person": 21,
+    "name": "Jorge",
+    "lastname": "Lopez",
+    "DNI": "12301234",
+    "cellphone": "109876543",
+    "direccion": "Calle U #890",
+    "sexo": "M"
+  },
+  {
+    "id_person": 22,
+    "name": "Camila",
+    "lastname": "Martinez",
+    "DNI": "23412345",
+    "cellphone": "098765432",
+    "direccion": "Avenida V #234",
+    "sexo": "F"
+  },
+  {
+    "id_person": 23,
+    "name": "Roberto",
+    "lastname": "Fernandez",
+    "DNI": "34523456",
+    "cellphone": "987654321",
+    "direccion": "Calle W #567",
+    "sexo": "M"
+  },
+  {
+    "id_person": 24,
+    "name": "Alicia",
+    "lastname": "Diaz",
+    "DNI": "45634567",
+    "cellphone": "876543210",
+    "direccion": "Avenida X #890",
+    "sexo": "F"
+  },
+  {
+    "id_person": 25,
+    "name": "Daniel",
+    "lastname": "Ramirez",
+    "DNI": "56745678",
+    "cellphone": "765432109",
+    "direccion": "Calle Y #234",
+    "sexo": "M"
+  },
+  {
+    "id_person": 26,
+    "name": "Natalia",
+    "lastname": "Hernandez",
+    "DNI": "67856789",
+    "cellphone": "654321098",
+    "direccion": "Avenida Z #567",
+    "sexo": "F"
+  },
+  {
+    "id_person": 27,
+    "name": "Alejandro",
+    "lastname": "Gutierrez",
+    "DNI": "78967890",
+    "cellphone": "543210987",
+    "direccion": "Calle AA #890",
+    "sexo": "M"
+  }
+]

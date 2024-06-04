@@ -1,0 +1,89 @@
+
+#content {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 2rem;
+}
+
+h1 {
+    font-size: 2em;
+    color: #0A60BD;
+}
+
+main {
+    display: grid;
+    gap: 0.8rem;
+}
+
+article {
+    display: grid;
+    gap: 0.3rem;
+}
+
+h3 {
+    padding: 0 2rem;
+    color: #324d6b;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+}
+.search-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #F3F8FF; /* Background color */
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex-grow: 1;
+}
+
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.date-range label {
+    color: #0A4FEB;
+    font-weight: bold;
+}
+
+.date-input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.filter-button, .action-button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #0A4FEB;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover, .action-button:hover {
+    background-color: #053b91;
+}
+
+.filter-button svg {
+    margin-right: 0.5rem;
+}
+
+.action-button {
+    background-color: #0A4FEB;
+}
+
+.action-button:hover {
+    background-color: #053b91;
+}
