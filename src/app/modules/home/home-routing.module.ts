@@ -7,9 +7,10 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
+     
       
       {
-        path:'viajes',
+        path:'Viajes',
         loadChildren: () => import('./pages/viajes/viajes.module').then(m => m.ViajesModule)
       },
       {
@@ -20,19 +21,10 @@ const routes: Routes = [
         path:'reportes',
         loadChildren: () => import('./pages/reportes/reportes.module').then(m => m.ReportesModule)
       },
+    
       {
         path: '**',
-        redirectTo: 'reportes',
-        pathMatch: 'full'
-      },      
-      {
-        path: '**',
-        redirectTo: 'mantenimiento',
-        pathMatch: 'full'
-      },
-      {
-        path: '**',
-        redirectTo: 'viajes',
+        redirectTo: 'Viajes',
         pathMatch: 'full'
       }
     ]

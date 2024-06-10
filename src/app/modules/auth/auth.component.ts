@@ -34,7 +34,7 @@ export class AuthComponent {
 
   public sendUser() {
     const { value } = this.formLogin
-    if (value.user === 'luceros@gmail.com' && value.password === 'Luceros123') {
+    if (value.user === 'a@gmail.com' && value.password === '123') {
       this.router.navigate(['/home']);
     } else {
       this.notifySrv.addNotification({

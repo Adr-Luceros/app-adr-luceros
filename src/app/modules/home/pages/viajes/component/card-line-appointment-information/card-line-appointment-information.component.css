@@ -1,0 +1,89 @@
+#appointment {
+    position: relative;
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border: solid 1.5px #0A60BD;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.client {
+    font-weight: 400;
+}
+
+div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+span.date {
+    padding: 5px 8px;
+    pointer-events: none;
+    font-size: 10px;
+    font-weight: 700;
+    color: #10396A90;
+    border: solid 1px #10396A20;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    gap: 0.4rem;
+}
+
+li {
+    width: 84px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    align-items: center;
+    cursor: pointer;
+    background-color: #177EE0;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: background .2s;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -ms-transition: background .2s;
+    -o-transition: background .2s;
+}
+
+li:hover {
+    background: #0A60BD;
+}
+
+@media (width > 768px) {
+    #appointment {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        justify-content: start;
+    }
+
+    article {
+        display: flex;
+        gap: 0.5rem;
+    }
+}

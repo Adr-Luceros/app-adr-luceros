@@ -1,3 +1,4 @@
+<H1>VIAJES & TRACKING</H1>
 
 <div class="search-filter-container">
     <input type="text" placeholder="Buscar Viajes..." class="search-input">
@@ -16,4 +17,36 @@
     <button class="action-button">AGREGAR VIAJE</button>
     <button class="action-button">IMPORTAR</button>
 </div>
+<section id="content">
+    <main>
+        
+        <article>
+            <ng-container *ngIf="clientsCurrently.length !== 0; else noClients">
+                <app-card-line-appointment-information *ngFor="let client of clientsCurrently" [client]="client"/>
+            </ng-container>
+            <ng-template #noClients>
+               
+            </ng-template>
+        </article>
+        
+        <article>
+            <ng-container *ngIf="clientsDefeated.length !== 0; else noDefeat">
+                <app-card-line-appointment-information *ngFor="let client of clientsDefeated" [client]="client" [onlyDate]="true"/>
+            </ng-container>
+            <ng-template #noDefeat>
+                <h3>No hay citas vencidas</h3>
+            </ng-template>
+        </article>
+    </main>
+    <app-modal *ngIf="activateModal">
+        
+        <div class="container">
+            <app-viajecargado></app-viajecargado>
+            <app-personal></app-personal>
+            <app-pickings></app-pickings>
+            <app-tiendas></app-tiendas>
+          </div>
+    </app-modal>
+</section>
+
 
