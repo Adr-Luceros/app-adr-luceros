@@ -1,100 +1,77 @@
-nav#sidebar {
+#sidebar {
+    z-index: 10;
     padding: 1rem 1rem;
+    position: fixed;
+    height: 100vh;
+    background-color: var(--color-700);
+    transition: margin-left .5s;
+    -webkit-transition: margin-left .5s;
+    -moz-transition: margin-left .5s;
+    -ms-transition: margin-left .5s;
+    -o-transition: margin-left .5s;
 }
 
-#user>div>p {
-    color: white;
-    max-width: 80px;
-    font-weight: 600;
+#container-user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#user {
+    position: relative;
+}
+
+#user>label {
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+    gap: 4px;
+    margin-bottom: 5px;
+    border-radius: 50px 16px 16px 50px;
+    -webkit-border-radius: 50px 16px 16px 50px;
+    -moz-border-radius: 50px 16px 16px 50px;
+    -ms-border-radius: 50px 16px 16px 50px;
+    -o-border-radius: 50px 16px 16px 50px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+#user>label>p {
+    color: var(--color-50);
+    user-select: none;
+    max-width: 100px;
+    font-weight: 500;
     white-space: nowrap;
-    overflow: hidden; 
+    overflow: hidden;
     text-overflow: ellipsis;
 }
 
-hr {
-    border: solid 1.5px white;
+#user:has(#profile input:not(:checked)):active {
+    scale: 0.95;
 }
 
-article#user > label:has(input:not(:checked)) {
-    position: inherit;
+#user:has(#profile input:not(:checked)) #menu {
+    display: none;
 }
 
-article#user > label:has(input:checked) {
-    position: fixed;
-    left: 1rem;
-    top: 1rem;
+#user>label:has(#profile input:checked) {
+    background-color: var(--color-600);
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    gap: 0.2rem;
-    
-    & li {
-        display: grid;
-        cursor: pointer;
-    }
-
-    & li a {
-        color: #fff;
-        padding: 0.3rem 0.8rem;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
+#user:has(#profile input:checked)>p {
+    text-decoration: underline;
 }
 
-ul li {
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-}
-
-ul li a:not(.activate):hover {
-    background: #177EE015;
-}
-
-li:has(.activate) {
-    background: #177EE0;
-}
-
-li a.activate {
-    color: #fff;
-}
-
-a.activate svg path,
-a.activate svg rect {
-    fill: white;
-}
-
-a.activate svg path[stroke] {
-    fill: transparent;
-    stroke: white;
-}
-
-#user, #user div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#user div {
-    position: relative;
-    gap: 0.5rem;
-    margin-bottom: 5px;
-}
-
-#user label#profile {
+#user #profile {
     height: 2rem;
     width: 2rem;
     cursor: pointer;
-    background-color: #f9fbfc;
-    border: 1px solid blue;    
-    color: #fff;
+    background-color: var(--color-50);
+    border: 1px solid var(--color-950);
     display: flex;
     justify-content: center;
     padding: 0.5rem;
@@ -105,9 +82,13 @@ a.activate svg path[stroke] {
     -o-border-radius: 50%;
 }
 
-#user svg {
-    padding: 0.2rem 0.4rem 0.4rem 0.2rem;
-    background: white;
+hr {
+    border: solid 1.5px var(--color-50);
+}
+
+#icon-despliege svg {
+    padding: 2px;
+    background: var(--color-700);
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -115,25 +96,33 @@ a.activate svg path[stroke] {
     -o-border-radius: 4px;
 }
 
-#user svg:hover {
+#icon-despliege svg path {
+    fill: var(--color-50);
+}
+
+#icon-despliege svg:hover {
     cursor: pointer;
-    background: #dfedfd;
+    background: var(--color-800);
 }
 
-#contenedor-btn {
-    margin-top: 5px;
+#icon-despliege:has(input:not(:checked)) {
+    position: inherit;
 }
 
-#user div:has(label#profile input:checked) #menu {
-    display: none;
+#icon-despliege:has(input:checked) {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
 }
 
 #menu {
     width: max-content;
     position: absolute;
-    background-color: #dfedfd;
+    background-color: var(--color-800);
+    border: solid 0.5px var(--color-200);
+    color: var(--color-50);
     padding: 0.5rem;
-    bottom: -130%;
+    top: 110%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -142,39 +131,74 @@ a.activate svg path[stroke] {
     -o-border-radius: 4px;
 }
 
-#menu::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid #dfedfd;
-    position: absolute;
-    top: -10px;
-    left: 5px;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+#menu li {
+    padding: 0.3rem 0.8rem;
 }
 
-#cerrar-sesion{
-    background: #be0404;
+#menu li:nth-child(n+2) {
+    border-top: solid 0.5px var(--color-200);
 }
 
 #cerrar-sesion a {
     font-size: 12px;
-    color: #fff;
+    color: var(--color-50);
 }
-#sidebar {
-    z-index: 10;
-    position: fixed;
-    height: 100vh;
-    background-color: #0A4FEB;
-    transition: margin-left .5s;
-    -webkit-transition: margin-left .5s;
-    -moz-transition: margin-left .5s;
-    -ms-transition: margin-left .5s;
-    -o-transition: margin-left .5s;
+
+#cerrar-sesion a:hover {
+    background: var(--color-900);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.2rem;
+}
+
+ul li {
+    display: grid;
+}
+
+#contenedor-btn ul li {
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+ul li a {
+    color: var(--color-50);
+    padding: 0.3rem 0.8rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+ul li:has(a:not(.activate)):hover {
+    background: var(--color-800);
+}
+
+li:has(.activate) {
+    background: var(--color-600);
+}
+
+li a.activate {
+    color: var(--color-50);
+}
+
+a.activate svg path,
+a.activate svg rect {
+    fill: var(--color-50);
+}
+
+a.activate svg path[stroke] {
+    fill: transparent;
+    stroke: var(--color-50);
+}
+
+#contenedor-btn {
+    margin-top: 5px;
 }

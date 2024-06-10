@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NotifyService } from 'src/app/core/index.service.trigger';
+import { NotifyService } from 'src/app/core/index.service.triggers';
 import { CustomValidators } from 'src/app/core/index.validator';
 
 @Component({

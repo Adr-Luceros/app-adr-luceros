@@ -5,8 +5,7 @@ section {
 
 #sidebar {
     z-index: 10;
-    position: fixed; 
-    height: 100vh;   
+    position: fixed;
     transition: margin-left .5s;
     -webkit-transition: margin-left .5s;
     -moz-transition: margin-left .5s;
@@ -34,11 +33,12 @@ section.activate #sidebar {
 
 @media (width > 800px) {
     section.no-activate #sidebar {
-        margin-left: -200px;
+        margin-left: -223px;
     }
+
     #sidebar {
         flex: 0 0 auto;
-        width: 200px;
+        width: 223px;
         height: 100%;
         height: auto;
         position: relative;
