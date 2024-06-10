@@ -1,6 +1,6 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { calculateDateString, hoursCurrently } from 'src/app/core/index.function';
-import { Diario } from 'src/app/core/index.interface';
+import { Component, HostListener, Input } from '@angular/core';
+// import { calculateDateString, hoursCurrently } from 'src/app/core/index.function';
+// import { Diario } from 'src/app/core/index.interface';
 import { ModalService } from 'src/app/core/index.service.triggers';
 
 @Component({
@@ -8,8 +8,8 @@ import { ModalService } from 'src/app/core/index.service.triggers';
   templateUrl: './card-line-appointment-information.component.html',
   styleUrls: ['./card-line-appointment-information.component.css']
 })
-export class CardLineAppointmentInformationComponent implements OnInit {
-  @Input()client!: Diario;
+export class CardLineAppointmentInformationComponent {
+  // @Input()client!: Diario;
   @Input()onlyDate: boolean = false;
   statusIcon: number = 1; /* 0: pending, 1: done, 2: defeated */
   isLargeScreen = window.innerWidth > 768;
@@ -17,19 +17,6 @@ export class CardLineAppointmentInformationComponent implements OnInit {
   constructor(
     private modalSrv: ModalService,
   ) {}
-
-  ngOnInit() {
-    const { hour_end, done } = this.client;
-    const dateCurrently: string = calculateDateString(new Date);
-
-    if(done) {
-      this.statusIcon = 1;
-    } else {
-      const defeated: boolean = hoursCurrently() > hour_end || dateCurrently > this.client.date;
-      this.statusIcon = defeated ? 2 : 0;
-    }
-
-  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {

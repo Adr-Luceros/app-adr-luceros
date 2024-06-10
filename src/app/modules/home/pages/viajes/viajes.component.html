@@ -21,21 +21,7 @@
     <main>
         
         <article>
-            <ng-container *ngIf="clientsCurrently.length !== 0; else noClients">
-                <app-card-line-appointment-information *ngFor="let client of clientsCurrently" [client]="client"/>
-            </ng-container>
-            <ng-template #noClients>
-               
-            </ng-template>
-        </article>
-        
-        <article>
-            <ng-container *ngIf="clientsDefeated.length !== 0; else noDefeat">
-                <app-card-line-appointment-information *ngFor="let client of clientsDefeated" [client]="client" [onlyDate]="true"/>
-            </ng-container>
-            <ng-template #noDefeat>
-                <h3>No hay citas vencidas</h3>
-            </ng-template>
+            <!-- <app-card-line-appointment-information *ngFor="let client of clientsCurrently" [client]="client"/> -->
         </article>
     </main>
     <app-modal *ngIf="activateModal">
