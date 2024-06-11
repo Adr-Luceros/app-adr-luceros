@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalService } from 'src/app/core/index.service.triggers';
 
 @Component({
   selector: 'app-card-line-viaje',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class CardLineViajeComponent {
 
+  constructor(
+    private modalSrv: ModalService,
+  ) { }
+
+  public watchData(): void {
+    this.modalSrv.activatedModal$.emit(true);
+  }
 }

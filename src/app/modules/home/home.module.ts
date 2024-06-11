@@ -7,12 +7,14 @@ import { SidebarComponent } from 'src/app/shared/components/sidebar/sidebar.comp
 
 @NgModule({
   declarations: [
-    HomeComponent,    
+    HomeComponent,
+
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    SidebarComponent
+    SidebarComponent,
+
   ]
 })
 export class HomeModule { }

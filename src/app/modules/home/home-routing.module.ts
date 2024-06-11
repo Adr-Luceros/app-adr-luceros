@@ -19,6 +19,7 @@ const routes: Routes = [
         path: 'mantenimiento',
         loadChildren: () => import('../mantenimiento/mantenimiento.module').then(m => m.MantenimientoModule)
       },
+    
       {
         path: '**',
         redirectTo: 'viajes',

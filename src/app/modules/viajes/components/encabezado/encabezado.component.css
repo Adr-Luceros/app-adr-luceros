@@ -6,6 +6,7 @@ section {
 h1 {
     font-size: 2em;
     color: var(--color-950);
+    display: block;
 }
 
 main,
@@ -62,10 +63,15 @@ label:has(.input-search) {
     background-color: transparent;
 }
 
-.date-range,
-.date-range label {
+.date-range {
     display: flex;
     align-items: center;
+    gap: 10px 0;
+}
+
+.date-range label {
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
 .date-range label:first-child span {

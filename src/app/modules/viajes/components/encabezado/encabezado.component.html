@@ -15,11 +15,11 @@
             <div class="date-range">
                 <label for="start-date">
                     <span>Desde</span>
-                    <input type="date">
+                    <input type="date" #startDate>
                 </label>
                 <label for="end-date">
                     <span>hasta</span>
-                    <input type="date">
+                    <input type="date" #endDate>
                 </label>
             </div>
             <button>
@@ -49,7 +49,9 @@
                         fill="#EDF7FF" />
                 </svg>
                 <span>Importar</span>
-                <input type="file" style="display: none;">
+                <input type="file"
+                    accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                    style="display: none;">
             </label>
         </div>
     </main>

@@ -1,0 +1,10 @@
+section {
+    max-width: 1000px;
+}
+
+span {
+    background: red;
+    color: var(--color-50);
+    font-weight: bold;
+    cursor: pointer;
+}
