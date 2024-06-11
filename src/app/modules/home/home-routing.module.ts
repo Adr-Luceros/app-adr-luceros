@@ -7,18 +7,17 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
-
       {
         path: 'viajes',
-        loadChildren: () => import('./pages/viajes/viajes.module').then(m => m.ViajesModule)
-      },
-      {
-        path: 'mantenimiento',
-        loadChildren: () => import('./pages/matenimiento/mantenimiento.module').then(m => m.MantenimientoModule)
+        loadChildren: () => import('../viajes/viajes.module').then(m => m.ViajesModule),
       },
       {
         path: 'reportes',
-        loadChildren: () => import('./pages/reportes/reportes.module').then(m => m.ReportesModule)
+        loadChildren: () => import('../reportes/reportes.module').then(m => m.ReportesModule)
+      },
+      {
+        path: 'mantenimiento',
+        loadChildren: () => import('../mantenimiento/mantenimiento.module').then(m => m.MantenimientoModule)
       },
       {
         path: '**',

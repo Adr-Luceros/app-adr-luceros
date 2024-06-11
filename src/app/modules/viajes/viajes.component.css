@@ -1,0 +1,11 @@
+section {
+    display: flex;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+div {
+    max-width: 1360px;
+    overflow-y: auto;
+    min-height: 100vh;
+}
