@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NotificationInterative } from 'src/app/core/index.model';
+import { NotificationInterative } from 'src/app/core/index.model.system';
 import { NotifyService } from 'src/app/core/index.service.triggers';
 
 @Component({

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Viaje } from 'src/app/core/index.model.frontend';
 import { ModalService } from 'src/app/core/index.service.triggers';
 
 @Component({
@@ -7,6 +8,8 @@ import { ModalService } from 'src/app/core/index.service.triggers';
   styleUrls: ['./card-line-viaje.component.css']
 })
 export class CardLineViajeComponent {
+
+  @Input() public viaje: Viaje = new Viaje();
 
   constructor(
     private modalSrv: ModalService,

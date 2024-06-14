@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Notification, NotificationInterative } from '../../index.model';
+import { Notification, NotificationInterative } from '../../index.model.system';
 
 @Injectable({
   providedIn: 'root'

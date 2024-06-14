@@ -1,0 +1,1692 @@
+[
+  {
+    "id": 51,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 3,
+      "placa": "AXG-757",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 48,
+        "picking": {
+          "id": 38,
+          "nroPicking": 8751114,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 209,
+        "tienda": {
+          "id": 154,
+          "psEx": "P100",
+          "destinatario": "270240.0",
+          "nombreTienda": "ECONOMYSA - VERTICAL",
+          "distrito": "",
+          "direccion": "",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      },
+      {
+        "id": 210,
+        "tienda": {
+          "id": 155,
+          "psEx": "P100",
+          "destinatario": "281863.0",
+          "nombreTienda": "HIPERBODEGA PANAMERICANA",
+          "distrito": "Puente Piedra",
+          "direccion": "AV. REPUBLICA DE CROACIA 505",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 211,
+        "tienda": {
+          "id": 156,
+          "psEx": "P100",
+          "destinatario": "144625.0",
+          "nombreTienda": "HIPERBODEGA PRECIO UNO - PUENTE PIE",
+          "distrito": "Puente Piedra",
+          "direccion": "AV. LEONCIO PRADO 1916",
+          "horaInicio": "07:00:00",
+          "horaFin": "13:30:00"
+        }
+      },
+      {
+        "id": 212,
+        "tienda": {
+          "id": 157,
+          "psEx": "P101",
+          "destinatario": "280921.0",
+          "nombreTienda": "CERCOMED",
+          "distrito": "Puente Piedra",
+          "direccion": "MZ F LOTE 33 ASOC. DE VIV. VALLE CH",
+          "horaInicio": "07:00:00",
+          "horaFin": "17:00:00"
+        }
+      },
+      {
+        "id": 213,
+        "tienda": {
+          "id": 42,
+          "psEx": "P100",
+          "destinatario": "73911.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - PUENTE",
+          "distrito": "Puente Piedra",
+          "direccion": "AV. PUENTE PIEDRA SUR 322",
+          "horaInicio": "10:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 214,
+        "tienda": {
+          "id": 70,
+          "psEx": "P100",
+          "destinatario": "119517.0",
+          "nombreTienda": "HIPERMERCADO TOTTUS - LOS OLIVOS",
+          "distrito": "Los Olivos",
+          "direccion": "AV. ALFREDO MENDIOLA 5810",
+          "horaInicio": "11:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 215,
+        "tienda": {
+          "id": 158,
+          "psEx": "P100",
+          "destinatario": "289610.0",
+          "nombreTienda": "R-H011-HIPERMERCADO METRO PASCANA",
+          "distrito": "",
+          "direccion": "Av. Túpac Amaru Km. 3.5",
+          "horaInicio": "08:00:00",
+          "horaFin": "17:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 20,
+      "placa": "AYH-772",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 49,
+        "picking": {
+          "id": 39,
+          "nroPicking": 8751092,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 216,
+        "tienda": {
+          "id": 5,
+          "psEx": "P100",
+          "destinatario": "330334.0",
+          "nombreTienda": "KAMARY - ALMACEN MKP MASIVO",
+          "distrito": "",
+          "direccion": "",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      },
+      {
+        "id": 217,
+        "tienda": {
+          "id": 6,
+          "psEx": "P101",
+          "destinatario": "330331.0",
+          "nombreTienda": "KAMARY - ALMACEN FDH",
+          "distrito": "",
+          "direccion": "",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      },
+      {
+        "id": 218,
+        "tienda": {
+          "id": 159,
+          "psEx": "P101",
+          "destinatario": "10058.0",
+          "nombreTienda": "MACC-HER REPRESENTACIONES S.R.LTDA.",
+          "distrito": "San Luis",
+          "direccion": "JR. RIO TUMBES URB.  LAS MORAS 262",
+          "horaInicio": "09:00:00",
+          "horaFin": "11:00:00"
+        }
+      },
+      {
+        "id": 219,
+        "tienda": {
+          "id": 160,
+          "psEx": "P100",
+          "destinatario": "281981.0",
+          "nombreTienda": "PICKING CENTER PANAMA",
+          "distrito": "Surquillo",
+          "direccion": "AV. REPUBLICA DE PANAMA 4615",
+          "horaInicio": "09:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 220,
+        "tienda": {
+          "id": 7,
+          "psEx": "P100",
+          "destinatario": "138149.0",
+          "nombreTienda": "HIPERMERCADO TOTTUS - SAN LUIS",
+          "distrito": "San Luis",
+          "direccion": "AV. SAN LUIS 2399",
+          "horaInicio": "13:00:00",
+          "horaFin": "16:00:00"
+        }
+      },
+      {
+        "id": 221,
+        "tienda": {
+          "id": 9,
+          "psEx": "P101",
+          "destinatario": "322631.0",
+          "nombreTienda": "KAMARY PERU - ALMACEN MEDIANA",
+          "distrito": "San Luis",
+          "direccion": "YEN ESCOBEDO GARRO 850",
+          "horaInicio": "07:00:00",
+          "horaFin": "08:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 14,
+      "placa": "BCB-905",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 50,
+        "picking": {
+          "id": 40,
+          "nroPicking": 8751119,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 222,
+        "tienda": {
+          "id": 161,
+          "psEx": "P101",
+          "destinatario": "316761.0",
+          "nombreTienda": "PLATINIUM PLAZA",
+          "distrito": "",
+          "direccion": "",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      },
+      {
+        "id": 223,
+        "tienda": {
+          "id": 162,
+          "psEx": "P100",
+          "destinatario": "338818.0",
+          "nombreTienda": "OXXO Rep?lica",
+          "distrito": "LA VICTORIA",
+          "direccion": "AVENIDA PASEO DE LA REPUBLICA 1453",
+          "horaInicio": "09:00:00",
+          "horaFin": "15:00:00"
+        }
+      },
+      {
+        "id": 224,
+        "tienda": {
+          "id": 145,
+          "psEx": "P100",
+          "destinatario": "17726.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS -SAN MIGUEL",
+          "distrito": "San Miguel",
+          "direccion": "AV.LA MARINA 2355",
+          "horaInicio": "11:00:00",
+          "horaFin": "14:00:00"
+        }
+      },
+      {
+        "id": 225,
+        "tienda": {
+          "id": 163,
+          "psEx": "P100",
+          "destinatario": "59225.0",
+          "nombreTienda": "MAYORSA - LINCE",
+          "distrito": "",
+          "direccion": "PROLONGACION IQUITOS 1840",
+          "horaInicio": "05:00:00",
+          "horaFin": "06:00:00"
+        }
+      },
+      {
+        "id": 226,
+        "tienda": {
+          "id": 164,
+          "psEx": "P100",
+          "destinatario": "149367.0",
+          "nombreTienda": "GRUPO M & M TRADING S.A.C.",
+          "distrito": "La Victoria",
+          "direccion": "PASAJE LOS MANZANOS 144",
+          "horaInicio": "08:00:00",
+          "horaFin": "10:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 19,
+      "placa": "D2H-779",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 51,
+        "picking": {
+          "id": 41,
+          "nroPicking": 8751094,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 227,
+        "tienda": {
+          "id": 59,
+          "psEx": "P100",
+          "destinatario": "303390.0",
+          "nombreTienda": "Rappi SAN BORJA 2",
+          "distrito": "",
+          "direccion": "",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      },
+      {
+        "id": 228,
+        "tienda": {
+          "id": 165,
+          "psEx": "P100",
+          "destinatario": "312139.0",
+          "nombreTienda": "OXXO SAENZ - 5031Z",
+          "distrito": "BARRANCO",
+          "direccion": "AV. ALMIRANTE GRAU N°909",
+          "horaInicio": "06:00:00",
+          "horaFin": "10:00:00"
+        }
+      },
+      {
+        "id": 229,
+        "tienda": {
+          "id": 166,
+          "psEx": "P100",
+          "destinatario": "104170.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - JOCKEY PLAZA",
+          "distrito": "Surco A",
+          "direccion": "AV. JAVIER PRADO ESTE 4010",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 230,
+        "tienda": {
+          "id": 167,
+          "psEx": "P101",
+          "destinatario": "313797.0",
+          "nombreTienda": "ADM FOOD REG - LAS ARTES",
+          "distrito": "San Borja",
+          "direccion": "Av. las artes # San Borja 397",
+          "horaInicio": "09:00:00",
+          "horaFin": "16:00:00"
+        }
+      },
+      {
+        "id": 231,
+        "tienda": {
+          "id": 168,
+          "psEx": "P101",
+          "destinatario": "291271.0",
+          "nombreTienda": "IMPORTACIONES UNO MAS UNO S.A",
+          "distrito": "San Borja",
+          "direccion": "AV AVIACION 4755",
+          "horaInicio": "09:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 232,
+        "tienda": {
+          "id": 169,
+          "psEx": "P101",
+          "destinatario": "292067.0",
+          "nombreTienda": "UNO MAS UNO - SAN BORJA",
+          "distrito": "San Borja",
+          "direccion": "AV. AVIACION 2792",
+          "horaInicio": "09:00:00",
+          "horaFin": "12:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 18,
+      "placa": "F5K-918",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 52,
+        "picking": {
+          "id": 42,
+          "nroPicking": 8751107,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 233,
+        "tienda": {
+          "id": 170,
+          "psEx": "P100",
+          "destinatario": "341125.0",
+          "nombreTienda": "OXXO Touring_Lim",
+          "distrito": "",
+          "direccion": "",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      },
+      {
+        "id": 234,
+        "tienda": {
+          "id": 1,
+          "psEx": "P101",
+          "destinatario": "328850.0",
+          "nombreTienda": "PRODUCTOS INSTITUCIONALES SAC",
+          "distrito": "",
+          "direccion": "",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      },
+      {
+        "id": 235,
+        "tienda": {
+          "id": 171,
+          "psEx": "P100",
+          "destinatario": "320850.0",
+          "nombreTienda": "OXXO BRISSA",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "AV SUCRE 290-292",
+          "horaInicio": "06:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 236,
+        "tienda": {
+          "id": 172,
+          "psEx": "P100",
+          "destinatario": "327173.0",
+          "nombreTienda": "OXXO GRA?A - 509BM",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "AV. ANTONIO MIRO QUESADA 660",
+          "horaInicio": "06:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 237,
+        "tienda": {
+          "id": 173,
+          "psEx": "P100",
+          "destinatario": "335617.0",
+          "nombreTienda": "OXXO Campo_Lim",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "JIRÓN CONTRALMIRANTE MONT 1015-1019",
+          "horaInicio": "06:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 238,
+        "tienda": {
+          "id": 174,
+          "psEx": "P100",
+          "destinatario": "315939.0",
+          "nombreTienda": "OXXO LARCO  - 98LARCO",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "URB. PRIMAVERA AV. BRASIL 3199",
+          "horaInicio": "06:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 239,
+        "tienda": {
+          "id": 175,
+          "psEx": "P100",
+          "destinatario": "338817.0",
+          "nombreTienda": "OXXO Independencia",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "JIRON TACNA (EX PASCUAL) 0955",
+          "horaInicio": "06:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 240,
+        "tienda": {
+          "id": 176,
+          "psEx": "P100",
+          "destinatario": "339299.0",
+          "nombreTienda": "OXXO HERRERA",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "AVENIDA DEL EJERCITO 323/325",
+          "horaInicio": "06:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 241,
+        "tienda": {
+          "id": 177,
+          "psEx": "P100",
+          "destinatario": "339300.0",
+          "nombreTienda": "OXXO JIMENEZ",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "AVENIDA JAVIER PRADO OESTE 808",
+          "horaInicio": "06:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 242,
+        "tienda": {
+          "id": 178,
+          "psEx": "P100",
+          "destinatario": "320630.0",
+          "nombreTienda": "OXXO MARGARITAS",
+          "distrito": "LINCE",
+          "direccion": "JR. RICARDO RIVERA NAVARRETE N 2396",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 243,
+        "tienda": {
+          "id": 179,
+          "psEx": "P100",
+          "destinatario": "252490.0",
+          "nombreTienda": "OXXO - MIRTOS",
+          "distrito": "LINCE",
+          "direccion": "AV. PROLONGACIÓN IQUITOS N°2615",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 244,
+        "tienda": {
+          "id": 180,
+          "psEx": "P100",
+          "destinatario": "254507.0",
+          "nombreTienda": "OXXO - RISSO",
+          "distrito": "LINCE",
+          "direccion": "AV. AREQUIPA 2000",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 245,
+        "tienda": {
+          "id": 181,
+          "psEx": "P100",
+          "destinatario": "267876.0",
+          "nombreTienda": "OXXO - AREQUIPA",
+          "distrito": "LINCE",
+          "direccion": "AV. AREQUIPA 1501",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 246,
+        "tienda": {
+          "id": 182,
+          "psEx": "P100",
+          "destinatario": "283230.0",
+          "nombreTienda": "OXXO - LEAL",
+          "distrito": "LINCE",
+          "direccion": "AV. JOSE LEAL N° 1185",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 247,
+        "tienda": {
+          "id": 183,
+          "psEx": "P100",
+          "destinatario": "309797.0",
+          "nombreTienda": "OXXO CLEMENTE - 503YH",
+          "distrito": "LINCE",
+          "direccion": "AV. RIVERA NAVARRETE 2821",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 248,
+        "tienda": {
+          "id": 184,
+          "psEx": "P100",
+          "destinatario": "336849.0",
+          "nombreTienda": "OXXO GUISSE",
+          "distrito": "LINCE",
+          "direccion": "JIRON GENERAL CORDOVA 1590-1598",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 249,
+        "tienda": {
+          "id": 185,
+          "psEx": "P100",
+          "destinatario": "320883.0",
+          "nombreTienda": "OXXO LAVANDA",
+          "distrito": "LINCE",
+          "direccion": "AV. AREQUIPA N°2661",
+          "horaInicio": "07:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 250,
+        "tienda": {
+          "id": 186,
+          "psEx": "P100",
+          "destinatario": "246239.0",
+          "nombreTienda": "OXXO - SAN ROCO",
+          "distrito": "MAGDALENA DEL MAR",
+          "direccion": "AV. JAVIER PRADO 490",
+          "horaInicio": "07:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 251,
+        "tienda": {
+          "id": 31,
+          "psEx": "P100",
+          "destinatario": "137736.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - 28 DE JULIO",
+          "distrito": "Miraflores",
+          "direccion": "AV. 28 DE JULIO 1003",
+          "horaInicio": "11:00:00",
+          "horaFin": "12:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 8,
+      "placa": "BYA-910",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 53,
+        "picking": {
+          "id": 43,
+          "nroPicking": 8751116,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 252,
+        "tienda": {
+          "id": 187,
+          "psEx": "P100",
+          "destinatario": "252491.0",
+          "nombreTienda": "OXXO - GRAU",
+          "distrito": "CALLAO",
+          "direccion": "AV. PRIMERO DE MAYO 199",
+          "horaInicio": "05:00:00",
+          "horaFin": "08:00:00"
+        }
+      },
+      {
+        "id": 253,
+        "tienda": {
+          "id": 188,
+          "psEx": "P100",
+          "destinatario": "246615.0",
+          "nombreTienda": "OXXO - SAN JOSE",
+          "distrito": "CALLAO",
+          "direccion": "AV. ELMER FAUCETT 1684",
+          "horaInicio": "07:00:00",
+          "horaFin": "09:00:00"
+        }
+      },
+      {
+        "id": 254,
+        "tienda": {
+          "id": 189,
+          "psEx": "P100",
+          "destinatario": "264153.0",
+          "nombreTienda": "OXXO - VIGIL",
+          "distrito": "CALLAO",
+          "direccion": "AV. SAENZ PEÑA 998",
+          "horaInicio": "07:00:00",
+          "horaFin": "09:00:00"
+        }
+      },
+      {
+        "id": 255,
+        "tienda": {
+          "id": 190,
+          "psEx": "P100",
+          "destinatario": "324472.0",
+          "nombreTienda": "OXXO PACIFICO",
+          "distrito": "CALLAO",
+          "direccion": "AV. VICTOR R.HAYA DE LA TORRE 593",
+          "horaInicio": "09:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 256,
+        "tienda": {
+          "id": 22,
+          "psEx": "P100",
+          "destinatario": "72474.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - CANTA CALLAO",
+          "distrito": "Callao",
+          "direccion": "CAR. CANTA CALLAO 378",
+          "horaInicio": "09:00:00",
+          "horaFin": "10:00:00"
+        }
+      },
+      {
+        "id": 257,
+        "tienda": {
+          "id": 19,
+          "psEx": "P100",
+          "destinatario": "128485.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - CANTA 157",
+          "distrito": "San Martin de Porres",
+          "direccion": "AV. CANTA CALLAO 3005",
+          "horaInicio": "11:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 258,
+        "tienda": {
+          "id": 74,
+          "psEx": "P100",
+          "destinatario": "65208.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - QUILCA",
+          "distrito": "Callao Centro",
+          "direccion": "AV. LIMA 4208",
+          "horaInicio": "11:30:00",
+          "horaFin": "12:30:00"
+        }
+      },
+      {
+        "id": 259,
+        "tienda": {
+          "id": 25,
+          "psEx": "P100",
+          "destinatario": "172190.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - DOMINICOS",
+          "distrito": "Callao Centro",
+          "direccion": "AV. TOMAS VALLE 3305",
+          "horaInicio": "12:00:00",
+          "horaFin": "15:00:00"
+        }
+      },
+      {
+        "id": 260,
+        "tienda": {
+          "id": 76,
+          "psEx": "P101",
+          "destinatario": "72338.0",
+          "nombreTienda": "SODIMAC - CANTA CALLAO",
+          "distrito": "Callao",
+          "direccion": "AV.CANTA CALLAO S/N ESQ AV.JAPON",
+          "horaInicio": "15:00:00",
+          "horaFin": "15:05:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 9,
+      "placa": "BXE-726",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 54,
+        "picking": {
+          "id": 44,
+          "nroPicking": 8751117,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 261,
+        "tienda": {
+          "id": 191,
+          "psEx": "P100",
+          "destinatario": "281559.0",
+          "nombreTienda": "OXXO - NAZCA",
+          "distrito": "BREÑA",
+          "direccion": "AV. BRASIL N° 840",
+          "horaInicio": "06:00:00",
+          "horaFin": "17:00:00"
+        }
+      },
+      {
+        "id": 262,
+        "tienda": {
+          "id": 192,
+          "psEx": "P100",
+          "destinatario": "320882.0",
+          "nombreTienda": "OXXO RUIZ",
+          "distrito": "BREÑA",
+          "direccion": "JR. PEDRO RUIZ GALLO N°498",
+          "horaInicio": "07:00:00",
+          "horaFin": "17:00:00"
+        }
+      },
+      {
+        "id": 263,
+        "tienda": {
+          "id": 142,
+          "psEx": "P100",
+          "destinatario": "161566.0",
+          "nombreTienda": "HIPERBODEGA PRECIO UNO BARRIOS ALTO",
+          "distrito": "Lima Cercado",
+          "direccion": "Jr. Huanuco 925 - Cercado de Lima",
+          "horaInicio": "10:00:00",
+          "horaFin": "11:30:00"
+        }
+      },
+      {
+        "id": 264,
+        "tienda": {
+          "id": 143,
+          "psEx": "P100",
+          "destinatario": "245343.0",
+          "nombreTienda": "HIPERBODEGA PRECIO UNO-DUE?AS",
+          "distrito": "Lima Cercado",
+          "direccion": "AV. NICOLAS DUEÑAS 475",
+          "horaInicio": "11:00:00",
+          "horaFin": "12:30:00"
+        }
+      },
+      {
+        "id": 265,
+        "tienda": {
+          "id": 26,
+          "psEx": "P100",
+          "destinatario": "289633.0",
+          "nombreTienda": "R-S095-SUPERMERCADO METRO MINKA",
+          "distrito": "",
+          "direccion": "Calle N°3 Pabellón 9",
+          "horaInicio": "08:00:00",
+          "horaFin": "16:00:00"
+        }
+      },
+      {
+        "id": 266,
+        "tienda": {
+          "id": 27,
+          "psEx": "P100",
+          "destinatario": "309828.0",
+          "nombreTienda": "Hiperbodega Tantamayo",
+          "distrito": "",
+          "direccion": "AV. TANTAMAYO Mz A Lote 8",
+          "horaInicio": "09:00:00",
+          "horaFin": "13:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 4,
+      "placa": "BWD-872",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 55,
+        "picking": {
+          "id": 45,
+          "nroPicking": 8750907,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 267,
+        "tienda": {
+          "id": 193,
+          "psEx": "P100",
+          "destinatario": "338033.0",
+          "nombreTienda": "OXXO IZAGUIRRE",
+          "distrito": "LOS OLIVOS",
+          "direccion": "AV. CARLOS IZAGUIRRE 423",
+          "horaInicio": "06:00:00",
+          "horaFin": "17:00:00"
+        }
+      },
+      {
+        "id": 268,
+        "tienda": {
+          "id": 75,
+          "psEx": "P100",
+          "destinatario": "282200.0",
+          "nombreTienda": "MAYORSA - MINKA 3",
+          "distrito": "callao",
+          "direccion": "AV. ARGENTINA N° 3093 C.C. MINKA,",
+          "horaInicio": "12:00:00",
+          "horaFin": "15:30:00"
+        }
+      },
+      {
+        "id": 269,
+        "tienda": {
+          "id": 194,
+          "psEx": "P100",
+          "destinatario": "247406.0",
+          "nombreTienda": "GRUPO VEGA - SUR",
+          "distrito": "Lima Industrial",
+          "direccion": "JR. MINERALES 669",
+          "horaInicio": "08:00:00",
+          "horaFin": "11:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 7,
+      "placa": "AYA-706",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 56,
+        "picking": {
+          "id": 46,
+          "nroPicking": 8751115,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 270,
+        "tienda": {
+          "id": 195,
+          "psEx": "P100",
+          "destinatario": "17116.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS -INDEPENDENCIA",
+          "distrito": "Independencia",
+          "direccion": "AV.ALFREDO MENDIOLA 3698-A02",
+          "horaInicio": "06:00:00",
+          "horaFin": "08:00:00"
+        }
+      },
+      {
+        "id": 271,
+        "tienda": {
+          "id": 196,
+          "psEx": "P100",
+          "destinatario": "173863.0",
+          "nombreTienda": "CORPORACION CODIFER S.R.L-MANTARO",
+          "distrito": "LA PERLA",
+          "direccion": "CALLE MANTARO 528",
+          "horaInicio": "08:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 272,
+        "tienda": {
+          "id": 24,
+          "psEx": "P100",
+          "destinatario": "67432.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - SAENZ PE?A",
+          "distrito": "Callao",
+          "direccion": "CAL. CASTILLA 496",
+          "horaInicio": "13:00:00",
+          "horaFin": "14:00:00"
+        }
+      },
+      {
+        "id": 273,
+        "tienda": {
+          "id": 50,
+          "psEx": "P100",
+          "destinatario": "73912.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - BELLAVISTA",
+          "distrito": "Callao",
+          "direccion": "AV. OSCAR R. BENAVIDES 3866",
+          "horaInicio": "08:00:00",
+          "horaFin": "14:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 15,
+      "placa": "D0M-731",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 57,
+        "picking": {
+          "id": 47,
+          "nroPicking": 8751095,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 274,
+        "tienda": {
+          "id": 197,
+          "psEx": "P100",
+          "destinatario": "99798.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - PENTA",
+          "distrito": "Surco B",
+          "direccion": "AV. LOS PROCERES 1030",
+          "horaInicio": "07:00:00",
+          "horaFin": "09:00:00"
+        }
+      },
+      {
+        "id": 275,
+        "tienda": {
+          "id": 198,
+          "psEx": "P101",
+          "destinatario": "164616.0",
+          "nombreTienda": "TOMOGRAFIA MEDICA SOCIEDAD ANONIMA",
+          "distrito": "Surco A",
+          "direccion": "CAL.LA CONQUISTA NRO. 145",
+          "horaInicio": "07:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 276,
+        "tienda": {
+          "id": 46,
+          "psEx": "P100",
+          "destinatario": "63523.0",
+          "nombreTienda": "PVEA AYACUCHO LIMA",
+          "distrito": "Surco A",
+          "direccion": "AV.AYACUCHO/P.REPUBLICA MZ LOTE. 10",
+          "horaInicio": "12:45:00",
+          "horaFin": "13:45:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Lurin",
+    "camion": {
+      "id": 16,
+      "placa": "BYI-839",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 58,
+        "picking": {
+          "id": 48,
+          "nroPicking": 8750915,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 277,
+        "tienda": {
+          "id": 16,
+          "psEx": "P100",
+          "destinatario": "47174.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS -ATOCONGO",
+          "distrito": "San Juan de Mirafl.",
+          "direccion": "AV.CIRCUMVALACION 1803",
+          "horaInicio": "07:00:00",
+          "horaFin": "09:00:00"
+        }
+      },
+      {
+        "id": 278,
+        "tienda": {
+          "id": 199,
+          "psEx": "P217",
+          "destinatario": "246642.0",
+          "nombreTienda": "OXXO - MATELLINI",
+          "distrito": "CHORRILLOS",
+          "direccion": "AV. PROLONG. A. MATELLINI #183, 197",
+          "horaInicio": "09:00:00",
+          "horaFin": "15:00:00"
+        }
+      },
+      {
+        "id": 279,
+        "tienda": {
+          "id": 200,
+          "psEx": "P217",
+          "destinatario": "315938.0",
+          "nombreTienda": "OXXO CEDROS -95CEDROS",
+          "distrito": "CHORRILLOS",
+          "direccion": "URB. CEDROS DE VILLA AV. ALAMEDA LO",
+          "horaInicio": "09:00:00",
+          "horaFin": "15:00:00"
+        }
+      },
+      {
+        "id": 280,
+        "tienda": {
+          "id": 201,
+          "psEx": "P217",
+          "destinatario": "318193.0",
+          "nombreTienda": "OXXO GAVIOTAS",
+          "distrito": "CHORRILLOS",
+          "direccion": "AV. GUARDIA PERUANA 692-696",
+          "horaInicio": "09:00:00",
+          "horaFin": "15:00:00"
+        }
+      },
+      {
+        "id": 281,
+        "tienda": {
+          "id": 139,
+          "psEx": "P100",
+          "destinatario": "154869.0",
+          "nombreTienda": "175 - TOTTUS LIMA SUR",
+          "distrito": "San Juan de Mirafl.",
+          "direccion": "AV. PEDRO MIOTTA 1010",
+          "horaInicio": "10:00:00",
+          "horaFin": "11:30:00"
+        }
+      },
+      {
+        "id": 282,
+        "tienda": {
+          "id": 202,
+          "psEx": "P217",
+          "destinatario": "310093.0",
+          "nombreTienda": "BOTICAS PER?",
+          "distrito": "SAN JUAN DE MIRAFLORES",
+          "direccion": "PARCELA “D” Mz. Q2 Lt. 29",
+          "horaInicio": null,
+          "horaFin": null
+        }
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 10,
+      "placa": "AVM-770",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 59,
+        "picking": {
+          "id": 49,
+          "nroPicking": 8751110,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 283,
+        "tienda": {
+          "id": 20,
+          "psEx": "P101",
+          "destinatario": "315800.0",
+          "nombreTienda": "FERRO PARTNERS CORP SAC",
+          "distrito": "LIMA CERCADO",
+          "direccion": "AV. OSCAR R. BENAVIDES N°200 INTERIOR 3039 CC PLAZA FERRETERO",
+          "horaInicio": "08:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 284,
+        "tienda": {
+          "id": 203,
+          "psEx": "P101",
+          "destinatario": "130157.0",
+          "nombreTienda": "DISTRIBUIDORA AYLIN & NIKITO",
+          "distrito": "Lima Cercado",
+          "direccion": "JR. ANTONIO MIROQUESADA 854",
+          "horaInicio": "09:00:00",
+          "horaFin": "11:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 5,
+      "placa": "D1J-702",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 60,
+        "picking": {
+          "id": 50,
+          "nroPicking": 8751106,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 285,
+        "tienda": {
+          "id": 204,
+          "psEx": "P101",
+          "destinatario": "323849.0",
+          "nombreTienda": "AC CORPORATIVO DEL PERU S.A.C.",
+          "distrito": "La Molina",
+          "direccion": "AV. JAVIER PRADO ESTE NRO. INT 6210",
+          "horaInicio": "09:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 286,
+        "tienda": {
+          "id": 100,
+          "psEx": "P100",
+          "destinatario": "89297.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - LA FONTANA",
+          "distrito": "La Molina",
+          "direccion": "AV. LA FONTANA 790",
+          "horaInicio": "09:00:00",
+          "horaFin": "10:00:00"
+        }
+      },
+      {
+        "id": 287,
+        "tienda": {
+          "id": 45,
+          "psEx": "P101",
+          "destinatario": "152064.0",
+          "nombreTienda": "INVERSIONES RODALFA S.A.C.",
+          "distrito": "Surco A",
+          "direccion": "CAL. LOS JAZMINES 178",
+          "horaInicio": "09:00:00",
+          "horaFin": "12:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 13,
+      "placa": "BRV-712",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 61,
+        "picking": {
+          "id": 51,
+          "nroPicking": 8750965,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 288,
+        "tienda": {
+          "id": 51,
+          "psEx": "P100",
+          "destinatario": "317359.0",
+          "nombreTienda": "SPSA MAKRO CA?ETE",
+          "distrito": "CAÑETE",
+          "direccion": "OTR. PARCELA 6 PROYECTO EL CHILCA",
+          "horaInicio": "10:00:00",
+          "horaFin": "11:00:00"
+        }
+      },
+      {
+        "id": 289,
+        "tienda": {
+          "id": 53,
+          "psEx": "P100",
+          "destinatario": "127430.0",
+          "nombreTienda": "HIPERMERCADO TOTTUS - CA?ETE",
+          "distrito": "Cañete",
+          "direccion": "AV. MARISCAL BENAVIDES S / N",
+          "horaInicio": "12:00:00",
+          "horaFin": "13:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 11,
+      "placa": "BLS-737",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 62,
+        "picking": {
+          "id": 52,
+          "nroPicking": 8750613,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 290,
+        "tienda": {
+          "id": 3,
+          "psEx": "P100",
+          "destinatario": "17118.0",
+          "nombreTienda": "HIPERMERCADOS TOTTUS - SAN ISIDRO",
+          "distrito": "San Isidro",
+          "direccion": "CAL.LAS BEGONIAS 785",
+          "horaInicio": "10:30:00",
+          "horaFin": "11:00:00"
+        }
+      },
+      {
+        "id": 291,
+        "tienda": {
+          "id": 205,
+          "psEx": "P101",
+          "destinatario": "281791.0",
+          "nombreTienda": "GESTION TRIBUTARIA S.A.C.",
+          "distrito": "Huancayo",
+          "direccion": "JIRON WIRACOCHA 367",
+          "horaInicio": "08:00:00",
+          "horaFin": "16:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 17,
+      "placa": "AXV-892",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 63,
+        "picking": {
+          "id": 53,
+          "nroPicking": 8751112,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 292,
+        "tienda": {
+          "id": 206,
+          "psEx": "P100",
+          "destinatario": "277601.0",
+          "nombreTienda": "TOTTUS MP COMAS",
+          "distrito": "Comas",
+          "direccion": "AV. ALAMEDAS DEL RETABLO 167",
+          "horaInicio": "11:00:00",
+          "horaFin": "12:00:00"
+        }
+      },
+      {
+        "id": 293,
+        "tienda": {
+          "id": 207,
+          "psEx": "P100",
+          "destinatario": "152249.0",
+          "nombreTienda": "CURTIS - COMAS",
+          "distrito": "Comas",
+          "direccion": "JR. LAS MANUFACTURAS 170",
+          "horaInicio": "08:00:00",
+          "horaFin": "11:00:00"
+        }
+      },
+      {
+        "id": 294,
+        "tienda": {
+          "id": 208,
+          "psEx": "P100",
+          "destinatario": "295575.0",
+          "nombreTienda": "Hiperbodega Ventanilla Pachacutec",
+          "distrito": "Ventanilla",
+          "direccion": "Mz 6H sublote 01B",
+          "horaInicio": "08:00:00",
+          "horaFin": "13:00:00"
+        }
+      },
+      {
+        "id": 295,
+        "tienda": {
+          "id": 209,
+          "psEx": "P100",
+          "destinatario": "287718.0",
+          "nombreTienda": "R-S014-Ventanilla",
+          "distrito": "",
+          "direccion": "MZA. C LOTE. 27 URB. PEDRO CUEVA S/",
+          "horaInicio": "09:00:00",
+          "horaFin": "14:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 2,
+      "placa": "BWO-798",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 64,
+        "picking": {
+          "id": 54,
+          "nroPicking": 8750906,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 296,
+        "tienda": {
+          "id": 43,
+          "psEx": "P100",
+          "destinatario": "55289.0",
+          "nombreTienda": "S011 - METRO COMAS RETABLO",
+          "distrito": "Comas",
+          "direccion": "AV.BELAUNDE 980",
+          "horaInicio": "12:00:00",
+          "horaFin": "14:00:00"
+        }
+      },
+      {
+        "id": 297,
+        "tienda": {
+          "id": 210,
+          "psEx": "P100",
+          "destinatario": "317096.0",
+          "nombreTienda": "ECONOMYSA - HORIZONTAL",
+          "distrito": "Los Olivos",
+          "direccion": "Jr. Los Hornos 353",
+          "horaInicio": "08:00:00",
+          "horaFin": "11:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 1,
+      "placa": "BCB-774",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 65,
+        "picking": {
+          "id": 55,
+          "nroPicking": 8750979,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 298,
+        "tienda": {
+          "id": 211,
+          "psEx": "P100",
+          "destinatario": "168405.0",
+          "nombreTienda": "REPRESENTACIONES JHOSEP SAC",
+          "distrito": "LIMA",
+          "direccion": "JR. PARURO 924",
+          "horaInicio": "05:00:00",
+          "horaFin": "08:00:00"
+        }
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "almacen": "Rosales",
+    "camion": {
+      "id": 6,
+      "placa": "BAN-932",
+      "marca": null
+    },
+    "fletes": [
+      {
+        "id": 66,
+        "picking": {
+          "id": 56,
+          "nroPicking": 8750984,
+          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+        },
+        "tipo": {
+          "id": 1,
+          "nombreTipo": "Tipo A"
+        }
+      }
+    ],
+    "entregas": [
+      {
+        "id": 299,
+        "tienda": {
+          "id": 212,
+          "psEx": "P100",
+          "destinatario": "139510.0",
+          "nombreTienda": "GRUPO VEGA - ESTE",
+          "distrito": "San Juan de Lurig.A",
+          "direccion": "LOS DURAZNOS 348",
+          "horaInicio": "07:00:00",
+          "horaFin": "11:00:00"
+        }
+      },
+      {
+        "id": 300,
+        "tienda": {
+          "id": 71,
+          "psEx": "P100",
+          "destinatario": "169277.0",
+          "nombreTienda": "DISTRIBUIDORA MOLI SAC",
+          "distrito": "San Juan de Lurig.A",
+          "direccion": "CALLE EL ROSARIO 428",
+          "horaInicio": "07:00:00",
+          "horaFin": "11:00:00"
+        }
+      }
+    ]
+  }
+]
