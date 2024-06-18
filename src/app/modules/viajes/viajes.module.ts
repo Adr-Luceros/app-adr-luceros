@@ -10,6 +10,7 @@ import { PersonalComponent } from './components/personal/personal.component';
 import { PickingsComponent } from './components/pickings/pickings.component';
 import { TiendasComponent } from './components/tiendas/tiendas.component';
 import { ViajecargadoComponent } from './components/viajecargado/viajecargado.component';
+import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 
 
 @NgModule({
@@ -20,9 +21,10 @@ import { ViajecargadoComponent } from './components/viajecargado/viajecargado.co
     PersonalComponent,
     PickingsComponent,
     TiendasComponent,
-    ViajecargadoComponent
+    ViajecargadoComponent,
   ],
   imports: [
+    LoadingComponent,
     CommonModule,
     ViajesRoutingModule,
     ModalComponent

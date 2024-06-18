@@ -2,9 +2,9 @@
     <div>
         <app-encabezado></app-encabezado>
         <section id="content">
+            <app-loading *ngIf="isLoading"></app-loading>
             <main class="list-viajes" *ngIf="listViajes.length > 0; else noViajes">
                 <app-card-line-viaje *ngFor="let viaje of listViajes" [viaje]="viaje"></app-card-line-viaje>
-                <!-- <app-card-line-viaje [viaje]="listViajes[0]"></app-card-line-viaje> -->
             </main>
             <ng-template #noViajes>
                 <main id="no-viajes">

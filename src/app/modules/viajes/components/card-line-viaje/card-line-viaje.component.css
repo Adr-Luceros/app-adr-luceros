@@ -2,6 +2,8 @@ section {
     position: relative;
     display: grid;
     padding-right: 30px;
+    overflow-y: hidden;
+    grid-row: 1fr auto;
 }
 
 ul {
@@ -10,7 +12,13 @@ ul {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .trip {
+    z-index: 10;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -53,7 +61,7 @@ ul {
     flex-wrap: wrap;
 }
 
-.list-personal>li {
+.list-personal>a {
     padding: 6px 8px;
     display: flex;
     align-items: center;
@@ -107,10 +115,37 @@ ul {
     margin-right: 5px;
 }
 
+.icon-more:has(input[type="checkbox"]) {
+    cursor: pointer;
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+}
+
+.icon-more:has(input[type="checkbox"]:checked) {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
 .option-trip {
+    opacity: 0;
     position: absolute;
     right: 0;
     top: 0;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+}
+
+section>main:hover .option-trip {
+    opacity: 1;
 }
 
 .option-trip svg {
@@ -125,6 +160,16 @@ ul {
 
 .container-shop {
     display: grid;
+    z-index: 9;
+    transition: margin-top .5s ease-out;
+    -webkit-transition: margin-top .5s ease-out;
+    -moz-transition: margin-top .5s ease-out;
+    -ms-transition: margin-top .5s ease-out;
+    -o-transition: margin-top .5s ease-out;
+}
+
+section:has(.icon-more>input[type="checkbox"]:checked) .container-shop {
+    margin-top: -120%;
 }
 
 .container-shop>li {
@@ -173,4 +218,21 @@ ul {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.container-shop>li>div>div>* {
+    cursor: pointer;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+}
+
+.icon-edit:hover {
+    background-color: var(--color-300);
+}
+
+.icon-delete:hover {
+    background-color: #99000050;
 }

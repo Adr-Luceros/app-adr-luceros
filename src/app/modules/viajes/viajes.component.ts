@@ -12,6 +12,7 @@ import { ModalService } from 'src/app/core/index.service.triggers';
 })
 export class ViajesComponent implements OnInit, OnDestroy {
   activateModal: boolean = false;
+  isLoading: boolean = false;
   listViajes: Viaje[] = [];
   modalSubcription: Subscription = new Subscription();
   viajeSubcription: Subscription = new Subscription();
@@ -23,7 +24,14 @@ export class ViajesComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.modalSubcription = this.modalSrv.activatedModal$.subscribe(res => this.activateModal = res);
-    this.viajeSubcription = this.viajeSrv.getViajes().subscribe(res => this.listViajes = res);
+    this.isLoading = true;
+    this.viajeSubcription = this.viajeSrv.getViajes().subscribe(
+      res => {
+        this.listViajes = res
+        this.isLoading = false;
+      },
+      err => this.isLoading = false
+    );
   }
 
   ngOnDestroy(): void {
