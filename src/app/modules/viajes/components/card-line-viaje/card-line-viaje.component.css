@@ -19,8 +19,8 @@ a {
 
 .trip {
     z-index: 10;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr auto;
     gap: 20px;
     background-color: var(--color-500);
     color: var(--color-50);
@@ -96,6 +96,7 @@ a {
 .trip>div:nth-child(2) {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px
 }
 
@@ -178,6 +179,35 @@ section:has(.icon-more>input[type="checkbox"]:checked) .container-shop {
     padding: 10px 22px;
 }
 
+.dt-vh,
+.dt-m3,
+.dt-psEx,
+.dt-distrito,
+.dt-direccion,
+.dt-destinatario {
+    display: none;
+}
+
+.dt-psEx {
+    max-width: 40px;
+}
+
+.dt-destinatario {
+    max-width: 80px;
+}
+
+.dt-distrito {
+    max-width: 100px;
+}
+
+.dt-m3 {
+    max-width: 50px;
+}
+
+.dt-nombreTienda {
+    max-width: 180px;
+}
+
 .container-shop>li>p {
     color: var(--color-700);
 }
@@ -191,7 +221,7 @@ section:has(.icon-more>input[type="checkbox"]:checked) .container-shop {
 .container-shop>li>div {
     display: grid;
     gap: 12px;
-    grid-template-columns: 40px 80px 1fr 100px 1fr 50px 120px 100px auto;
+    grid-template-columns: 1fr 100px;
     align-items: center;
 }
 
@@ -215,7 +245,7 @@ section:has(.icon-more>input[type="checkbox"]:checked) .container-shop {
 }
 
 .container-shop>li>div>div {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 5px;
 }
@@ -235,4 +265,53 @@ section:has(.icon-more>input[type="checkbox"]:checked) .container-shop {
 
 .icon-delete:hover {
     background-color: #99000050;
+}
+
+@media (width > 600px) {
+
+    .dt-vh,
+    .dt-direccion {
+        display: block;
+    }
+
+    .container-shop>li>div>div {
+        display: flex;
+    }
+
+    .container-shop>li>div {
+        grid-template-columns: 180px 1fr auto 100px auto;
+    }
+}
+
+@media (width > 700px) {
+    .trip {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr auto;
+    }
+}
+
+@media (width > 1000px) {
+
+    .dt-m3,
+    .dt-psEx,
+    .dt-distrito,
+    .dt-destinatario {
+        display: block;
+    }
+
+    .container-shop>li>div {
+        grid-template-columns: 1fr 1fr 180px 1fr 180px 1fr 120px 100px auto;
+    }
+}
+
+@media (pointer: coarse) {
+    .option-trip {
+        opacity: 1;
+    }
+}
+
+@media (any-pointer: coarse) {
+    .option-trip {
+        opacity: 1;
+    }
 }

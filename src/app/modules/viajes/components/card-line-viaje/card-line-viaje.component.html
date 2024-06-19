@@ -95,17 +95,17 @@
     <ul class="container-shop">
         <li *ngFor="let entrega of viaje.entregas">
             <div class="data">
-                <span>{{ entrega.tienda?.psEx }}</span>
-                <span>{{ entrega.tienda?.destinatario }}</span>
-                <span>{{ entrega.tienda?.nombreTienda }}</span>
-                <span>{{ entrega.tienda?.distrito }}</span>
-                <span>{{ entrega.tienda?.direccion }}</span>
-                <span> 22.08 </span>
-                <span *ngIf="entrega.tienda?.horaInicio != null; else sinVh">
+                <span class="dt-psEx">{{ entrega.tienda?.psEx }}</span>
+                <span class="dt-destinatario">{{ entrega.tienda?.destinatario }}</span>
+                <span class="dt-nombreTienda">{{ entrega.tienda?.nombreTienda }}</span>
+                <span class="dt-distrito">{{ entrega.tienda?.distrito }}</span>
+                <span class="dt-direccion">{{ entrega.tienda?.direccion }}</span>
+                <span class="dt-m3"> 22.08 </span>
+                <span class="dt-vh" *ngIf="entrega.tienda?.horaInicio != null; else sinVh">
                     {{ entrega.tienda?.horaInicio?.slice(0, 5) + " - " + entrega.tienda?.horaFin?.slice(0, 5) }}
                 </span>
                 <ng-template #sinVh>
-                    <span>-</span>
+                    <span class="dt-vh">-</span>
                 </ng-template>
                 <select class="estado-tienda">
                     <option value="Registrado" selected>Registrado</option>

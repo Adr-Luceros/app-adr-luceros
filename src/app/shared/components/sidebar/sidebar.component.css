@@ -1,5 +1,4 @@
 #sidebar {
-    z-index: 10;
     padding: 1rem 1rem;
     position: fixed;
     height: 100vh;
@@ -166,6 +165,11 @@ ul li {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
 }
 
 ul li a {
@@ -179,6 +183,10 @@ ul li a {
 
 ul li:has(a:not(.activate)):hover {
     background: var(--color-800);
+}
+
+ul li:has(a:not(.activate)):active {
+    background: var(--color-950);
 }
 
 li:has(.activate) {

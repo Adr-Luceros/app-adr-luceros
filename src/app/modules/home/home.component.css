@@ -4,7 +4,7 @@ section {
 }
 
 #sidebar {
-    z-index: 10;
+    z-index: 99;
     position: fixed;
     transition: margin-left .5s;
     -webkit-transition: margin-left .5s;
