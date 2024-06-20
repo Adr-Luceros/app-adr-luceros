@@ -1,1 +1,24 @@
-<p>matenimiento works!</p>
+<section>
+    <nav>
+        <span (click)="goToMantenimiento()">Mantenimiento</span>
+        <span>{{ nombreEntidad }}</span>
+    </nav>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+    <div>
+        <div class="card-entity" *ngFor="let entity of entities">
+            <a *ngIf="entity.href; else noHref" [routerLink]="entity.href" routerLinkActive="isActive"
+                (click)="nombreEntidad = entity.name">
+                <h3>{{entity.name}}</h3>
+                <p>{{entity.description}}</p>
+            </a>
+            <ng-template #noHref>
+                <div class="disable">
+                    <h3>{{entity.name}}</h3>
+                    <p>{{entity.description}}</p>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</section>
