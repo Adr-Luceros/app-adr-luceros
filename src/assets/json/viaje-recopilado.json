@@ -1,7 +1,7 @@
 [
   {
-    "id": 51,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 6,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
       "id": 3,
@@ -10,23 +10,25 @@
     },
     "fletes": [
       {
-        "id": 48,
+        "id": 3,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 38,
+          "id": 6,
           "nroPicking": 8751114,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 209,
+        "id": 3,
         "tienda": {
-          "id": 154,
+          "id": 2,
           "psEx": "P100",
           "destinatario": "270240.0",
           "nombreTienda": "ECONOMYSA - VERTICAL",
@@ -37,9 +39,9 @@
         }
       },
       {
-        "id": 210,
+        "id": 4,
         "tienda": {
-          "id": 155,
+          "id": 3,
           "psEx": "P100",
           "destinatario": "281863.0",
           "nombreTienda": "HIPERBODEGA PANAMERICANA",
@@ -50,9 +52,9 @@
         }
       },
       {
-        "id": 211,
+        "id": 5,
         "tienda": {
-          "id": 156,
+          "id": 4,
           "psEx": "P100",
           "destinatario": "144625.0",
           "nombreTienda": "HIPERBODEGA PRECIO UNO - PUENTE PIE",
@@ -63,9 +65,9 @@
         }
       },
       {
-        "id": 212,
+        "id": 6,
         "tienda": {
-          "id": 157,
+          "id": 5,
           "psEx": "P101",
           "destinatario": "280921.0",
           "nombreTienda": "CERCOMED",
@@ -76,9 +78,9 @@
         }
       },
       {
-        "id": 213,
+        "id": 7,
         "tienda": {
-          "id": 42,
+          "id": 6,
           "psEx": "P100",
           "destinatario": "73911.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - PUENTE",
@@ -89,9 +91,9 @@
         }
       },
       {
-        "id": 214,
+        "id": 8,
         "tienda": {
-          "id": 70,
+          "id": 7,
           "psEx": "P100",
           "destinatario": "119517.0",
           "nombreTienda": "HIPERMERCADO TOTTUS - LOS OLIVOS",
@@ -102,9 +104,9 @@
         }
       },
       {
-        "id": 215,
+        "id": 9,
         "tienda": {
-          "id": 158,
+          "id": 8,
           "psEx": "P100",
           "destinatario": "289610.0",
           "nombreTienda": "R-H011-HIPERMERCADO METRO PASCANA",
@@ -117,33 +119,35 @@
     ]
   },
   {
-    "id": 52,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 7,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 20,
+      "id": 4,
       "placa": "AYH-772",
       "marca": null
     },
     "fletes": [
       {
-        "id": 49,
+        "id": 4,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 39,
+          "id": 7,
           "nroPicking": 8751092,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 216,
+        "id": 10,
         "tienda": {
-          "id": 5,
+          "id": 9,
           "psEx": "P100",
           "destinatario": "330334.0",
           "nombreTienda": "KAMARY - ALMACEN MKP MASIVO",
@@ -154,9 +158,9 @@
         }
       },
       {
-        "id": 217,
+        "id": 11,
         "tienda": {
-          "id": 6,
+          "id": 10,
           "psEx": "P101",
           "destinatario": "330331.0",
           "nombreTienda": "KAMARY - ALMACEN FDH",
@@ -167,9 +171,9 @@
         }
       },
       {
-        "id": 218,
+        "id": 12,
         "tienda": {
-          "id": 159,
+          "id": 11,
           "psEx": "P101",
           "destinatario": "10058.0",
           "nombreTienda": "MACC-HER REPRESENTACIONES S.R.LTDA.",
@@ -180,9 +184,9 @@
         }
       },
       {
-        "id": 219,
+        "id": 13,
         "tienda": {
-          "id": 160,
+          "id": 12,
           "psEx": "P100",
           "destinatario": "281981.0",
           "nombreTienda": "PICKING CENTER PANAMA",
@@ -193,9 +197,9 @@
         }
       },
       {
-        "id": 220,
+        "id": 14,
         "tienda": {
-          "id": 7,
+          "id": 13,
           "psEx": "P100",
           "destinatario": "138149.0",
           "nombreTienda": "HIPERMERCADO TOTTUS - SAN LUIS",
@@ -206,9 +210,9 @@
         }
       },
       {
-        "id": 221,
+        "id": 15,
         "tienda": {
-          "id": 9,
+          "id": 14,
           "psEx": "P101",
           "destinatario": "322631.0",
           "nombreTienda": "KAMARY PERU - ALMACEN MEDIANA",
@@ -221,33 +225,35 @@
     ]
   },
   {
-    "id": 53,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 8,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 14,
+      "id": 5,
       "placa": "BCB-905",
       "marca": null
     },
     "fletes": [
       {
-        "id": 50,
+        "id": 5,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 40,
+          "id": 8,
           "nroPicking": 8751119,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 222,
+        "id": 16,
         "tienda": {
-          "id": 161,
+          "id": 15,
           "psEx": "P101",
           "destinatario": "316761.0",
           "nombreTienda": "PLATINIUM PLAZA",
@@ -258,9 +264,9 @@
         }
       },
       {
-        "id": 223,
+        "id": 17,
         "tienda": {
-          "id": 162,
+          "id": 16,
           "psEx": "P100",
           "destinatario": "338818.0",
           "nombreTienda": "OXXO Rep?lica",
@@ -271,9 +277,9 @@
         }
       },
       {
-        "id": 224,
+        "id": 18,
         "tienda": {
-          "id": 145,
+          "id": 17,
           "psEx": "P100",
           "destinatario": "17726.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS -SAN MIGUEL",
@@ -284,9 +290,9 @@
         }
       },
       {
-        "id": 225,
+        "id": 19,
         "tienda": {
-          "id": 163,
+          "id": 18,
           "psEx": "P100",
           "destinatario": "59225.0",
           "nombreTienda": "MAYORSA - LINCE",
@@ -297,9 +303,9 @@
         }
       },
       {
-        "id": 226,
+        "id": 20,
         "tienda": {
-          "id": 164,
+          "id": 19,
           "psEx": "P100",
           "destinatario": "149367.0",
           "nombreTienda": "GRUPO M & M TRADING S.A.C.",
@@ -312,33 +318,35 @@
     ]
   },
   {
-    "id": 54,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 9,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 19,
+      "id": 6,
       "placa": "D2H-779",
       "marca": null
     },
     "fletes": [
       {
-        "id": 51,
+        "id": 6,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 41,
+          "id": 9,
           "nroPicking": 8751094,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 227,
+        "id": 21,
         "tienda": {
-          "id": 59,
+          "id": 20,
           "psEx": "P100",
           "destinatario": "303390.0",
           "nombreTienda": "Rappi SAN BORJA 2",
@@ -349,9 +357,9 @@
         }
       },
       {
-        "id": 228,
+        "id": 22,
         "tienda": {
-          "id": 165,
+          "id": 21,
           "psEx": "P100",
           "destinatario": "312139.0",
           "nombreTienda": "OXXO SAENZ - 5031Z",
@@ -362,9 +370,9 @@
         }
       },
       {
-        "id": 229,
+        "id": 23,
         "tienda": {
-          "id": 166,
+          "id": 22,
           "psEx": "P100",
           "destinatario": "104170.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - JOCKEY PLAZA",
@@ -375,9 +383,9 @@
         }
       },
       {
-        "id": 230,
+        "id": 24,
         "tienda": {
-          "id": 167,
+          "id": 23,
           "psEx": "P101",
           "destinatario": "313797.0",
           "nombreTienda": "ADM FOOD REG - LAS ARTES",
@@ -388,9 +396,9 @@
         }
       },
       {
-        "id": 231,
+        "id": 25,
         "tienda": {
-          "id": 168,
+          "id": 24,
           "psEx": "P101",
           "destinatario": "291271.0",
           "nombreTienda": "IMPORTACIONES UNO MAS UNO S.A",
@@ -401,9 +409,9 @@
         }
       },
       {
-        "id": 232,
+        "id": 26,
         "tienda": {
-          "id": 169,
+          "id": 25,
           "psEx": "P101",
           "destinatario": "292067.0",
           "nombreTienda": "UNO MAS UNO - SAN BORJA",
@@ -416,33 +424,35 @@
     ]
   },
   {
-    "id": 55,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 10,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 18,
+      "id": 7,
       "placa": "F5K-918",
       "marca": null
     },
     "fletes": [
       {
-        "id": 52,
+        "id": 7,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 42,
+          "id": 10,
           "nroPicking": 8751107,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 233,
+        "id": 27,
         "tienda": {
-          "id": 170,
+          "id": 26,
           "psEx": "P100",
           "destinatario": "341125.0",
           "nombreTienda": "OXXO Touring_Lim",
@@ -453,9 +463,9 @@
         }
       },
       {
-        "id": 234,
+        "id": 28,
         "tienda": {
-          "id": 1,
+          "id": 27,
           "psEx": "P101",
           "destinatario": "328850.0",
           "nombreTienda": "PRODUCTOS INSTITUCIONALES SAC",
@@ -466,9 +476,9 @@
         }
       },
       {
-        "id": 235,
+        "id": 29,
         "tienda": {
-          "id": 171,
+          "id": 28,
           "psEx": "P100",
           "destinatario": "320850.0",
           "nombreTienda": "OXXO BRISSA",
@@ -479,9 +489,9 @@
         }
       },
       {
-        "id": 236,
+        "id": 30,
         "tienda": {
-          "id": 172,
+          "id": 29,
           "psEx": "P100",
           "destinatario": "327173.0",
           "nombreTienda": "OXXO GRA?A - 509BM",
@@ -492,9 +502,9 @@
         }
       },
       {
-        "id": 237,
+        "id": 31,
         "tienda": {
-          "id": 173,
+          "id": 30,
           "psEx": "P100",
           "destinatario": "335617.0",
           "nombreTienda": "OXXO Campo_Lim",
@@ -505,9 +515,9 @@
         }
       },
       {
-        "id": 238,
+        "id": 32,
         "tienda": {
-          "id": 174,
+          "id": 31,
           "psEx": "P100",
           "destinatario": "315939.0",
           "nombreTienda": "OXXO LARCO  - 98LARCO",
@@ -518,9 +528,9 @@
         }
       },
       {
-        "id": 239,
+        "id": 33,
         "tienda": {
-          "id": 175,
+          "id": 32,
           "psEx": "P100",
           "destinatario": "338817.0",
           "nombreTienda": "OXXO Independencia",
@@ -531,9 +541,9 @@
         }
       },
       {
-        "id": 240,
+        "id": 34,
         "tienda": {
-          "id": 176,
+          "id": 33,
           "psEx": "P100",
           "destinatario": "339299.0",
           "nombreTienda": "OXXO HERRERA",
@@ -544,9 +554,9 @@
         }
       },
       {
-        "id": 241,
+        "id": 35,
         "tienda": {
-          "id": 177,
+          "id": 34,
           "psEx": "P100",
           "destinatario": "339300.0",
           "nombreTienda": "OXXO JIMENEZ",
@@ -557,9 +567,9 @@
         }
       },
       {
-        "id": 242,
+        "id": 36,
         "tienda": {
-          "id": 178,
+          "id": 35,
           "psEx": "P100",
           "destinatario": "320630.0",
           "nombreTienda": "OXXO MARGARITAS",
@@ -570,9 +580,9 @@
         }
       },
       {
-        "id": 243,
+        "id": 37,
         "tienda": {
-          "id": 179,
+          "id": 36,
           "psEx": "P100",
           "destinatario": "252490.0",
           "nombreTienda": "OXXO - MIRTOS",
@@ -583,9 +593,9 @@
         }
       },
       {
-        "id": 244,
+        "id": 38,
         "tienda": {
-          "id": 180,
+          "id": 37,
           "psEx": "P100",
           "destinatario": "254507.0",
           "nombreTienda": "OXXO - RISSO",
@@ -596,9 +606,9 @@
         }
       },
       {
-        "id": 245,
+        "id": 39,
         "tienda": {
-          "id": 181,
+          "id": 38,
           "psEx": "P100",
           "destinatario": "267876.0",
           "nombreTienda": "OXXO - AREQUIPA",
@@ -609,9 +619,9 @@
         }
       },
       {
-        "id": 246,
+        "id": 40,
         "tienda": {
-          "id": 182,
+          "id": 39,
           "psEx": "P100",
           "destinatario": "283230.0",
           "nombreTienda": "OXXO - LEAL",
@@ -622,9 +632,9 @@
         }
       },
       {
-        "id": 247,
+        "id": 41,
         "tienda": {
-          "id": 183,
+          "id": 40,
           "psEx": "P100",
           "destinatario": "309797.0",
           "nombreTienda": "OXXO CLEMENTE - 503YH",
@@ -635,9 +645,9 @@
         }
       },
       {
-        "id": 248,
+        "id": 42,
         "tienda": {
-          "id": 184,
+          "id": 41,
           "psEx": "P100",
           "destinatario": "336849.0",
           "nombreTienda": "OXXO GUISSE",
@@ -648,9 +658,9 @@
         }
       },
       {
-        "id": 249,
+        "id": 43,
         "tienda": {
-          "id": 185,
+          "id": 42,
           "psEx": "P100",
           "destinatario": "320883.0",
           "nombreTienda": "OXXO LAVANDA",
@@ -661,9 +671,9 @@
         }
       },
       {
-        "id": 250,
+        "id": 44,
         "tienda": {
-          "id": 186,
+          "id": 43,
           "psEx": "P100",
           "destinatario": "246239.0",
           "nombreTienda": "OXXO - SAN ROCO",
@@ -674,9 +684,9 @@
         }
       },
       {
-        "id": 251,
+        "id": 45,
         "tienda": {
-          "id": 31,
+          "id": 44,
           "psEx": "P100",
           "destinatario": "137736.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - 28 DE JULIO",
@@ -689,8 +699,8 @@
     ]
   },
   {
-    "id": 56,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 11,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
       "id": 8,
@@ -699,23 +709,25 @@
     },
     "fletes": [
       {
-        "id": 53,
+        "id": 8,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 43,
+          "id": 11,
           "nroPicking": 8751116,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 252,
+        "id": 46,
         "tienda": {
-          "id": 187,
+          "id": 45,
           "psEx": "P100",
           "destinatario": "252491.0",
           "nombreTienda": "OXXO - GRAU",
@@ -726,9 +738,9 @@
         }
       },
       {
-        "id": 253,
+        "id": 47,
         "tienda": {
-          "id": 188,
+          "id": 46,
           "psEx": "P100",
           "destinatario": "246615.0",
           "nombreTienda": "OXXO - SAN JOSE",
@@ -739,9 +751,9 @@
         }
       },
       {
-        "id": 254,
+        "id": 48,
         "tienda": {
-          "id": 189,
+          "id": 47,
           "psEx": "P100",
           "destinatario": "264153.0",
           "nombreTienda": "OXXO - VIGIL",
@@ -752,9 +764,9 @@
         }
       },
       {
-        "id": 255,
+        "id": 49,
         "tienda": {
-          "id": 190,
+          "id": 48,
           "psEx": "P100",
           "destinatario": "324472.0",
           "nombreTienda": "OXXO PACIFICO",
@@ -765,9 +777,9 @@
         }
       },
       {
-        "id": 256,
+        "id": 50,
         "tienda": {
-          "id": 22,
+          "id": 49,
           "psEx": "P100",
           "destinatario": "72474.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - CANTA CALLAO",
@@ -778,9 +790,9 @@
         }
       },
       {
-        "id": 257,
+        "id": 51,
         "tienda": {
-          "id": 19,
+          "id": 50,
           "psEx": "P100",
           "destinatario": "128485.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - CANTA 157",
@@ -791,9 +803,9 @@
         }
       },
       {
-        "id": 258,
+        "id": 52,
         "tienda": {
-          "id": 74,
+          "id": 51,
           "psEx": "P100",
           "destinatario": "65208.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - QUILCA",
@@ -804,9 +816,9 @@
         }
       },
       {
-        "id": 259,
+        "id": 53,
         "tienda": {
-          "id": 25,
+          "id": 52,
           "psEx": "P100",
           "destinatario": "172190.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - DOMINICOS",
@@ -817,9 +829,9 @@
         }
       },
       {
-        "id": 260,
+        "id": 54,
         "tienda": {
-          "id": 76,
+          "id": 53,
           "psEx": "P101",
           "destinatario": "72338.0",
           "nombreTienda": "SODIMAC - CANTA CALLAO",
@@ -832,8 +844,8 @@
     ]
   },
   {
-    "id": 57,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 12,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
       "id": 9,
@@ -842,23 +854,25 @@
     },
     "fletes": [
       {
-        "id": 54,
+        "id": 9,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 44,
+          "id": 12,
           "nroPicking": 8751117,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 261,
+        "id": 55,
         "tienda": {
-          "id": 191,
+          "id": 54,
           "psEx": "P100",
           "destinatario": "281559.0",
           "nombreTienda": "OXXO - NAZCA",
@@ -869,9 +883,9 @@
         }
       },
       {
-        "id": 262,
+        "id": 56,
         "tienda": {
-          "id": 192,
+          "id": 55,
           "psEx": "P100",
           "destinatario": "320882.0",
           "nombreTienda": "OXXO RUIZ",
@@ -882,9 +896,9 @@
         }
       },
       {
-        "id": 263,
+        "id": 57,
         "tienda": {
-          "id": 142,
+          "id": 56,
           "psEx": "P100",
           "destinatario": "161566.0",
           "nombreTienda": "HIPERBODEGA PRECIO UNO BARRIOS ALTO",
@@ -895,9 +909,9 @@
         }
       },
       {
-        "id": 264,
+        "id": 58,
         "tienda": {
-          "id": 143,
+          "id": 57,
           "psEx": "P100",
           "destinatario": "245343.0",
           "nombreTienda": "HIPERBODEGA PRECIO UNO-DUE?AS",
@@ -908,9 +922,9 @@
         }
       },
       {
-        "id": 265,
+        "id": 59,
         "tienda": {
-          "id": 26,
+          "id": 58,
           "psEx": "P100",
           "destinatario": "289633.0",
           "nombreTienda": "R-S095-SUPERMERCADO METRO MINKA",
@@ -921,9 +935,9 @@
         }
       },
       {
-        "id": 266,
+        "id": 60,
         "tienda": {
-          "id": 27,
+          "id": 59,
           "psEx": "P100",
           "destinatario": "309828.0",
           "nombreTienda": "Hiperbodega Tantamayo",
@@ -936,33 +950,35 @@
     ]
   },
   {
-    "id": 58,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 13,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 4,
+      "id": 10,
       "placa": "BWD-872",
       "marca": null
     },
     "fletes": [
       {
-        "id": 55,
+        "id": 10,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 45,
+          "id": 13,
           "nroPicking": 8750907,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 267,
+        "id": 61,
         "tienda": {
-          "id": 193,
+          "id": 60,
           "psEx": "P100",
           "destinatario": "338033.0",
           "nombreTienda": "OXXO IZAGUIRRE",
@@ -973,9 +989,9 @@
         }
       },
       {
-        "id": 268,
+        "id": 62,
         "tienda": {
-          "id": 75,
+          "id": 61,
           "psEx": "P100",
           "destinatario": "282200.0",
           "nombreTienda": "MAYORSA - MINKA 3",
@@ -986,9 +1002,9 @@
         }
       },
       {
-        "id": 269,
+        "id": 63,
         "tienda": {
-          "id": 194,
+          "id": 62,
           "psEx": "P100",
           "destinatario": "247406.0",
           "nombreTienda": "GRUPO VEGA - SUR",
@@ -1001,33 +1017,35 @@
     ]
   },
   {
-    "id": 59,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 14,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 7,
+      "id": 11,
       "placa": "AYA-706",
       "marca": null
     },
     "fletes": [
       {
-        "id": 56,
+        "id": 11,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 46,
+          "id": 14,
           "nroPicking": 8751115,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 270,
+        "id": 64,
         "tienda": {
-          "id": 195,
+          "id": 63,
           "psEx": "P100",
           "destinatario": "17116.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS -INDEPENDENCIA",
@@ -1038,9 +1056,9 @@
         }
       },
       {
-        "id": 271,
+        "id": 65,
         "tienda": {
-          "id": 196,
+          "id": 64,
           "psEx": "P100",
           "destinatario": "173863.0",
           "nombreTienda": "CORPORACION CODIFER S.R.L-MANTARO",
@@ -1051,9 +1069,9 @@
         }
       },
       {
-        "id": 272,
+        "id": 66,
         "tienda": {
-          "id": 24,
+          "id": 65,
           "psEx": "P100",
           "destinatario": "67432.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - SAENZ PE?A",
@@ -1064,9 +1082,9 @@
         }
       },
       {
-        "id": 273,
+        "id": 67,
         "tienda": {
-          "id": 50,
+          "id": 66,
           "psEx": "P100",
           "destinatario": "73912.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - BELLAVISTA",
@@ -1079,33 +1097,35 @@
     ]
   },
   {
-    "id": 60,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 15,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 15,
+      "id": 12,
       "placa": "D0M-731",
       "marca": null
     },
     "fletes": [
       {
-        "id": 57,
+        "id": 12,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 47,
+          "id": 15,
           "nroPicking": 8751095,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 274,
+        "id": 68,
         "tienda": {
-          "id": 197,
+          "id": 67,
           "psEx": "P100",
           "destinatario": "99798.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - PENTA",
@@ -1116,9 +1136,9 @@
         }
       },
       {
-        "id": 275,
+        "id": 69,
         "tienda": {
-          "id": 198,
+          "id": 68,
           "psEx": "P101",
           "destinatario": "164616.0",
           "nombreTienda": "TOMOGRAFIA MEDICA SOCIEDAD ANONIMA",
@@ -1129,9 +1149,9 @@
         }
       },
       {
-        "id": 276,
+        "id": 70,
         "tienda": {
-          "id": 46,
+          "id": 69,
           "psEx": "P100",
           "destinatario": "63523.0",
           "nombreTienda": "PVEA AYACUCHO LIMA",
@@ -1144,34 +1164,36 @@
     ]
   },
   {
-    "id": 61,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 16,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Lurin",
     "camion": {
-      "id": 16,
+      "id": 13,
       "placa": "BYI-839",
       "marca": null
     },
     "fletes": [
       {
-        "id": 58,
+        "id": 13,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 48,
+          "id": 16,
           "nroPicking": 8750915,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 277,
+        "id": 71,
         "tienda": {
-          "id": 16,
-          "psEx": "P100",
+          "id": 70,
+          "psEx": "P217",
           "destinatario": "47174.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS -ATOCONGO",
           "distrito": "San Juan de Mirafl.",
@@ -1181,9 +1203,9 @@
         }
       },
       {
-        "id": 278,
+        "id": 72,
         "tienda": {
-          "id": 199,
+          "id": 71,
           "psEx": "P217",
           "destinatario": "246642.0",
           "nombreTienda": "OXXO - MATELLINI",
@@ -1194,9 +1216,9 @@
         }
       },
       {
-        "id": 279,
+        "id": 73,
         "tienda": {
-          "id": 200,
+          "id": 72,
           "psEx": "P217",
           "destinatario": "315938.0",
           "nombreTienda": "OXXO CEDROS -95CEDROS",
@@ -1207,9 +1229,9 @@
         }
       },
       {
-        "id": 280,
+        "id": 74,
         "tienda": {
-          "id": 201,
+          "id": 73,
           "psEx": "P217",
           "destinatario": "318193.0",
           "nombreTienda": "OXXO GAVIOTAS",
@@ -1220,10 +1242,10 @@
         }
       },
       {
-        "id": 281,
+        "id": 75,
         "tienda": {
-          "id": 139,
-          "psEx": "P100",
+          "id": 74,
+          "psEx": "P217",
           "destinatario": "154869.0",
           "nombreTienda": "175 - TOTTUS LIMA SUR",
           "distrito": "San Juan de Mirafl.",
@@ -1233,9 +1255,9 @@
         }
       },
       {
-        "id": 282,
+        "id": 76,
         "tienda": {
-          "id": 202,
+          "id": 75,
           "psEx": "P217",
           "destinatario": "310093.0",
           "nombreTienda": "BOTICAS PER?",
@@ -1248,46 +1270,48 @@
     ]
   },
   {
-    "id": 62,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 17,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 10,
+      "id": 14,
       "placa": "AVM-770",
       "marca": null
     },
     "fletes": [
       {
-        "id": 59,
+        "id": 14,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 49,
+          "id": 17,
           "nroPicking": 8751110,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 283,
+        "id": 77,
         "tienda": {
-          "id": 20,
+          "id": 76,
           "psEx": "P101",
           "destinatario": "315800.0",
           "nombreTienda": "FERRO PARTNERS CORP SAC",
           "distrito": "LIMA CERCADO",
           "direccion": "AV. OSCAR R. BENAVIDES N°200 INTERIOR 3039 CC PLAZA FERRETERO",
           "horaInicio": "08:00:00",
-          "horaFin": "12:00:00"
+          "horaFin": "10:30:00"
         }
       },
       {
-        "id": 284,
+        "id": 78,
         "tienda": {
-          "id": 203,
+          "id": 77,
           "psEx": "P101",
           "destinatario": "130157.0",
           "nombreTienda": "DISTRIBUIDORA AYLIN & NIKITO",
@@ -1300,33 +1324,35 @@
     ]
   },
   {
-    "id": 63,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 18,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 5,
+      "id": 15,
       "placa": "D1J-702",
       "marca": null
     },
     "fletes": [
       {
-        "id": 60,
+        "id": 15,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 50,
+          "id": 18,
           "nroPicking": 8751106,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 285,
+        "id": 79,
         "tienda": {
-          "id": 204,
+          "id": 78,
           "psEx": "P101",
           "destinatario": "323849.0",
           "nombreTienda": "AC CORPORATIVO DEL PERU S.A.C.",
@@ -1337,9 +1363,9 @@
         }
       },
       {
-        "id": 286,
+        "id": 80,
         "tienda": {
-          "id": 100,
+          "id": 79,
           "psEx": "P100",
           "destinatario": "89297.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - LA FONTANA",
@@ -1350,9 +1376,9 @@
         }
       },
       {
-        "id": 287,
+        "id": 81,
         "tienda": {
-          "id": 45,
+          "id": 80,
           "psEx": "P101",
           "destinatario": "152064.0",
           "nombreTienda": "INVERSIONES RODALFA S.A.C.",
@@ -1365,33 +1391,35 @@
     ]
   },
   {
-    "id": 64,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 19,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 13,
+      "id": 16,
       "placa": "BRV-712",
       "marca": null
     },
     "fletes": [
       {
-        "id": 61,
+        "id": 16,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 51,
+          "id": 19,
           "nroPicking": 8750965,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 288,
+        "id": 82,
         "tienda": {
-          "id": 51,
+          "id": 81,
           "psEx": "P100",
           "destinatario": "317359.0",
           "nombreTienda": "SPSA MAKRO CA?ETE",
@@ -1402,9 +1430,9 @@
         }
       },
       {
-        "id": 289,
+        "id": 83,
         "tienda": {
-          "id": 53,
+          "id": 82,
           "psEx": "P100",
           "destinatario": "127430.0",
           "nombreTienda": "HIPERMERCADO TOTTUS - CA?ETE",
@@ -1417,33 +1445,35 @@
     ]
   },
   {
-    "id": 65,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 20,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 11,
+      "id": 17,
       "placa": "BLS-737",
       "marca": null
     },
     "fletes": [
       {
-        "id": 62,
+        "id": 17,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 52,
+          "id": 20,
           "nroPicking": 8750613,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 290,
+        "id": 84,
         "tienda": {
-          "id": 3,
+          "id": 83,
           "psEx": "P100",
           "destinatario": "17118.0",
           "nombreTienda": "HIPERMERCADOS TOTTUS - SAN ISIDRO",
@@ -1454,9 +1484,9 @@
         }
       },
       {
-        "id": 291,
+        "id": 85,
         "tienda": {
-          "id": 205,
+          "id": 84,
           "psEx": "P101",
           "destinatario": "281791.0",
           "nombreTienda": "GESTION TRIBUTARIA S.A.C.",
@@ -1469,33 +1499,35 @@
     ]
   },
   {
-    "id": 66,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 21,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 17,
+      "id": 18,
       "placa": "AXV-892",
       "marca": null
     },
     "fletes": [
       {
-        "id": 63,
+        "id": 18,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 53,
+          "id": 21,
           "nroPicking": 8751112,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 292,
+        "id": 86,
         "tienda": {
-          "id": 206,
+          "id": 85,
           "psEx": "P100",
           "destinatario": "277601.0",
           "nombreTienda": "TOTTUS MP COMAS",
@@ -1506,9 +1538,9 @@
         }
       },
       {
-        "id": 293,
+        "id": 87,
         "tienda": {
-          "id": 207,
+          "id": 86,
           "psEx": "P100",
           "destinatario": "152249.0",
           "nombreTienda": "CURTIS - COMAS",
@@ -1519,9 +1551,9 @@
         }
       },
       {
-        "id": 294,
+        "id": 88,
         "tienda": {
-          "id": 208,
+          "id": 87,
           "psEx": "P100",
           "destinatario": "295575.0",
           "nombreTienda": "Hiperbodega Ventanilla Pachacutec",
@@ -1532,9 +1564,9 @@
         }
       },
       {
-        "id": 295,
+        "id": 89,
         "tienda": {
-          "id": 209,
+          "id": 88,
           "psEx": "P100",
           "destinatario": "287718.0",
           "nombreTienda": "R-S014-Ventanilla",
@@ -1547,33 +1579,35 @@
     ]
   },
   {
-    "id": 67,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 22,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 2,
+      "id": 19,
       "placa": "BWO-798",
       "marca": null
     },
     "fletes": [
       {
-        "id": 64,
+        "id": 19,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 54,
+          "id": 22,
           "nroPicking": 8750906,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 296,
+        "id": 90,
         "tienda": {
-          "id": 43,
+          "id": 89,
           "psEx": "P100",
           "destinatario": "55289.0",
           "nombreTienda": "S011 - METRO COMAS RETABLO",
@@ -1584,9 +1618,9 @@
         }
       },
       {
-        "id": 297,
+        "id": 91,
         "tienda": {
-          "id": 210,
+          "id": 90,
           "psEx": "P100",
           "destinatario": "317096.0",
           "nombreTienda": "ECONOMYSA - HORIZONTAL",
@@ -1599,33 +1633,35 @@
     ]
   },
   {
-    "id": 68,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 23,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 1,
+      "id": 20,
       "placa": "BCB-774",
       "marca": null
     },
     "fletes": [
       {
-        "id": 65,
+        "id": 20,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 55,
+          "id": 23,
           "nroPicking": 8750979,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 298,
+        "id": 92,
         "tienda": {
-          "id": 211,
+          "id": 91,
           "psEx": "P100",
           "destinatario": "168405.0",
           "nombreTienda": "REPRESENTACIONES JHOSEP SAC",
@@ -1638,33 +1674,35 @@
     ]
   },
   {
-    "id": 69,
-    "fechaDeSalida": "2024-06-13T05:00:00.000+00:00",
+    "id": 24,
+    "fechaDeSalida": "2024-06-24T05:00:00.000+00:00",
     "almacen": "Rosales",
     "camion": {
-      "id": 6,
+      "id": 21,
       "placa": "BAN-932",
       "marca": null
     },
     "fletes": [
       {
-        "id": 66,
+        "id": 21,
+        "volumenViaje": 0.0,
         "picking": {
-          "id": 56,
+          "id": 24,
           "nroPicking": 8750984,
-          "fechaCreacion": "2024-06-13T05:00:00.000+00:00"
+          "fechaCreacion": "2024-06-24T05:00:00.000+00:00",
+          "volumen": 0.0
         },
         "tipo": {
-          "id": 1,
+          "id": 3,
           "nombreTipo": "Tipo A"
         }
       }
     ],
     "entregas": [
       {
-        "id": 299,
+        "id": 93,
         "tienda": {
-          "id": 212,
+          "id": 92,
           "psEx": "P100",
           "destinatario": "139510.0",
           "nombreTienda": "GRUPO VEGA - ESTE",
@@ -1675,9 +1713,9 @@
         }
       },
       {
-        "id": 300,
+        "id": 94,
         "tienda": {
-          "id": 71,
+          "id": 93,
           "psEx": "P100",
           "destinatario": "169277.0",
           "nombreTienda": "DISTRIBUIDORA MOLI SAC",

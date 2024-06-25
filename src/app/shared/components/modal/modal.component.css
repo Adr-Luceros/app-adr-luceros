@@ -8,7 +8,7 @@
     display: grid;
     place-items: center;
     background: #17171780;
-    backdrop-filter: blur(2px); 
+    backdrop-filter: blur(2px);
 }
 
 #modal {
@@ -25,6 +25,7 @@
 div:has(> svg) {
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
 
 svg {
@@ -34,4 +35,27 @@ svg {
 svg:hover path {
     fill: #082f49;
     stroke: #082f49;
+}
+
+button {
+    border: none;
+    background: var(--color-400);
+    color: var(--color-950);
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+button:hover {
+    background: var(--color-700);
+    color: var(--color-50);
+}
+
+button:active {
+    background: var(--color-900);
+    color: var(--color-50);
 }

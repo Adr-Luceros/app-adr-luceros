@@ -20,11 +20,7 @@
     </div>
 </section>
 
-<app-modal *ngIf="activateModal">
-    <div class="container">
-        <app-viajecargado></app-viajecargado>
-        <app-personal></app-personal>
-        <app-pickings></app-pickings>
-        <app-tiendas></app-tiendas>
-    </div>
+<app-modal *ngIf="activateModal" [withClickDesactiveModal]="false">
+    <!-- activateModal -->
+    <app-form-viaje></app-form-viaje>
 </app-modal>

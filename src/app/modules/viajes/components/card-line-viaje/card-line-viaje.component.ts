@@ -15,7 +15,17 @@ export class CardLineViajeComponent {
     private modalSrv: ModalService,
   ) { }
 
-  public watchData(): void {
+  public activeModalWithEDit(): void {
+    this.modalSrv.hasBtnEdit$.emit(false);
+    this.watchData();
+  }
+
+  public activeModalWithWatch(): void {
+    this.modalSrv.hasBtnEdit$.emit(true);
+    this.watchData();
+  }
+
+  private watchData(): void {
     this.modalSrv.activatedModal$.emit(true);
   }
 }

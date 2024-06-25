@@ -5,4 +5,5 @@ import { EventEmitter, Injectable } from '@angular/core';
 })
 export class ModalService {
   activatedModal$: EventEmitter<boolean> = new EventEmitter<boolean>();
+  hasBtnEdit$: EventEmitter<boolean> = new EventEmitter<boolean>();
 }

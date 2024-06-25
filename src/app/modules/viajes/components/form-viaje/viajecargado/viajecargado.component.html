@@ -1,0 +1,23 @@
+<section class="container-main">
+  <h2>Viaje cargado</h2>
+  <div>
+    <label>
+      <span>Placa</span>
+      <select id="placa" [(ngModel)]="placa" [disabled]="isDisable">
+        <option [value]="1">AVR-871</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Almacen</span>
+      <select id="almacen" [(ngModel)]="almacen" [disabled]="isDisable">
+        <option [value]="1">Rosales</option>
+      </select>
+    </label>
+
+    <label>
+      <span>F. Carga</span>
+      <input type="date" [(ngModel)]="dia" [disabled]="isDisable">
+    </label>
+  </div>
+</section>

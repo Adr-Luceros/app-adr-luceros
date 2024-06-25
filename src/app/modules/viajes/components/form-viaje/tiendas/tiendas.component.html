@@ -1,0 +1,62 @@
+<section class="container-main tiendas">
+  <div>
+    <h2>Tiendas</h2>
+    <button>Agregar Tienda</button>
+  </div>
+
+  <div>
+    <label>
+      <span>Tienda</span>
+      <select [disabled]="isDisable">
+        <option value="PULITEZZA J&D S.A.C.">PULITEZZA J&D S.A.C.</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Vh. Inicio:</span>
+      <input type="time" [disabled]="isDisable">
+    </label>
+
+    <label>
+      <span>Vh. Fin:</span>
+      <input type="time" [disabled]="isDisable">
+    </label>
+
+    <label>
+      <span>Dirección:</span>
+      <input type="text" [disabled]="isDisable">
+    </label>
+
+    <label>
+      <span>Distrito:</span>
+      <input type="text" [disabled]="isDisable">
+    </label>
+
+    <label>
+      <span>Moderno</span>
+      <select [disabled]="isDisable">
+        <option value="Moderno">Moderno</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Volumen</span>
+      <select [disabled]="isDisable">
+        <option value="volumen">Volumen</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Status</span>
+      <select [disabled]="isDisable">
+        <option value="Entregado">Entregado</option>
+      </select>
+    </label>
+  </div>
+
+
+  <label>
+    <span>Observación:</span>
+    <textarea [disabled]="isDisable"></textarea>
+  </label>
+</section>

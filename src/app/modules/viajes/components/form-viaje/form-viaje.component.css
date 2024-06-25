@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px 20px;
+    padding: 20px;
+    height: calc(100vh - 80px);
+    max-height: 600px;
+    max-width: 1000px;
+    overflow-y: scroll;
+}
+
+.container div:first-child {
+    display: grid;
+    gap: 30px 10px;
+}
+
+.container div:last-child {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 1.5rem;
+}
+
+.container div .btn-cancel {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+
+.btn-guardar {
+    background-color: var(--color-950);
+    color: var(--color-50);
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.btn-guardar:hover {
+    background-color: var(--color-800);
+}
+
+.btn-guardar:active {
+    background-color: var(--color-600);
+}
+
+@media (width > 850px) {
+    div:first-child {
+        grid-template-columns: 1fr 1fr;
+    }
+}

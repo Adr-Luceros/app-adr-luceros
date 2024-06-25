@@ -1,0 +1,12 @@
+<form class="container">
+    <div>
+        <app-viajecargado [isDisable]="!isActiveActionSave"></app-viajecargado>
+        <app-personal [isDisable]="!isActiveActionSave"></app-personal>
+    </div>
+    <app-pickings [isDisable]="!isActiveActionSave"></app-pickings>
+    <app-tiendas [isDisable]="!isActiveActionSave"></app-tiendas>
+    <div *ngIf="isActiveActionSave">
+        <input class="btn-guardar" type="submit" value="Guardar">
+        <span class="btn-cancel">Cancelar</span>
+    </div>
+</form>

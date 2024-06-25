@@ -1,0 +1,32 @@
+<section class="container-main pickings">
+  <div>
+    <h2>Pickings</h2>
+    <button>Agregar picking</button>
+  </div>
+  <div>
+    <label>
+      <span>Picking</span>
+      <select [disabled]="isDisable">
+        <option value="7195079">7195079</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Ruta</span>
+      <select [disabled]="isDisable">
+        <option value="Santa Rosa - Ruta Larga">Santa Rosa - Ruta Larga</option>
+      </select>
+    </label>
+
+    <label>
+      <span>Tipo carga</span>
+      <select [disabled]="isDisable">
+        <option value="FALSO FLETE">FALSO FLETE</option>
+      </select>
+    </label>
+  </div>
+  <label>
+    <span>Observación</span>
+    <textarea [disabled]="isDisable"></textarea>
+  </label>
+</section>

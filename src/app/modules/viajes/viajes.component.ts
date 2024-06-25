@@ -1,9 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { calculateDateString } from 'src/app/core/index.function';
 import { Viaje } from 'src/app/core/index.model.frontend';
 import { ViajeService } from 'src/app/core/index.service.https';
 import { ModalService } from 'src/app/core/index.service.triggers';
+import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 
 @Component({
   selector: 'app-viajes',
@@ -11,11 +11,13 @@ import { ModalService } from 'src/app/core/index.service.triggers';
   styleUrls: ['./viajes.component.css']
 })
 export class ViajesComponent implements OnInit, OnDestroy {
+  modal = ViewChild(ModalComponent);
   activateModal: boolean = false;
   isLoading: boolean = false;
   listViajes: Viaje[] = [];
   modalSubcription: Subscription = new Subscription();
   viajeSubcription: Subscription = new Subscription();
+  isActiveEditable: boolean = false;
 
   constructor(
     private modalSrv: ModalService,
@@ -37,6 +39,10 @@ export class ViajesComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.modalSubcription.unsubscribe();
     this.viajeSubcription.unsubscribe();
+  }
+
+  public activeEditable(active: boolean): void {
+    this.isActiveEditable = active;
   }
 
 }

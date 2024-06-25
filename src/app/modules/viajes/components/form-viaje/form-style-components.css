@@ -1,0 +1,114 @@
+.container-main {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.container-main h2 {
+    color: var(--color-950);
+    font-size: 40px;
+}
+
+label {
+    display: flex;
+}
+
+label:not(:has(textarea)),
+textarea {
+    border: solid 1px var(--color-700);
+}
+
+label:not(:has(textarea)) {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+label:has(textarea) {
+    flex-direction: column;
+}
+
+label:has(textarea)>span {
+    width: fit-content;
+    border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -ms-border-radius: 4px 4px 0 0;
+    -o-border-radius: 4px 4px 0 0;
+}
+
+label>span {
+    white-space: nowrap;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-700);
+    color: var(--color-50);
+    font-size: 16px;
+}
+
+input,
+select {
+    color: var(--color-700);
+    width: calc(100% - 10px);
+    font-size: 16px;
+    padding: 0 8px;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    height: 100px;
+    border-radius: 0 4px 4px 4px;
+    -webkit-border-radius: 0 4px 4px 4px;
+    -moz-border-radius: 0 4px 4px 4px;
+    -ms-border-radius: 0 4px 4px 4px;
+    -o-border-radius: 0 4px 4px 4px;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+    background-color: var(--color-100);
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+button {
+    background-color: var(--color-950);
+    color: var(--color-50);
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+button:hover {
+    background-color: var(--color-800);
+}
+
+button:active {
+    background-color: var(--color-600);
+}
