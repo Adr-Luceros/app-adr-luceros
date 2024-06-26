@@ -20,7 +20,7 @@
     </div>
 </section>
 
-<app-modal *ngIf="activateModal" [withClickDesactiveModal]="false">
+<app-modal [style]="activateModal ? { 'display': 'block' } : { 'display': 'none' }" [withClickDesactiveModal]="false">
     <!-- activateModal -->
     <app-form-viaje></app-form-viaje>
 </app-modal>

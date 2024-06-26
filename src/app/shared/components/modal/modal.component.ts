@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { ModalService } from 'src/app/core/index.service.triggers';
 
 @Component({
@@ -9,14 +10,21 @@ import { ModalService } from 'src/app/core/index.service.triggers';
   styleUrls: ['./modal.component.css'],
   imports: [CommonModule],
 })
-export class ModalComponent {
+export class ModalComponent implements OnInit {
   @ViewChild('asContainerModal') containerModal!: ElementRef;
   @Input() withClickDesactiveModal: boolean = true;
   @Input() hasBtnEdit: boolean = false;
+  btnSaveSubcription: Subscription = new Subscription();
 
   constructor(
     private modalSrv: ModalService
   ) { }
+
+  ngOnInit(): void {
+    this.btnSaveSubcription = this.modalSrv.activatedModal$.subscribe(res => {
+      this.hasBtnEdit = res;
+    })
+  }
 
   public closeModal($event: any) {
     const container = this.containerModal.nativeElement;

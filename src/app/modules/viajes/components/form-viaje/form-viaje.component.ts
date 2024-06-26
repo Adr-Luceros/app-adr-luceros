@@ -7,37 +7,22 @@ import { ModalService } from 'src/app/core/index.service.triggers';
   templateUrl: './form-viaje.component.html',
   styleUrls: ['./form-viaje.component.css']
 })
-export class FormViajeComponent implements AfterViewInit, OnDestroy {
+export class FormViajeComponent implements OnInit, OnDestroy {
   isActiveActionSave: boolean = true;
   modalSubcription: Subscription = new Subscription();
 
 
   constructor(
     private modalSrv: ModalService
-  ) {
-    console.log("constructor")
-    // No jala el boton de modal, solucionar esa problematica
-    this.modalSubcription = this.modalSrv.hasBtnEdit$.subscribe(
-      isEditable => {
-        console.log("constructor")
-        this.isActiveActionSave = !isEditable;
-      },
-      err => {
-        console.log(err)
-      }
-    );
-  }
+  ) { }
 
-  ngAfterViewInit(): void {
-    console.log("afterview")
+  ngOnInit(): void {
     this.modalSubcription = this.modalSrv.hasBtnEdit$.subscribe(
       isEditable => {
-        console.log("afterview")
-        this.isActiveActionSave = !isEditable;
-        console.log(isEditable);
+        this.isActiveActionSave = isEditable;
       },
       err => {
-        console.log(err)
+        console.error(err)
       }
     );
   }
