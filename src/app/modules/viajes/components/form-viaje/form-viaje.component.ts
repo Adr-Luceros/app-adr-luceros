@@ -17,14 +17,9 @@ export class FormViajeComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
-    this.modalSubcription = this.modalSrv.hasBtnEdit$.subscribe(
-      isEditable => {
-        this.isActiveActionSave = isEditable;
-      },
-      err => {
-        console.error(err)
-      }
-    );
+    this.modalSubcription = this.modalSrv.hasBtnEdit$.subscribe(isEditable => {
+      this.isActiveActionSave = !isEditable;
+    });
   }
 
   ngOnDestroy(): void {
