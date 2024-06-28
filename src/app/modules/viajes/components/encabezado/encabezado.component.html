@@ -22,7 +22,7 @@
                     <input type="date" #endDate>
                 </label>
             </div>
-            <button>
+            <button (click)="filtrarPorRango()">
                 <span>Filtrar</span>
             </button>
         </div>
@@ -49,7 +49,7 @@
                         fill="#EDF7FF" />
                 </svg>
                 <span>Importar</span>
-                <input type="file"
+                <input type="file" (change)="onFileSelected($event)"
                     accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
                     style="display: none;">
             </label>

@@ -1,0 +1,1 @@
+export { ViajeTransferService } from './services/transfer/viaje-transfer.service'
