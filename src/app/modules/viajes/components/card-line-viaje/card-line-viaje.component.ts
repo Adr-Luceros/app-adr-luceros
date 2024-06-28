@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Viaje } from 'src/app/core/index.model.frontend';
+import { Viaje } from 'src/app/core/index.model.entity';
 import { ModalService } from 'src/app/core/index.service.triggers';
 
 @Component({

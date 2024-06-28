@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Viaje } from '../../index.model.frontend';
+import { Viaje } from '../../index.model.entity';
 import { Observable } from 'rxjs';
 
 @Injectable({

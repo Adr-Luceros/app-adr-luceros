@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { calculateDateString } from 'src/app/core/index.function';
-import { Viaje } from 'src/app/core/index.model.frontend';
+import { Viaje } from 'src/app/core/index.model.entity';
 import { ViajeService } from 'src/app/core/index.service.https';
 import { ModalService } from 'src/app/core/index.service.triggers';
 

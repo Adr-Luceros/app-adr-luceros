@@ -1,4 +1,4 @@
-import { Picking, Tipo } from '../../index.model.frontend';
+import { Picking, Tipo } from '../../index.model.entity';
 
 export class Flete {
     id: number | null = null

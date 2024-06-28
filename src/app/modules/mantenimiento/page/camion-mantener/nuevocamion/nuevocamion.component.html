@@ -1,0 +1,28 @@
+<div class="negro"><h1>{{ esEditar ? 'Editar Camion' : 'Nuevo Camion' }}</h1>
+</div>
+<form (ngSubmit)="guardarCamion()">
+  <div>
+    <label for="marca">Marca:</label>
+    <input id="marca" [(ngModel)]="nuevoCamion.marca" name="marca" required>
+  </div>
+  <div>
+    <label for="placa">Placa:</label>
+    <input id="placa" [(ngModel)]="nuevoCamion.placa" name="placa" required>
+  </div>
+  <div>
+    <label for="tc">TC:</label>
+    <input id="tc" [(ngModel)]="nuevoCamion.tc" name="tc" required>
+  </div>
+  <div>
+    <label for="soat">SOAT:</label>
+    <input id="soat" [(ngModel)]="nuevoCamion.soat" name="soat" required>
+  </div>
+  <div>
+    <label for="capacidad">Capacidad:</label>
+    <select id="capacidad" [(ngModel)]="nuevoCamion.capacidad" name="capacidad" required>
+      <option *ngFor="let capacidad of capacidades" [ngValue]="capacidad" [selected]="capacidad.capacidadId === nuevoCamion.capacidad.capacidadId">{{ capacidad.volumen }}</option>
+    </select>
+  </div>
+  <button type="submit">{{ esEditar ? 'Actualizar' : 'Guardar' }}</button>
+  <button type="button" (click)="cerrarModal()">Cancelar</button>
+</form>

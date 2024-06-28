@@ -1,0 +1,22 @@
+<div class="modal" tabindex="-1" id="nuevoRolCargoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+         <div class="negro"> <h5 class="modal-title">{{ esEditar ? 'Editar RolCargo' : 'Nuevo RolCargo' }}</h5></div>
+          
+        
+        <div class="modal-body">
+          <form (ngSubmit)="guardarRolCargo()">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevoRolCargo.nombre" name="nombre" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">{{ esEditar ? 'Actualizar' : 'Guardar' }}</button>
+            <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

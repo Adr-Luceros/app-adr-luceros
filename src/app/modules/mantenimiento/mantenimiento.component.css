@@ -42,6 +42,7 @@ nav>span:nth-child(n +2):before {
 
 section>main {
     display: none;
+    position: relative;
 }
 
 section:has(.isActive)>main {
