@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ViajeExcel } from 'src/app/core/index.model.frontend';
+import { ViajeExcel } from 'src/app/core/index.model.entity';
 import { ViajeTransferService } from 'src/app/core/index.service.transferm';
 import { ModalService } from 'src/app/core/index.service.triggers';
 

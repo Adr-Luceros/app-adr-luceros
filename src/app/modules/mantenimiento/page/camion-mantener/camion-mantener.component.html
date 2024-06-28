@@ -1,1 +1,37 @@
-<p>camion-mantener works!</p>
+<div class="container">
+    <div>
+        <h1>Camiones</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar Camion..." class="search-input">
+            <button class="filter-btn">Filtrar</button>
+            <button class="new-personal-btn" (click)="abrirDialogoNuevoCamion()">Nuevo Camion</button>
+        </div>
+        <div class="kenny">
+            <table class="personal-table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Placa</th>
+                        <th>TC</th>
+                        <th>SOAT</th>
+                        <th>Capacidad</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let camion of camions">
+                        <td>{{camion.marca ?? ''}}</td>
+                        <td>{{camion.placa ?? ''}}</td>
+                        <td>{{camion.tc ?? ''}}</td>
+                        <td>{{camion.soat ?? ''}}</td>
+                        <td>{{camion.capacidad?.volumen ?? ''}}</td>
+                        <td>
+                            <button class="edit-btn" (click)="abrirDialogoEditarCamion(camion)">✏️</button>
+                            <button class="delete-btn" (click)="eliminarCamion(camion.camion_id)">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

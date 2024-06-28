@@ -1,1 +1,38 @@
-<p>rol-cargo-mantener works!</p>
+<div class="container">
+    <div>
+        <h1>Personal</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Buscar Personal..." class="search-input">
+        <button class="filter-btn">Filtrar</button> 
+        <button class="new-personal-btn" (click)="abrirModalNuevoRolCargo()">Nuevo Personal</button>
+       
+    </div>
+    <div class="kenny">
+    <table class="personal-table">
+        <thead>
+            <tr>
+                
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+      
+            <tr *ngFor="let rolcargo of rolcargol">
+                <td>{{rolcargo.nombre}}</td>
+              
+                <td>
+                   
+                    <button class="edit-btn" (click)="abrirModalEditarRolCargo(rolcargo)">✏️</button>
+                    <button class="delete-btn" (click)="deleteItem(rolcargo.rolcargo_id)">🗑️</button>
+                  
+                    
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+    </div>
+    
+</div>

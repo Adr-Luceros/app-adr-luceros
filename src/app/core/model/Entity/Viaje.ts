@@ -1,4 +1,4 @@
-import { Entrega, Flete, Camion } from '../../index.model.frontend'
+import { Entrega, Flete, Camion } from '../../index.model.entity'
 
 export class Viaje {
     id: number | null = null

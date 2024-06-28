@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ViajeExcel } from '../../index.model.frontend';
+import { ViajeExcel } from '../../index.model.entity';
 import { Observable } from 'rxjs';
 import { Message } from '../../index.model.system';
 

@@ -2,7 +2,7 @@ import { ViajeService } from 'src/app/core/index.service.https';
 import { AfterViewInit, Component, ElementRef, EventEmitter, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NotifyService } from 'src/app/core/index.service.triggers';
-import { ViajeExcel } from 'src/app/core/index.model.frontend';
+import { ViajeExcel } from 'src/app/core/index.model.entity';
 
 @Component({
   selector: 'app-encabezado',

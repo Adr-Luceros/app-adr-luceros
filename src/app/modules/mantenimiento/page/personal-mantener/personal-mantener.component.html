@@ -1,1 +1,43 @@
-<p>personal-mantener works!</p>
+<div class="container">
+    <div>
+        <h1>Personal</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Buscar Personal..." class="search-input">
+        <button class="filter-btn">Filtrar</button> 
+        <button class="new-personal-btn" (click)="abrirModalNuevoPersonal()">Nuevo Personal</button>
+       
+    </div>
+    <div class="kenny">
+    <table class="personal-table">
+        <thead>
+            <tr>
+                
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Telefono</th>
+                <th>Tipo documento</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+      
+            <tr *ngFor="let persona of personal">
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.nroDocumento}}</td>
+                <td>{{persona.telefono}}</td>                
+                <td>{{persona.tipoDocumento}}</td>
+                <td>
+                   
+                    <button class="edit-btn" (click)="abrirModalEditarPersonal(persona)">✏️</button>
+                    <button class="delete-btn" (click)="deleteItem(persona.personal_id)">🗑️</button>
+                  
+                    
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    </div>
+    </div>
+    
+</div>

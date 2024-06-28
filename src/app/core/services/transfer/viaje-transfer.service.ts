@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { ViajeExcel } from '../../index.model.frontend';
+import { ViajeExcel } from '../../index.model.entity';
 
 @Injectable({
   providedIn: 'root'

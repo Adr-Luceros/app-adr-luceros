@@ -11,7 +11,7 @@ import { CamionMantenerComponent } from './page/camion-mantener/camion-mantener.
   declarations: [
     MantenimientoComponent,
     RolCargoMantenerComponent,
-    CamionMantenerComponent,
+   
   ],
   imports: [
     CommonModule,
