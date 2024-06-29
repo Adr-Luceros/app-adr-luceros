@@ -3,7 +3,7 @@
         <app-encabezado (isLoading)="activeLoading($event)" (getListViaje)="getListViaje($event)"></app-encabezado>
         <section id="content">
             <app-loading *ngIf="isLoading"></app-loading>
-            <main class="list-viajes" *ngIf="listViajes; else noViajes">
+            <main class="list-viajes" *ngIf="listViajes == []; else noViajes">
                 <app-card-line-viaje *ngFor="let viaje of listViajes" [viaje]="viaje"></app-card-line-viaje>
             </main>
             <ng-template #noViajes>

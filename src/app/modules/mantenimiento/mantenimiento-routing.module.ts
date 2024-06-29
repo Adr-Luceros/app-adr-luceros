@@ -19,6 +19,10 @@ const routes: Routes = [
       {
         path: 'camion',
         loadChildren: () => import('./page/camion-mantener/camion-mantener.module').then(m => m.CamionMantenerModule)
+      },
+      {
+        path: 'tienda',
+        loadChildren: () => import('./page/tienda-mantener/tienda-mantener.module').then(m => m.TiendaMantenerModule)
       }
     ]
   },

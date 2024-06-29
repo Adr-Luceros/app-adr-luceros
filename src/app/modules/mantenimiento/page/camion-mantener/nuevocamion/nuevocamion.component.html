@@ -20,9 +20,10 @@
   </div>
   <div>
     <label for="capacidad">Capacidad:</label>
-    <select id="capacidad" [(ngModel)]="nuevoCamion.capacidad" name="capacidad" required>
-      <option *ngFor="let capacidad of capacidades" [ngValue]="capacidad"
-        [selected]="capacidad.capacidadId === nuevoCamion.capacidad.capacidadId">{{ capacidad.volumen }}</option>
+    <select id="capacidad" [(ngModel)]="capacidadSeleccionada.capacidad_id" name="capacidad" required>
+      <option value="0" disable selected>-seleccionar-</option>
+      <option [ngValue]="capacidad.capacidad_id" *ngFor="let capacidad of capacidades">{{
+        capacidad.volumen }}</option>
     </select>
   </div>
   <button type="submit">{{ esEditar ? 'Actualizar' : 'Guardar' }}</button>

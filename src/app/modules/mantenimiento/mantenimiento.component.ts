@@ -36,6 +36,7 @@ export class MantenimientoComponent {
     },
     {
       name: 'Tienda',
+      href: 'tienda',
       description: 'Mantenimiento de las tiendas que tiene la empresa para las entregas'
     },
     {

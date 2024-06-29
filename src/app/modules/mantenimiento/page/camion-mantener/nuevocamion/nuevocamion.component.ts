@@ -13,6 +13,7 @@ import { CamionService } from 'src/app/core/services/https/camion.service';
 })
 export class NuevocamionComponent implements OnInit {
   nuevoCamion: Camion = new Camion();
+  capacidadSeleccionada: Capacidad = new Capacidad();
   capacidades: Capacidad[] = [];
   esEditar: boolean;
 
@@ -32,45 +33,35 @@ export class NuevocamionComponent implements OnInit {
       this.nuevoCamion = new Camion();
       this.nuevoCamion.capacidad = new Capacidad();
     }
+
+    if (this.nuevoCamion.capacidad === null || this.nuevoCamion.capacidad.capacidad_id === null) {
+      this.capacidadSeleccionada.capacidad_id = 0;
+    } else {
+      this.capacidadSeleccionada.capacidad_id = this.nuevoCamion.capacidad.capacidad_id;
+    }
   }
 
   ngOnInit(): void {
-    this.listarCapacidades();
-  }
-
-
-  private listarCapacidades(): void {
     this.capacidadSub = this.capacidadService.listarCapacidad().subscribe(
-      (data: Capacidad[]) => {
-        this.capacidades = data;
-      },
-      error => {
-        console.error('Error al listar capacidades:', error);
-      }
+      caps => this.capacidades = caps,
+      error => console.error('Error al listar capacidades:', error)
     );
   }
 
   guardarCamion(): void {
-    console.log('Datos del camión a enviar:', this.nuevoCamion); // Añade este log para verificar los datos
+    if (this.capacidadSeleccionada.capacidad_id !== null) {
+      this.nuevoCamion.capacidad = this.capacidadSeleccionada;
+    }
+
     if (this.esEditar) {
       this.camionSub = this.camionService.editarCamion(this.nuevoCamion.camion_id!, this.nuevoCamion).subscribe(
-        response => {
-          console.log('Camion actualizado exitosamente:', response);
-          this.dialogRef.close(true);
-        },
-        error => {
-          console.error('Error al actualizar el camion', error);
-        }
+        response => this.dialogRef.close(true),
+        error => console.error('Error al actualizar el camion', error)
       );
     } else {
       this.camionSub = this.camionService.guardarCamion(this.nuevoCamion).subscribe(
-        response => {
-          console.log('Camion guardado exitosamente:', response);
-          this.dialogRef.close(true);
-        },
-        error => {
-          console.error('Error al guardar el camion', error);
-        }
+        response => this.dialogRef.close(true),
+        error => console.error('Error al guardar el camion', error)
       );
     }
   }

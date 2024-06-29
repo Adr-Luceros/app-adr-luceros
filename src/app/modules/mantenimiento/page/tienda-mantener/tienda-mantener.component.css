@@ -1,0 +1,101 @@
+.container {
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    height: calc(100vh - 55px);
+    /* min-height: 100vh; */
+    width: 100%;
+}
+
+.container>div {
+    position: relative;
+    max-width: 1900px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #0d6efd;
+    border-radius: 5px;
+
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.personal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.personal-table th,
+.personal-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.personal-table th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.personal-table tbody tr:nth-child(even) {
+    background-color: #e7f0ff;
+}
+
+.edit-btn,
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.new-personal-btn {
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.kenny {
+    position: relative;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.kenny thead {
+    position: sticky;
+    top: 0;
+}

@@ -1,0 +1,42 @@
+<div class="container">
+    <div>
+        <h1>Tienda</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar Personal..." class="search-input">
+            <button class="filter-btn">Filtrar</button>
+            <button class="new-personal-btn" (click)="abrirModalNuevoRolCargo()">Nuevo Tienda</button>
+
+        </div>
+        <div class="kenny">
+            <table class="personal-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>psEx</th>
+                        <th>destinatario</th>
+                        <th>distrito</th>
+                        <th>direccion</th>
+                        <th>hora inicio</th>
+                        <th>hora fin</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tienda of tiendas">
+                        <td>{{tienda.nombreTienda}}</td>
+                        <td>{{tienda.psEx}}</td>
+                        <td>{{tienda.destinatario}}</td>
+                        <td>{{tienda.distrito}}</td>
+                        <td>{{tienda.direccion}}</td>
+                        <td>{{tienda.horaInicio}}</td>
+                        <td>{{tienda.horaFin}}</td>
+                        <td>
+                            <button class="edit-btn" (click)="abrirModalEditarRolCargo(tienda)">✏️</button>
+                            <button class="delete-btn" (click)="deleteItem(tienda.tienda_id)">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
