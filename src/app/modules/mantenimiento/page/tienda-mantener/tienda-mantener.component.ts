@@ -19,6 +19,7 @@ export interface DialogoTienda {
 export class TiendaMantenerComponent {
   tiendas: Tienda[] = [];
   searchText: string = '';
+  isLoading: boolean = false;
 
   constructor(
     private tiendaSrv: TiendaService,
@@ -27,6 +28,7 @@ export class TiendaMantenerComponent {
   ) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.listarTiendasSrv();
   }
 
@@ -36,17 +38,22 @@ export class TiendaMantenerComponent {
         this.tiendas = res;
         const nombreEntidad: NameEntity = 'Tienda'
         localStorage.setItem(nombreEntidad, res.length.toString());
+        this.isLoading = false;
       },
-      err => this.notifySrv.addNotification({
-        status: 'error',
-        message: 'Error al listar tiendas'
-      })
+      err => {
+        this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error al listar tiendas'
+        })
+        this.isLoading = false;
+      }
     );
   }
 
   public deleteItem(id: number | null) {
     const confirmar = window.confirm('¿Estás seguro de que deseas eliminar esta tienda?');
     if (confirmar && id != null) {
+      this.isLoading = true;
       this.tiendaSrv.eliminarTienda(id).subscribe(
         res => {
           this.notifySrv.addNotification({
@@ -55,10 +62,13 @@ export class TiendaMantenerComponent {
           })
           this.listarTiendasSrv()
         },
-        err => this.notifySrv.addNotification({
-          status: 'error',
-          message: 'Error al eliminar a la tienda'
-        })
+        err => {
+          this.notifySrv.addNotification({
+            status: 'error',
+            message: 'Error al eliminar a la tienda'
+          })
+          this.isLoading = false;
+        }
       );
     }
   }

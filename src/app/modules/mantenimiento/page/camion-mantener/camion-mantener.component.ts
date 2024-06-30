@@ -21,6 +21,7 @@ export class CamionMantenerComponent implements OnInit, OnDestroy {
   camions: Camion[] = [];
   camionSub: Subscription = new Subscription();
   searchText: string = '';
+  isLoading: boolean = false;
 
   constructor(
     private dialog: MatDialog,
@@ -29,6 +30,7 @@ export class CamionMantenerComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.listarCamion();
   }
 
@@ -42,18 +44,22 @@ export class CamionMantenerComponent implements OnInit, OnDestroy {
         this.camions = res;
         const nombreEntidad: NameEntity = 'Camion'
         localStorage.setItem(nombreEntidad, res.length.toString());
+        this.isLoading = false;
       },
       err => {
         this.notifySrv.addNotification({
           status: 'error',
           message: 'Error al listar Camiones'
         })
+        this.isLoading = false;
       }
     );
   }
 
   eliminarCamion(id: number | null): void {
-    if (id !== null) {
+    const confirmar = window.confirm('¿Estás seguro de que deseas eliminar este camión?');
+    if (confirmar && id != null) {
+      this.isLoading = true;
       this.camionSub = this.camionService.eliminarCamion(id).subscribe(
         res => {
           this.notifySrv.addNotification({
@@ -66,7 +72,8 @@ export class CamionMantenerComponent implements OnInit, OnDestroy {
           this.notifySrv.addNotification({
             status: 'error',
             message: 'Error al eliminar al camión'
-          })
+          });
+          this.isLoading = false;
         }
       );
     }

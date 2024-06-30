@@ -19,6 +19,7 @@ export interface DialogoPersona {
 export class PersonalMantenerComponent implements OnInit {
   personal: Persona[] = [];
   searchText: string = '';
+  isLoading: boolean = false;
 
   constructor(
     private dialog: MatDialog,
@@ -27,6 +28,7 @@ export class PersonalMantenerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.listarPersonal();
   }
 
@@ -36,17 +38,22 @@ export class PersonalMantenerComponent implements OnInit {
         this.personal = res;
         const nombreEntidad: NameEntity = 'Personal'
         localStorage.setItem(nombreEntidad, res.length.toString());
+        this.isLoading = false;
       },
-      err => this.notifySrv.addNotification({
-        status: 'error',
-        message: 'Error al listar personas'
-      })
+      err => {
+        this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error al listar personas'
+        })
+        this.isLoading = false;
+      }
     );
   }
 
   deleteItem(id: number | null) {
     const confirmar = window.confirm('¿Estás seguro de que deseas eliminar este personal?');
     if (confirmar && id != null) {
+      this.isLoading = true;
       this.PersonalService.eliminarPersona(id).subscribe(
         res => {
           this.notifySrv.addNotification({
@@ -55,10 +62,13 @@ export class PersonalMantenerComponent implements OnInit {
           });
           this.listarPersonal();
         },
-        err => this.notifySrv.addNotification({
-          status: 'error',
-          message: 'Error al eliminar al personal'
-        })
+        err => {
+          this.notifySrv.addNotification({
+            status: 'error',
+            message: 'Error al eliminar al personal'
+          })
+          this.isLoading = false;
+        }
       );
     }
   }

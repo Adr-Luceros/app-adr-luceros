@@ -7,6 +7,7 @@ import { NuevotiendaComponent } from './nuevotienda/nuevotienda.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FilterTiendaPipe } from 'src/app/core/pipe/filter-tienda.pipe';
+import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FilterTiendaPipe } from 'src/app/core/pipe/filter-tienda.pipe';
     TiendaMantenerRoutingModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoadingComponent
   ]
 })
 export class TiendaMantenerModule { }

@@ -19,6 +19,7 @@ export interface DialogoRolCargo {
 export class RolCargoMantenerComponent implements OnInit {
   rolcargol: RolCargo[] = [];
   searchText: string = '';
+  isLoading: boolean = false;
 
   constructor(
     private dialog: MatDialog,
@@ -27,6 +28,7 @@ export class RolCargoMantenerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.isLoading = true;
     this.listarRolCargo();
   }
 
@@ -36,23 +38,37 @@ export class RolCargoMantenerComponent implements OnInit {
         this.rolcargol = res;
         const nombreEntidad: NameEntity = 'Rol cargo'
         localStorage.setItem(nombreEntidad, res.length.toString());
+        this.isLoading = false;
       },
-      err => this.notifySrv.addNotification({
-        status: 'error',
-        message: 'Error al listar Roles para viajes'
-      })
+      err => {
+        this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error al listar Roles para viajes'
+        })
+        this.isLoading = false;
+      }
     );
   }
 
   public deleteItem(id: number | null) {
     const confirmar = window.confirm('¿Estás seguro de que deseas eliminar este personal?');
     if (confirmar && id != null) {
+      this.isLoading = true;
       this.rolCargoService.eliminarRolCargo(id).subscribe(
-        res => this.listarRolCargo(),
-        err => this.notifySrv.addNotification({
-          status: 'error',
-          message: 'Error al eliminar al personal'
-        })
+        res => {
+          this.notifySrv.addNotification({
+            status: 'success',
+            message: 'Personal eliminado exitosamente'
+          })
+          this.listarRolCargo();
+        },
+        err => {
+          this.notifySrv.addNotification({
+            status: 'error',
+            message: 'Error al eliminar al personal'
+          })
+          this.isLoading = false;
+        }
       );
     }
   }

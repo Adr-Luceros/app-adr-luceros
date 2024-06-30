@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FilterRolCargoPipe } from 'src/app/core/pipe/filter-rol-cargo.pipe';
 import { RolCargoMantenerComponent } from './rol-cargo-mantener.component';
+import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RolCargoMantenerComponent } from './rol-cargo-mantener.component';
     CommonModule,
     MatDialogModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoadingComponent
   ]
 })
 export class RolCargoMantenerModule { }
