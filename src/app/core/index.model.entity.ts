@@ -6,6 +6,8 @@ export { Picking } from './model/Entity/Picking'
 export { Tienda } from './model/Entity/Tienda'
 export { Tipo } from './model/Entity/Tipo'
 export { Viaje } from './model/Entity/Viaje'
+export { Capacidad } from './model/Entity/Capacidad'
+export { RolCargo } from './model/Entity/RolCargo'
 
 export {
     CamionExcel,
@@ -15,4 +17,4 @@ export {
     TipoExcel,
     TiendaExcel,
     ViajeExcel
-} from './model/entity/Excel'
+} from './model/Entity/Excel'

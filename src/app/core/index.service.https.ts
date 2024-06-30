@@ -1,2 +1,7 @@
+export { CamionService } from './services/https/camion.service'
+export { CapacidadService } from './services/https/capacidad.service'
+export { PersonalService } from './services/https/personal.service'
+export { RolService } from './services/https/rol.service'
+export { RolcargoService } from './services/https/rolcargo.service'
 export { ViajeService } from './services/https/viaje.service'
 export { TiendaService } from './services/https/tienda.service'
