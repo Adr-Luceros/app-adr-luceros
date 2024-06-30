@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+export type NameEntity =
+  'Personal' | 'Rol cargo' | 'Camion' | 'Tienda' |
+  'Picking' | 'Ruta' | 'Estado picking' | 'Estado entrega' |
+  'Tipo flete' | 'Capacidad'
+
 export interface Entity {
-  name: string;
+  name: NameEntity;
+  count: number;
   href?: string;
-  description: string;
 }
 
 @Component({
@@ -17,47 +22,47 @@ export class MantenimientoComponent {
   entities: Entity[] = [
     {
       name: 'Personal',
+      count: 0,
       href: 'personal',
-      description: 'Mantenimiento de todos los personales que cuenta la empresa para las entregas'
     },
     {
       name: 'Rol cargo',
+      count: 0,
       href: 'rol-cargo',
-      description: 'Mantenimiento de todos los roles y cargos que tiene la empresa para las entregas'
     },
     {
       name: 'Camion',
+      count: 0,
       href: 'camion',
-      description: 'Mantenimiento de todos los camiones que tiene la empresa para las entregas'
     },
     {
       name: 'Capacidad',
-      description: 'Mantenimiento de las capacidades de los camiones que tiene la empresa para las entregas'
+      count: 0,
     },
     {
       name: 'Tienda',
+      count: 0,
       href: 'tienda',
-      description: 'Mantenimiento de las tiendas que tiene la empresa para las entregas'
     },
     {
       name: 'Estado entrega',
-      description: 'Mantenimiento de los estados de las entregas'
+      count: 0,
     },
     {
       name: 'Tipo flete',
-      description: 'Mantenimiento de los tipos de fletes'
+      count: 0,
     },
     {
       name: 'Picking',
-      description: 'Mantenimiento de los picking'
+      count: 0,
     },
     {
       name: 'Estado picking',
-      description: 'Mantenimiento de los estados de picking'
+      count: 0,
     },
     {
       name: 'Ruta',
-      description: 'Mantenimiento de las rutas'
+      count: 0,
     }
   ]
 
@@ -68,11 +73,23 @@ export class MantenimientoComponent {
 
     for (let entity of this.entities) {
       if (entity.href == urlCurrect) this.nombreEntidad = entity.name
+      this.recopilationCountEntities(entity);
     }
   }
 
   public goToMantenimiento(): void {
     this.router.navigate(['/home/mantenimiento'])
+    for (let entity of this.entities) {
+      this.recopilationCountEntities(entity);
+    }
+  }
+
+  private recopilationCountEntities(entity: Entity): void {
+    if (entity.href) {
+      const getLocalStorage = localStorage.getItem(entity.name) ?? null;
+      const count: number = getLocalStorage !== null ? parseInt(getLocalStorage) : 0;
+      entity.count = count;
+    }
   }
 
 }

@@ -51,9 +51,10 @@ section:has(.isActive)>main {
 
 section>div {
     padding: 10px 20px;
-    display: flex;
+    display: grid;
     gap: 10px;
-    flex-wrap: wrap;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 section:has(.isActive)>div {
@@ -61,9 +62,8 @@ section:has(.isActive)>div {
 }
 
 .card-entity {
-    max-width: 300px;
     border: 1px solid var(--color-300);
-    padding: 10px 20px;
+    display: grid;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -76,7 +76,14 @@ section:has(.isActive)>div {
     color: inherit;
 }
 
-.card-entity div {
+.card-entity>* {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+.card-entity .disable {
     opacity: 0.5;
     pointer-events: none;
     user-select: none;
@@ -88,4 +95,16 @@ section:has(.isActive)>div {
 
 .card-entity p {
     font-size: 18px;
+}
+
+@media (width > 720px) {
+    section>div {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (width > 900px) {
+    section>div {
+        grid-template-columns: repeat(3, auto);
+    }
 }

@@ -5,6 +5,7 @@ import { NuevocamionComponent } from './nuevocamion/nuevocamion.component';
 import { CamionService } from 'src/app/core/index.service.https';
 import { NotifyService } from 'src/app/core/index.service.triggers';
 import { Subscription } from 'rxjs';
+import { NameEntity } from '../../mantenimiento.component';
 
 export interface DialogoCamion {
   esEditar: boolean,
@@ -37,11 +38,15 @@ export class CamionMantenerComponent implements OnInit, OnDestroy {
 
   listarCamion(): void {
     this.camionSub = this.camionService.listarCamion().subscribe(
-      res => this.camions = res,
+      res => {
+        this.camions = res;
+        const nombreEntidad: NameEntity = 'Camion'
+        localStorage.setItem(nombreEntidad, res.length.toString());
+      },
       err => {
         this.notifySrv.addNotification({
           status: 'error',
-          message: 'Error del servidor'
+          message: 'Error al listar Camiones'
         })
       }
     );

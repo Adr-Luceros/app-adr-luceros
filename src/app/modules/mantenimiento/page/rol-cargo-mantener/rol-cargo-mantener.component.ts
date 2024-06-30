@@ -4,6 +4,7 @@ import { NuevorolcargoComponent } from './nuevorolcargo/nuevorolcargo.component'
 import { NotifyService } from 'src/app/core/index.service.triggers';
 import { RolcargoService } from 'src/app/core/index.service.https';
 import { RolCargo } from 'src/app/core/index.model.entity';
+import { NameEntity } from '../../mantenimiento.component';
 
 export interface DialogoRolCargo {
   esEditar: boolean,
@@ -31,7 +32,11 @@ export class RolCargoMantenerComponent implements OnInit {
 
   private listarRolCargo(): void {
     this.rolCargoService.listarRolCargo().subscribe(
-      res => this.rolcargol = res,
+      res => {
+        this.rolcargol = res;
+        const nombreEntidad: NameEntity = 'Rol cargo'
+        localStorage.setItem(nombreEntidad, res.length.toString());
+      },
       err => this.notifySrv.addNotification({
         status: 'error',
         message: 'Error al listar Roles para viajes'

@@ -7,18 +7,24 @@
         <router-outlet></router-outlet>
     </main>
     <div>
-        <div class="card-entity" *ngFor="let entity of entities">
+        <article class="card-entity" *ngFor="let entity of entities">
             <a *ngIf="entity.href; else noHref" [routerLink]="entity.href" routerLinkActive="isActive"
                 (click)="nombreEntidad = entity.name">
-                <h3>{{entity.name}}</h3>
-                <p>{{entity.description}}</p>
+                <img src="/assets/img/card-img.png" alt="card image">
+                <div>
+                    <h3>{{entity.name}}</h3>
+                    <p><strong>total:</strong> {{ entity.count }}</p>
+                </div>
             </a>
             <ng-template #noHref>
                 <div class="disable">
-                    <h3>{{entity.name}}</h3>
-                    <p>{{entity.description}}</p>
+                    <img src="/assets/img/card-img.png" alt="card image">
+                    <div>
+                        <h3>{{entity.name}}</h3>
+                        <p><strong>total:</strong> {{ entity.count }}</p>
+                    </div>
                 </div>
             </ng-template>
-        </div>
+        </article>
     </div>
 </section>

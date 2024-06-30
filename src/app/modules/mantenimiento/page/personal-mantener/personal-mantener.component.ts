@@ -4,6 +4,7 @@ import { Persona } from 'src/app/core/index.model.entity';
 import { PersonalService } from './../../../../core/services/https/personal.service';
 import { NuevoPersonalComponent } from './nuevo-personal/nuevo-personal.component';
 import { NotifyService } from 'src/app/core/index.service.triggers';
+import { NameEntity } from '../../mantenimiento.component';
 
 export interface DialogoPersona {
   esEditar: boolean,
@@ -31,10 +32,14 @@ export class PersonalMantenerComponent implements OnInit {
 
   listarPersonal(): void {
     this.PersonalService.listarPersona().subscribe(
-      res => this.personal = res,
+      res => {
+        this.personal = res;
+        const nombreEntidad: NameEntity = 'Personal'
+        localStorage.setItem(nombreEntidad, res.length.toString());
+      },
       err => this.notifySrv.addNotification({
         status: 'error',
-        message: 'Error del servidor'
+        message: 'Error al listar personas'
       })
     );
   }

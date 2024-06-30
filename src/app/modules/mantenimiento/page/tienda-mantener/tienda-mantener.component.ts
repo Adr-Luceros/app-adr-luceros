@@ -4,6 +4,7 @@ import { Tienda } from 'src/app/core/index.model.entity';
 import { NuevotiendaComponent } from './nuevotienda/nuevotienda.component';
 import { TiendaService } from 'src/app/core/index.service.https';
 import { NotifyService } from 'src/app/core/index.service.triggers';
+import { NameEntity } from '../../mantenimiento.component';
 
 export interface DialogoTienda {
   esEditar: boolean,
@@ -31,7 +32,11 @@ export class TiendaMantenerComponent {
 
   private listarTiendasSrv(): void {
     this.tiendaSrv.listarTienda().subscribe(
-      res => this.tiendas = res,
+      res => {
+        this.tiendas = res;
+        const nombreEntidad: NameEntity = 'Tienda'
+        localStorage.setItem(nombreEntidad, res.length.toString());
+      },
       err => this.notifySrv.addNotification({
         status: 'error',
         message: 'Error al listar tiendas'
