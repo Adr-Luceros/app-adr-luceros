@@ -2,6 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { RolCargo } from 'src/app/core/model/Entity/RolCargo';
 import { RolcargoService } from 'src/app/core/services/https/rolcargo.service';
+import { DialogoRolCargo } from '../rol-cargo-mantener.component';
+import { NotifyService } from 'src/app/core/index.service.triggers';
 
 @Component({
   selector: 'app-nuevorolcargo',
@@ -14,42 +16,55 @@ export class NuevorolcargoComponent {
 
   constructor(
     private rolcargoService: RolcargoService,
+    private notifySrv: NotifyService,
     private dialogRef: MatDialogRef<NuevorolcargoComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: DialogoRolCargo
   ) {
     this.esEditar = data.esEditar;
-    this.nuevoRolCargo = data.esEditar ? data.rolcargo : {
-      rolcargo_id: null,
-      nombre: '',
-     
-    };
+    this.nuevoRolCargo = data.rolcargo ?? new RolCargo();
   }
 
-  guardarRolCargo(): void {
+  public guardarCambios(): void {
     if (this.esEditar) {
-      this.rolcargoService.editarRolCargo(this.nuevoRolCargo.rolcargo_id!, this.nuevoRolCargo).subscribe(
-        response => {
-          console.log('Rol Cargo actualizada exitosamente:', response);
-          this.dialogRef.close(true);
-        },
-        error => {
-          console.error('Error al actualizar el rolcargo', error);
-        }
-      );
+      this.editarRolCargo();
     } else {
-      this.rolcargoService.guardarRolCargo(this.nuevoRolCargo).subscribe(
-        response => {
-          console.log('Rolcargo guardada exitosamente:', response);
-          this.dialogRef.close(true);
-        },
-        error => {
-          console.error('Error al guardar el rolcargo', error);
-        }
-      );
+      this.guardarRolCargo();
     }
   }
 
-  cerrarModal(): void {
+  private guardarRolCargo(): void {
+    this.rolcargoService.guardarRolCargo(this.nuevoRolCargo).subscribe(
+      res => {
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Rolcargo guardada exitosamente'
+        })
+        this.dialogRef.close(true);
+      },
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error al guardar el rolcargo'
+      })
+    );
+  }
+
+  private editarRolCargo(): void {
+    this.rolcargoService.editarRolCargo(this.nuevoRolCargo.rolcargo_id!, this.nuevoRolCargo).subscribe(
+      res => {
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Rolcargo editado exitosamente'
+        })
+        this.dialogRef.close(true);
+      },
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error al editar el rolcargo'
+      })
+    );
+  }
+
+  public cerrarModal(): void {
     this.dialogRef.close();
   }
 }
