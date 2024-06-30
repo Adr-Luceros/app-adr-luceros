@@ -2,6 +2,8 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Persona } from 'src/app/core/index.model.entity';
 import { PersonalService } from 'src/app/core/services/https/personal.service';
+import { DialogoPersona } from '../personal-mantener.component';
+import { NotifyService } from 'src/app/core/index.service.triggers';
 
 @Component({
   selector: 'app-nuevo-personal',
@@ -14,44 +16,55 @@ export class NuevoPersonalComponent {
 
   constructor(
     private personalService: PersonalService,
+    private notifySrv: NotifyService,
     private dialogRef: MatDialogRef<NuevoPersonalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: DialogoPersona
   ) {
     this.esEditar = data.esEditar;
-    this.nuevoPersonal = data.esEditar ? data.persona : {
-      personal_id: null,
-      nombre: '',
-      nroDocumento: '',
-      telefono: '',
-      tipoDocumento: ''
-    };
+    this.nuevoPersonal = data.persona ?? new Persona;
   }
 
-  guardarPersonal(): void {
+  public guardarCambios(): void {
     if (this.esEditar) {
-      this.personalService.editarPersona(this.nuevoPersonal.personal_id!, this.nuevoPersonal).subscribe(
-        response => {
-          console.log('Persona actualizada exitosamente:', response);
-          this.dialogRef.close(true);
-        },
-        error => {
-          console.error('Error al actualizar el personal', error);
-        }
-      );
+      this.editarPersona();
     } else {
-      this.personalService.guardarPersona(this.nuevoPersonal).subscribe(
-        response => {
-          console.log('Persona guardada exitosamente:', response);
-          this.dialogRef.close(true);
-        },
-        error => {
-          console.error('Error al guardar el personal', error);
-        }
-      );
+      this.guardarPersona();
     }
   }
 
-  cerrarModal(): void {
+  private guardarPersona() {
+    this.personalService.guardarPersona(this.nuevoPersonal).subscribe(
+      res => {
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Persona guardada exitosamente'
+        })
+        this.dialogRef.close(true);
+      },
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error al guardar persona'
+      })
+    );
+  }
+
+  private editarPersona() {
+    this.personalService.editarPersona(this.nuevoPersonal.personal_id!, this.nuevoPersonal).subscribe(
+      res => {
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Persona editada exitosamente'
+        });
+        this.dialogRef.close(true);
+      },
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error al editar persona'
+      })
+    );
+  }
+
+  public cerrarModal(): void {
     this.dialogRef.close();
   }
 }

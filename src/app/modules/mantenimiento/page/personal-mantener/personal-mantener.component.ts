@@ -3,6 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { Persona } from 'src/app/core/index.model.entity';
 import { PersonalService } from './../../../../core/services/https/personal.service';
 import { NuevoPersonalComponent } from './nuevo-personal/nuevo-personal.component';
+import { NotifyService } from 'src/app/core/index.service.triggers';
+
+export interface DialogoPersona {
+  esEditar: boolean,
+  persona?: Persona
+}
 
 @Component({
   selector: 'app-personal-mantener',
@@ -11,11 +17,13 @@ import { NuevoPersonalComponent } from './nuevo-personal/nuevo-personal.componen
 })
 export class PersonalMantenerComponent implements OnInit {
   personal: Persona[] = [];
+  searchText: string = '';
 
   constructor(
     private dialog: MatDialog,
-    private PersonalService: PersonalService
-  ) {}
+    private PersonalService: PersonalService,
+    private notifySrv: NotifyService
+  ) { }
 
   ngOnInit(): void {
     this.listarPersonal();
@@ -23,12 +31,11 @@ export class PersonalMantenerComponent implements OnInit {
 
   listarPersonal(): void {
     this.PersonalService.listarPersona().subscribe(
-      (data: Persona[]) => {
-        this.personal = data;
-      },
-      (error) => {
-        console.error('Error al listar el personal:', error);
-      }
+      res => this.personal = res,
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error del servidor'
+      })
     );
   }
 
@@ -36,39 +43,37 @@ export class PersonalMantenerComponent implements OnInit {
     const confirmar = window.confirm('¿Estás seguro de que deseas eliminar este personal?');
     if (confirmar && id != null) {
       this.PersonalService.eliminarPersona(id).subscribe(
-        () => {
+        res => {
+          this.notifySrv.addNotification({
+            status: 'success',
+            message: 'Persona eliminada exitosamente'
+          });
           this.listarPersonal();
         },
-        err => {
-          console.error('Error al eliminar el personal', err);
-        }
+        err => this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error al eliminar al personal'
+        })
       );
     }
   }
 
   abrirModalNuevoPersonal(): void {
-    const dialogRef = this.dialog.open(NuevoPersonalComponent, {
-      width: '500px',
-      data: { esEditar: false }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.listarPersonal();
-      }
-    });
+    this.DialogoActive({ esEditar: false })
   }
 
   abrirModalEditarPersonal(persona: Persona): void {
+    this.DialogoActive({ esEditar: true, persona })
+  }
+
+  private DialogoActive(dataRequired: DialogoPersona) {
     const dialogRef = this.dialog.open(NuevoPersonalComponent, {
       width: '500px',
-      data: { esEditar: true, persona }
+      data: dataRequired
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.listarPersonal();
-      }
+      if (result) this.listarPersonal();
     });
   }
 }

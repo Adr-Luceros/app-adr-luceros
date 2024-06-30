@@ -1,26 +1,30 @@
 <div class="modal" tabindex="-1" id="nuevoPersonalModal">
   <div class="modal-dialog">
     <div class="modal-content">
-      
-       <div class="negro"> <h5 class="modal-title">{{ esEditar ? 'Editar Personal' : 'Nuevo Personal' }}</h5></div>
-
+      <div class="negro">
+        <h5 class="modal-title">{{ esEditar ? 'Editar Personal' : 'Nuevo Personal' }}</h5>
+      </div>
       <div class="modal-body">
-        <form (ngSubmit)="guardarPersonal()">
+        <form (ngSubmit)="guardarCambios()">
           <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevoPersonal.nombre" name="nombre" required>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevoPersonal.nombre" name="nombre"
+              required>
           </div>
           <div class="form-group">
-            <label for="dni">DNI</label>
-            <input type="text" class="form-control" id="dni" [(ngModel)]="nuevoPersonal.nroDocumento" name="dni" required>
+            <label for="dni">nro Documento</label>
+            <input type="text" class="form-control" id="dni" [(ngModel)]="nuevoPersonal.nroDocumento" name="dni"
+              required>
           </div>
           <div class="form-group">
             <label for="telefono">Telefono</label>
-            <input type="text" class="form-control" id="telefono" [(ngModel)]="nuevoPersonal.telefono" name="telefono" required>
+            <input type="text" class="form-control" id="telefono" [(ngModel)]="nuevoPersonal.telefono" name="telefono"
+              required>
           </div>
           <div class="form-group">
             <label for="tipoDocumento">Tipo Documento</label>
-            <input type="text" class="form-control" id="tipoDocumento" [(ngModel)]="nuevoPersonal.tipoDocumento" name="tipoDocumento" required>
+            <input type="text" class="form-control" id="tipoDocumento" [(ngModel)]="nuevoPersonal.tipoDocumento"
+              name="tipoDocumento" required>
           </div>
           <button type="submit" class="btn btn-primary">{{ esEditar ? 'Actualizar' : 'Guardar' }}</button>
           <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cancelar</button>
