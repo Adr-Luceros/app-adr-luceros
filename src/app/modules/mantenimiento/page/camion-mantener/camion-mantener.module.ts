@@ -5,18 +5,21 @@ import { CamionMantenerRoutingModule } from './camion-mantener-routing.module';
 import { NuevocamionComponent } from './nuevocamion/nuevocamion.component';
 import { CamionMantenerComponent } from './camion-mantener.component';
 
-import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';import { MatDialogModule } from '@angular/material/dialog';
-import{ MatButtonModule } from '@angular/material/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { FilterCamionesPipe } from '../../../../core/pipe/filter-camiones.pipe';
 
 
 @NgModule({
   declarations: [
     CamionMantenerComponent,
-    NuevocamionComponent
+    NuevocamionComponent,
+    FilterCamionesPipe
   ],
   imports: [
     CommonModule,

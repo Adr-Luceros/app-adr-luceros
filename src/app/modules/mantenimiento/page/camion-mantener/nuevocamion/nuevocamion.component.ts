@@ -1,10 +1,9 @@
-import { CapacidadService } from './../../../../../core/services/https/capacidad.service';
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Subscription } from 'rxjs';
-import { Camion } from 'src/app/core/index.model.entity';
-import { Capacidad } from 'src/app/core/model/Entity/Capacidad';
-import { CamionService } from 'src/app/core/services/https/camion.service';
+import { Camion, Capacidad } from 'src/app/core/index.model.entity';
+import { CapacidadService, CamionService } from 'src/app/core/index.service.https';
+import { NotifyService } from 'src/app/core/index.service.triggers';
+import { DialogoCamion } from '../camion-mantener.component';
 
 @Component({
   selector: 'app-nuevocamion',
@@ -17,56 +16,76 @@ export class NuevocamionComponent implements OnInit {
   capacidades: Capacidad[] = [];
   esEditar: boolean;
 
-  capacidadSub: Subscription = new Subscription();
-  camionSub: Subscription = new Subscription();
-
   constructor(
-    private camionService: CamionService,
-    private capacidadService: CapacidadService,
+    private camionSrv: CamionService,
+    private capacidadSrv: CapacidadService,
+    private notitySrv: NotifyService,
     private dialogRef: MatDialogRef<NuevocamionComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: DialogoCamion
   ) {
     this.esEditar = data.esEditar;
-    if (this.esEditar && data.camion) {
-      this.nuevoCamion = data.camion;
-    } else {
-      this.nuevoCamion = new Camion();
-      this.nuevoCamion.capacidad = new Capacidad();
-    }
+    this.nuevoCamion = data.camion ?? new Camion();
 
-    if (this.nuevoCamion.capacidad === null || this.nuevoCamion.capacidad.capacidad_id === null) {
-      this.capacidadSeleccionada.capacidad_id = 0;
-    } else {
-      this.capacidadSeleccionada.capacidad_id = this.nuevoCamion.capacidad.capacidad_id;
-    }
+    const isInvalidIdCapacidad = this.nuevoCamion.capacidad === null || this.nuevoCamion.capacidad.capacidad_id === null;
+    const idCapacidad = isInvalidIdCapacidad ? 0 : this.nuevoCamion.capacidad.capacidad_id;
+    this.capacidadSeleccionada.capacidad_id = idCapacidad;
   }
 
   ngOnInit(): void {
-    this.capacidadSub = this.capacidadService.listarCapacidad().subscribe(
+    this.capacidadSrv.listarCapacidad().subscribe(
       caps => this.capacidades = caps,
-      error => console.error('Error al listar capacidades:', error)
+      error => this.notitySrv.addNotification({
+        status: 'error',
+        message: 'Error al listar capacidad de carga'
+      })
     );
   }
 
-  guardarCamion(): void {
+  public guardarCambios(): void {
     if (this.capacidadSeleccionada.capacidad_id !== null) {
       this.nuevoCamion.capacidad = this.capacidadSeleccionada;
     }
 
     if (this.esEditar) {
-      this.camionSub = this.camionService.editarCamion(this.nuevoCamion.camion_id!, this.nuevoCamion).subscribe(
-        response => this.dialogRef.close(true),
-        error => console.error('Error al actualizar el camion', error)
-      );
+      this.editarCamion();
     } else {
-      this.camionSub = this.camionService.guardarCamion(this.nuevoCamion).subscribe(
-        response => this.dialogRef.close(true),
-        error => console.error('Error al guardar el camion', error)
-      );
+      this.guardarCamion();
     }
   }
 
-  cerrarModal(): void {
+  private editarCamion(): void {
+    this.camionSrv.editarCamion(this.nuevoCamion.camion_id!, this.nuevoCamion).subscribe(
+      response => {
+        this.notitySrv.addNotification({
+          status: 'success',
+          message: 'Camión editado Exitosamente'
+        })
+        this.dialogRef.close(true);
+      },
+      error => this.notitySrv.addNotification({
+        status: 'error',
+        message: 'Error al editar el camión'
+      })
+    );
+  }
+
+  private guardarCamion() {
+    this.camionSrv.guardarCamion(this.nuevoCamion).subscribe(
+      response => {
+        this.notitySrv.addNotification({
+          status: 'success',
+          message: 'Camión guardado Exitosamente'
+        })
+        this.dialogRef.close(true);
+      },
+      error => this.notitySrv.addNotification({
+        status: 'error',
+        message: 'Error al guardar al camión'
+      })
+    );
+  }
+
+  public cerrarModal(): void {
     this.dialogRef.close();
   }
 }

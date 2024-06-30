@@ -27,8 +27,18 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
       res => {
         this.getListViaje.emit(res);
         this.isLoading.emit(false);
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Listado exitosamente',
+        });
       },
-      err => this.isLoading.emit(false)
+      err => {
+        this.isLoading.emit(false);
+        this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error del servidor',
+        });
+      }
     );
   }
 
@@ -69,12 +79,22 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
     let fechaInicio: string = this.inputDateInit.nativeElement.value;
     let fechaFin: string = this.inputDateEnd.nativeElement.value;
     this.isLoading.emit(true);
-    this.viajeSrv.getViajesPorRango(fechaInicio, fechaFin).subscribe(
+    this.viajeSubs = this.viajeSrv.getViajesPorRango(fechaInicio, fechaFin).subscribe(
       res => {
         this.getListViaje.emit(res);
         this.isLoading.emit(false);
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Listado exitoso',
+        });
       },
-      err => this.isLoading.emit(false)
+      err => {
+        this.isLoading.emit(false);
+        this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error del servidor',
+        });
+      }
     )
   }
 

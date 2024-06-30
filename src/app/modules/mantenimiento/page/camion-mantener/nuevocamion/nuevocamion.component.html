@@ -1,7 +1,7 @@
 <div class="negro">
   <h1>{{ esEditar ? 'Editar Camion' : 'Nuevo Camion' }}</h1>
 </div>
-<form (ngSubmit)="guardarCamion()">
+<form (ngSubmit)="guardarCambios()">
   <div>
     <label for="marca">Marca:</label>
     <input id="marca" [(ngModel)]="nuevoCamion.marca" name="marca" required>

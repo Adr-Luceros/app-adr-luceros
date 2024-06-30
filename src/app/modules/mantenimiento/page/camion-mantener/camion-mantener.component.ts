@@ -1,74 +1,88 @@
-import { CamionService } from './../../../../core/services/https/camion.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Camion } from 'src/app/core/index.model.entity';
 import { NuevocamionComponent } from './nuevocamion/nuevocamion.component';
+import { CamionService } from 'src/app/core/index.service.https';
+import { NotifyService } from 'src/app/core/index.service.triggers';
+import { Subscription } from 'rxjs';
+
+export interface DialogoCamion {
+  esEditar: boolean,
+  camion?: Camion
+}
 
 @Component({
   selector: 'app-camion-mantener',
   templateUrl: './camion-mantener.component.html',
   styleUrls: ['./camion-mantener.component.css']
 })
-export class CamionMantenerComponent implements OnInit {
+export class CamionMantenerComponent implements OnInit, OnDestroy {
   camions: Camion[] = [];
+  camionSub: Subscription = new Subscription();
+  searchText: string = '';
 
   constructor(
     private dialog: MatDialog,
-    private camionService: CamionService
-  ) {}
+    private camionService: CamionService,
+    private notifySrv: NotifyService
+  ) { }
 
   ngOnInit(): void {
     this.listarCamion();
   }
 
+  ngOnDestroy(): void {
+    if (this.camionSub) this.camionSub.unsubscribe();
+  }
+
   listarCamion(): void {
-    this.camionService.listarCamion().subscribe(
-      (data: Camion[]) => {
-        this.camions = data;
-      },
-      (error) => {
-        console.error('Error al listar los camiones:', error);
+    this.camionSub = this.camionService.listarCamion().subscribe(
+      res => this.camions = res,
+      err => {
+        this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error del servidor'
+        })
       }
     );
   }
 
   eliminarCamion(id: number | null): void {
     if (id !== null) {
-      this.camionService.eliminarCamion(id).subscribe(
-        response => {
-          console.log('Camion eliminado:', response);
-          this.listarCamion(); // Refresh the list after deletion
+      this.camionSub = this.camionService.eliminarCamion(id).subscribe(
+        res => {
+          this.notifySrv.addNotification({
+            status: 'success',
+            message: 'Camión eliminado'
+          })
+          this.listarCamion();
         },
-        error => {
-          console.error('Error al eliminar el camion:', error);
+        err => {
+          this.notifySrv.addNotification({
+            status: 'error',
+            message: 'Error al eliminar al camión'
+          })
         }
       );
     }
   }
 
-  abrirDialogoNuevoCamion(): void {
-    const dialogRef = this.dialog.open(NuevocamionComponent, {
-      width: '500px',
-      data: { esEditar: false }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.listarCamion();
-      }
-    });
+  public abrirDialogoNuevoCamion(): void {
+    this.DialogoActive({ esEditar: true })
   }
 
-  abrirDialogoEditarCamion(camion: Camion): void {
+  public abrirDialogoEditarCamion(camion: Camion): void {
+    this.DialogoActive({ esEditar: true, camion })
+  }
+
+  private DialogoActive(dataRequired: DialogoCamion) {
     const dialogRef = this.dialog.open(NuevocamionComponent, {
       width: '500px',
-      data: { esEditar: true, camion }
+      data: dataRequired
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.listarCamion();
-      }
+      if (result) this.listarCamion();
     });
   }
 }

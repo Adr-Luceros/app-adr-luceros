@@ -2,8 +2,7 @@
     <div>
         <h1>Camiones</h1>
         <div class="search-container">
-            <input type="text" placeholder="Buscar Camion..." class="search-input">
-            <button class="filter-btn">Filtrar</button>
+            <input type="text" placeholder="Buscar Camion..." [(ngModel)]="searchText" class="search-input">
             <button class="new-personal-btn" (click)="abrirDialogoNuevoCamion()">Nuevo Camion</button>
         </div>
         <div class="kenny">
@@ -19,12 +18,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let camion of camions">
+                    <tr *ngFor="let camion of camions | filterCamiones: searchText">
                         <td>{{camion.marca ?? ''}}</td>
                         <td>{{camion.placa ?? ''}}</td>
                         <td>{{camion.tc ?? ''}}</td>
                         <td>{{camion.soat ?? ''}}</td>
-                        <td>{{camion.capacidad?.volumen ?? ''}}</td>
+                        <td>{{camion.capacidad != null ? camion.capacidad.volumen : ''}}</td>
                         <td>
                             <button class="edit-btn" (click)="abrirDialogoEditarCamion(camion)">✏️</button>
                             <button class="delete-btn" (click)="eliminarCamion(camion.camion_id)">🗑️</button>
