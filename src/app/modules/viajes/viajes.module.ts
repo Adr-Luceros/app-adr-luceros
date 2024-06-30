@@ -8,6 +8,8 @@ import { CardLineViajeComponent } from './components/card-line-viaje/card-line-v
 import { ModalComponent } from 'src/app/shared/components/modal/modal.component';
 import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 import { FormViajeModule } from './components/form-viaje/form-viaje.module';
+import { FilterGestionViajePipe } from 'src/app/core/pipe/filter-gestion-viaje.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,13 +17,15 @@ import { FormViajeModule } from './components/form-viaje/form-viaje.module';
     ViajesComponent,
     EncabezadoComponent,
     CardLineViajeComponent,
+    FilterGestionViajePipe
   ],
   imports: [
     LoadingComponent,
     CommonModule,
     ViajesRoutingModule,
     ModalComponent,
-    FormViajeModule
+    FormViajeModule,
+    FormsModule
   ]
 })
 export class ViajesModule { }

@@ -10,11 +10,15 @@ import { ViajeExcel } from 'src/app/core/index.model.entity';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
+  buscar: string = '';
   @ViewChild('startDate') inputDateInit!: ElementRef;
   @ViewChild('endDate') inputDateEnd!: ElementRef;
+  @Output() search: EventEmitter<string> = new EventEmitter<string>();
   @Output() isLoading: EventEmitter<boolean> = new EventEmitter<boolean>(false);
   @Output() getListViaje: EventEmitter<ViajeExcel[]> = new EventEmitter<ViajeExcel[]>();
-  viajeSubs: Subscription = new Subscription()
+  viajeSubsGetterList: Subscription = new Subscription()
+  viajeSubsGetterListRango: Subscription = new Subscription()
+  viajeSubsRecopilarExcel: Subscription = new Subscription()
 
   constructor(
     private viajeSrv: ViajeService,
@@ -23,7 +27,7 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.isLoading.emit(true);
-    this.viajeSubs = this.viajeSrv.getViajes().subscribe(
+    this.viajeSubsGetterList = this.viajeSrv.getViajes().subscribe(
       res => {
         this.getListViaje.emit(res);
         this.isLoading.emit(false);
@@ -36,7 +40,7 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
         this.isLoading.emit(false);
         this.notifySrv.addNotification({
           status: 'error',
-          message: 'Error del servidor',
+          message: 'Error al listar viajes',
         });
       }
     );
@@ -48,7 +52,9 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.viajeSubs.unsubscribe()
+    if (this.viajeSubsGetterList) this.viajeSubsGetterList.unsubscribe();
+    if (this.viajeSubsGetterListRango) this.viajeSubsGetterListRango.unsubscribe();
+    if (this.viajeSubsRecopilarExcel) this.viajeSubsRecopilarExcel.unsubscribe();
   }
 
   public onFileSelected(event: Event) {
@@ -56,7 +62,7 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
     const files = target.files;
     if (files!.length > 0 && files != null) {
       this.isLoading.emit(true)
-      this.viajeSubs = this.viajeSrv.transferExcel(files[0]).subscribe(
+      this.viajeSubsRecopilarExcel = this.viajeSrv.transferExcel(files[0]).subscribe(
         res => {
           this.isLoading.emit(false);
           this.notifySrv.addNotification({
@@ -79,7 +85,7 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
     let fechaInicio: string = this.inputDateInit.nativeElement.value;
     let fechaFin: string = this.inputDateEnd.nativeElement.value;
     this.isLoading.emit(true);
-    this.viajeSubs = this.viajeSrv.getViajesPorRango(fechaInicio, fechaFin).subscribe(
+    this.viajeSubsGetterListRango = this.viajeSrv.getViajesPorRango(fechaInicio, fechaFin).subscribe(
       res => {
         this.getListViaje.emit(res);
         this.isLoading.emit(false);
@@ -96,6 +102,11 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
         });
       }
     )
+  }
+
+  public filtrarPorBusqueda($event: string): void {
+    this.search.emit($event);
+
   }
 
 }

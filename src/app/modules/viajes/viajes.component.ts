@@ -17,6 +17,7 @@ export class ViajesComponent implements OnInit, OnDestroy {
   isLoading: boolean = false;
   activateModal: boolean = false;
   isActiveEditable: boolean = false;
+  searchText: string = '';
   groupListaViajes: ViajeGroup[] | null = null;
   modalSubcription: Subscription = new Subscription();
 
@@ -56,6 +57,10 @@ export class ViajesComponent implements OnInit, OnDestroy {
 
   public activeLoading(active: boolean): void {
     this.isLoading = active;
+  }
+
+  public search(search: string): void {
+    this.searchText = search;
   }
 
 }

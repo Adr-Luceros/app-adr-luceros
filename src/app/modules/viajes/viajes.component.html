@@ -1,13 +1,14 @@
 <section id="container-main">
     <div>
-        <app-encabezado (isLoading)="activeLoading($event)" (getListViaje)="getListViaje($event)"></app-encabezado>
+        <app-encabezado (isLoading)="activeLoading($event)" (getListViaje)="getListViaje($event)"
+            (search)="search($event)"></app-encabezado>
         <section id="content">
             <app-loading *ngIf="isLoading"></app-loading>
             <ng-container *ngIf="groupListaViajes !== null; else noViajes">
                 <div *ngFor="let groupViaje of groupListaViajes" class="group-viajes">
                     <h1>{{groupViaje.dia}}</h1>
                     <main class="list-viajes">
-                        <app-card-line-viaje *ngFor="let viaje of groupViaje.value"
+                        <app-card-line-viaje *ngFor="let viaje of groupViaje.value | filterGestionViaje: searchText"
                             [viaje]="viaje"></app-card-line-viaje>
                     </main>
                 </div>
