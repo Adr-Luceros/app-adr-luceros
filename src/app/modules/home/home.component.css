@@ -15,7 +15,7 @@ section {
 
 section main {
     flex: 1 1 auto;
-    overflow: auto;
+    overflow-x: auto;
     transition: padding-left .5s;
     -webkit-transition: padding-left .5s;
     -moz-transition: padding-left .5s;
