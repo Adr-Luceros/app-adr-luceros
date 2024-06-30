@@ -1,55 +1,51 @@
 <div class="modal" tabindex="-1" id="nuevoRolCargoModal">
     <div class="modal-dialog">
         <div class="modal-content">
-
             <div class="negro">
                 <h5 class="modal-title">{{ esEditar ? 'Editar RolCargo' : 'Nuevo RolCargo' }}</h5>
             </div>
-
-
             <div class="modal-body">
-                <form (ngSubmit)="guardartienda()">
+                <form (ngSubmit)="guardarCambios()">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevoTienda.nombreTienda"
                             name="nombre" required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">psEx</label>
+                        <label for="psEx">psEx</label>
                         <input type="text" class="form-control" id="psEx" [(ngModel)]="nuevoTienda.psEx" name="psEx"
                             required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">distrito</label>
+                        <label for="distrito">distrito</label>
                         <input type="text" class="form-control" id="distrito" [(ngModel)]="nuevoTienda.distrito"
                             name="distrito" required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">direccion</label>
+                        <label for="direccion">direccion</label>
                         <input type="text" class="form-control" id="direccion" [(ngModel)]="nuevoTienda.direccion"
                             name="direccion" required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">destinatario</label>
+                        <label for="destinatario">destinatario</label>
                         <input type="text" class="form-control" id="destinatario" [(ngModel)]="nuevoTienda.destinatario"
                             name="destinatario" required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">hora inicio</label>
+                        <label for="horaInicio">hora inicio</label>
                         <input type="time" class="form-control" id="horaInicio" [(ngModel)]="nuevoTienda.horaInicio"
-                            name="destinatario" required>
+                            name="horaInicio" required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">hora fin</label>
+                        <label for="horaFin">hora fin</label>
                         <input type="time" class="form-control" id="horaFin" [(ngModel)]="nuevoTienda.horaFin"
-                            name="destinatario" required>
+                            name="horaFin" required>
                     </div>
                     <div class="form-group">
-                        <label for="nombre">contacto</label>
+                        <label for="contacto">contacto</label>
                         <input type="text" class="form-control" id="contacto" [(ngModel)]="nuevoTienda.contacto"
-                            name="destinatario" required>
+                            name="contacto" required>
                     </div>
-
                     <button type="submit" class="btn btn-primary">{{ esEditar ? 'Actualizar' : 'Guardar' }}</button>
                     <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cancelar</button>
                 </form>

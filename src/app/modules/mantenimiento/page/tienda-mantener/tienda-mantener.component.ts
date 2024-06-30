@@ -3,6 +3,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { Tienda } from 'src/app/core/index.model.entity';
 import { NuevotiendaComponent } from './nuevotienda/nuevotienda.component';
 import { TiendaService } from 'src/app/core/index.service.https';
+import { NotifyService } from 'src/app/core/index.service.triggers';
+
+export interface DialogoTienda {
+  esEditar: boolean,
+  tienda?: Tienda
+}
 
 @Component({
   selector: 'app-tienda-mantener',
@@ -11,9 +17,11 @@ import { TiendaService } from 'src/app/core/index.service.https';
 })
 export class TiendaMantenerComponent {
   tiendas: Tienda[] = [];
+  searchText: string = '';
 
   constructor(
     private tiendaSrv: TiendaService,
+    private notifySrv: NotifyService,
     private dialog: MatDialog,
   ) { }
 
@@ -23,44 +31,49 @@ export class TiendaMantenerComponent {
 
   private listarTiendasSrv(): void {
     this.tiendaSrv.listarTienda().subscribe(
-      data => this.tiendas = data,
-      error => console.error('Error al listar el personal:', error)
+      res => this.tiendas = res,
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error al listar tiendas'
+      })
     );
   }
 
-  deleteItem(id: number | null) {
+  public deleteItem(id: number | null) {
     const confirmar = window.confirm('¿Estás seguro de que deseas eliminar esta tienda?');
     if (confirmar && id != null) {
       this.tiendaSrv.eliminarTienda(id).subscribe(
-        () => this.listarTiendasSrv(),
-        err => console.error('Error al eliminar el personal', err)
+        res => {
+          this.notifySrv.addNotification({
+            status: 'success',
+            message: 'Tienda eliminado exitosamente'
+          })
+          this.listarTiendasSrv()
+        },
+        err => this.notifySrv.addNotification({
+          status: 'error',
+          message: 'Error al eliminar a la tienda'
+        })
       );
     }
   }
 
-  abrirModalNuevoRolCargo(): void {
-    const dialogRef = this.dialog.open(NuevotiendaComponent, {
-      width: '500px',
-      data: { esEditar: false }
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.listarTiendasSrv();
-      }
-    });
+  public abrirModalNuevoRolCargo(): void {
+    this.DialogoActive({ esEditar: false })
   }
 
-  abrirModalEditarRolCargo(tienda: Tienda): void {
+  public abrirModalEditarRolCargo(tienda: Tienda): void {
+    this.DialogoActive({ esEditar: true, tienda })
+  }
+
+  private DialogoActive(dataRequired: DialogoTienda) {
     const dialogRef = this.dialog.open(NuevotiendaComponent, {
       width: '500px',
-      data: { esEditar: true, tienda }
+      data: dataRequired
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.listarTiendasSrv();
-      }
+      if (result) this.listarTiendasSrv();
     });
   }
 }

@@ -5,7 +5,7 @@ export class Tienda {
     nombreTienda: string | null = null;
     distrito: string | null = null;
     direccion: string | null = null;
-    horaInicio: String | null = null;
-    horaFin: String | null = null;
+    horaInicio: string | null = null;
+    horaFin: string | null = null;
     contacto: string | null = null;
 }

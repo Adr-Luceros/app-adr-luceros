@@ -1,7 +1,9 @@
-import { Component, Inject } from '@angular/core';
+import { Component, ElementRef, Inject, ViewChild } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Tienda } from 'src/app/core/index.model.entity';
 import { TiendaService } from 'src/app/core/index.service.https';
+import { DialogoTienda } from '../tienda-mantener.component';
+import { NotifyService } from 'src/app/core/index.service.triggers';
 
 @Component({
   selector: 'app-nuevotienda',
@@ -11,41 +13,65 @@ import { TiendaService } from 'src/app/core/index.service.https';
 export class NuevotiendaComponent {
   nuevoTienda: Tienda;
   esEditar: boolean;
+  @ViewChild('HoraFin') input!: ElementRef
 
   constructor(
     private tiendaSrv: TiendaService,
+    private notifySrv: NotifyService,
     private dialogRef: MatDialogRef<NuevotiendaComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: DialogoTienda
   ) {
     this.esEditar = data.esEditar;
-    this.nuevoTienda = data.esEditar ? data.tienda : {
-      tienda_id: null,
-      destinatario: '',
-      direccion: '',
-      distrito: '',
-      nombreTienda: '',
-      psEx: '',
-      horaFin: '',
-      horaInicio: '',
-      contacto: '',
-    };
+    this.nuevoTienda = data.tienda ?? new Tienda();
   }
 
-  guardartienda(): void {
-    this.nuevoTienda.horaFin = this.nuevoTienda.horaFin === '' ? null : this.nuevoTienda.horaFin + ':00';
-    this.nuevoTienda.horaInicio = this.nuevoTienda.horaInicio === '' ? null : this.nuevoTienda.horaInicio + ':00';
+  public guardarCambios(): void {
+    let tienda: Tienda = this.nuevoTienda;
+    if (tienda.horaInicio?.length === 5) {
+      tienda.horaInicio = tienda.horaInicio + ':00';
+    }
+
+    if (tienda.horaFin?.length === 5) {
+      tienda.horaFin = tienda.horaFin + ':00';
+    }
 
     if (this.esEditar) {
-      this.tiendaSrv.editarTienda(this.nuevoTienda.tienda_id!, this.nuevoTienda).subscribe(
-        response => this.dialogRef.close(true),
-        error => console.error('Error al actualizar el tienda', error)
-      );
+      this.editarTienda(tienda);
     } else {
-      this.tiendaSrv.guardarTienda(this.nuevoTienda).subscribe(
-        response => this.dialogRef.close(true),
-        error => console.error('Error al guardar el tienda', error)
-      );
+      this.guardarTienda(tienda);
     }
+  }
+
+  private guardarTienda(tienda: Tienda): void {
+    this.tiendaSrv.guardarTienda(tienda).subscribe(
+      res => {
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Tienda guardada exitosamente'
+        });
+        this.dialogRef.close(true);
+      },
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error al guardar a la tienda'
+      })
+    );
+  }
+
+  private editarTienda(tienda: Tienda): void {
+    this.tiendaSrv.editarTienda(tienda.tienda_id!, tienda).subscribe(
+      res => {
+        this.notifySrv.addNotification({
+          status: 'success',
+          message: 'Tienda editada exitosamente'
+        });
+        this.dialogRef.close(true);
+      },
+      err => this.notifySrv.addNotification({
+        status: 'error',
+        message: 'Error al editar a la tienda'
+      })
+    );
   }
 
   cerrarModal(): void {
