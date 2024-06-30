@@ -3,17 +3,21 @@ import { Subscription } from 'rxjs';
 import { ViajeExcel } from 'src/app/core/index.model.entity';
 import { ModalService } from 'src/app/core/index.service.triggers';
 
+interface ViajeGroup {
+  dia: string;
+  value: ViajeExcel[];
+}
+
 @Component({
   selector: 'app-viajes',
   templateUrl: './viajes.component.html',
   styleUrls: ['./viajes.component.css']
 })
 export class ViajesComponent implements OnInit, OnDestroy {
-  // modal = ViewChild(ModalComponent);
   isLoading: boolean = false;
   activateModal: boolean = false;
   isActiveEditable: boolean = false;
-  listViajes: ViajeExcel[] = [];
+  groupListaViajes: ViajeGroup[] | null = null;
   modalSubcription: Subscription = new Subscription();
 
   constructor(
@@ -23,7 +27,6 @@ export class ViajesComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.isLoading = true;
     this.modalSubcription = this.modalSrv.activatedModal$.subscribe(res => this.activateModal = res);
-
   }
 
   ngOnDestroy(): void {
@@ -31,7 +34,20 @@ export class ViajesComponent implements OnInit, OnDestroy {
   }
 
   public getListViaje(list: ViajeExcel[]): void {
-    this.listViajes = list;
+    if (list === null || list.length === 0) {
+      this.groupListaViajes = null;
+      return
+    }
+    this.groupListaViajes = Object.values(
+      list.reduce((acc, salida) => {
+        const fecha = salida.fechaDeSalida == null ? new Date().toISOString().split('T')[0] : salida.fechaDeSalida.split('T')[0];
+        if (!acc[fecha]) {
+          acc[fecha] = { dia: fecha, value: [] };
+        }
+        acc[fecha].value.push(salida);
+        return acc;
+      }, {} as { [key: string]: ViajeGroup })
+    );
   }
 
   public activeEditable(active: boolean): void {

@@ -22,6 +22,7 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    this.isLoading.emit(true);
     this.viajeSubs = this.viajeSrv.getViajes().subscribe(
       res => {
         this.getListViaje.emit(res);
@@ -67,6 +68,7 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
   public filtrarPorRango(): void {
     let fechaInicio: string = this.inputDateInit.nativeElement.value;
     let fechaFin: string = this.inputDateEnd.nativeElement.value;
+    this.isLoading.emit(true);
     this.viajeSrv.getViajesPorRango(fechaInicio, fechaFin).subscribe(
       res => {
         this.getListViaje.emit(res);
