@@ -12,14 +12,10 @@ const routes: Routes = [
         loadChildren: () => import('../viajes/viajes.module').then(m => m.ViajesModule),
       },
       {
-        path: 'reportes',
-        loadChildren: () => import('../reportes/reportes.module').then(m => m.ReportesModule)
-      },
-      {
         path: 'mantenimiento',
         loadChildren: () => import('../mantenimiento/mantenimiento.module').then(m => m.MantenimientoModule)
       },
-    
+
       {
         path: '**',
         redirectTo: 'viajes',
