@@ -27,10 +27,25 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.isLoading.emit(true);
+    this.listarViajes();
+  }
+
+  ngAfterViewInit(): void {
+    this.inputDateInit.nativeElement.value = new Date().toISOString().split('T')[0]
+    this.inputDateEnd.nativeElement.value = new Date().toISOString().split('T')[0]
+  }
+
+  ngOnDestroy(): void {
+    if (this.viajeSubsGetterList) this.viajeSubsGetterList.unsubscribe();
+    if (this.viajeSubsGetterListRango) this.viajeSubsGetterListRango.unsubscribe();
+    if (this.viajeSubsRecopilarExcel) this.viajeSubsRecopilarExcel.unsubscribe();
+  }
+
+  private listarViajes() {
     this.viajeSubsGetterList = this.viajeSrv.getViajes().subscribe(
       res => {
-        this.getListViaje.emit(res);
         this.isLoading.emit(false);
+        this.getListViaje.emit(res);
         this.notifySrv.addNotification({
           status: 'success',
           message: 'Listado exitosamente',
@@ -46,17 +61,6 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
     );
   }
 
-  ngAfterViewInit(): void {
-    this.inputDateInit.nativeElement.value = new Date().toISOString().split('T')[0]
-    this.inputDateEnd.nativeElement.value = new Date().toISOString().split('T')[0]
-  }
-
-  ngOnDestroy(): void {
-    if (this.viajeSubsGetterList) this.viajeSubsGetterList.unsubscribe();
-    if (this.viajeSubsGetterListRango) this.viajeSubsGetterListRango.unsubscribe();
-    if (this.viajeSubsRecopilarExcel) this.viajeSubsRecopilarExcel.unsubscribe();
-  }
-
   public onFileSelected(event: Event) {
     const target = event.target as HTMLInputElement;
     const files = target.files;
@@ -64,7 +68,7 @@ export class EncabezadoComponent implements OnInit, AfterViewInit, OnDestroy {
       this.isLoading.emit(true)
       this.viajeSubsRecopilarExcel = this.viajeSrv.transferExcel(files[0]).subscribe(
         res => {
-          this.isLoading.emit(false);
+          this.listarViajes();
           this.notifySrv.addNotification({
             status: 'success',
             message: res.mensaje,
