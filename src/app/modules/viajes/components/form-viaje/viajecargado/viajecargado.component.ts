@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CamionExcel } from 'src/app/core/index.model.entity';
 
 @Component({
   selector: 'app-viajecargado',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ViajecargadoComponent {
   @Input() isDisable: boolean = true;
-  placa: number = 1;
-  almacen: number = 1;
-  dia: string = new Date().toISOString().split('T')[0]
+  @Input() camion: CamionExcel = new CamionExcel();
+  @Input() almacen: string = 'Rosales';
+  @Input() dia: string | null = new Date().toISOString().split('T')[0];
 }

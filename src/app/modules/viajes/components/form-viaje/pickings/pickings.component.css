@@ -4,7 +4,19 @@ section>div:first-child {
     gap: 20px;
 }
 
-section>div:nth-child(2) {
+section>main {
+    display: grid;
+    gap: 10px;
+}
+
+.card-flete {
+    padding: 20px;
+    background-color: color-mix(in srgb, var(--color-700) 6%, transparent);
+    border-top: solid 1px color-mix(in srgb, var(--color-700) 35%, transparent);
+    border-bottom: solid 1px color-mix(in srgb, var(--color-700) 35%, transparent);
+}
+
+.card-flete>div {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;

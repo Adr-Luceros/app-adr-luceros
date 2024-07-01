@@ -1,10 +1,11 @@
 <form class="container">
     <div>
-        <app-viajecargado [isDisable]="!isActiveActionSave"></app-viajecargado>
-        <app-personal [isDisable]="!isActiveActionSave"></app-personal>
+        <app-viajecargado [isDisable]="!isActiveActionSave" [dia]="fechaDeSalida" [camion]="viajeGet.camion"
+            [almacen]="viajeGet.almacen!"></app-viajecargado>
+        <app-personal [isDisable]="!isActiveActionSave" [cargos]="viajeGet.cargos"></app-personal>
     </div>
-    <app-pickings [isDisable]="!isActiveActionSave"></app-pickings>
-    <app-tiendas [isDisable]="!isActiveActionSave"></app-tiendas>
+    <app-pickings [isDisable]="!isActiveActionSave" [fletes]="viajeGet.fletes"></app-pickings>
+    <app-tiendas [isDisable]="!isActiveActionSave" [entregas]="viajeGet.entregas"></app-tiendas>
     <div *ngIf="isActiveActionSave">
         <input class="btn-guardar" type="submit" value="Guardar">
         <span class="btn-cancel">Cancelar</span>

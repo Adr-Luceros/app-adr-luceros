@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FleteExcel } from 'src/app/core/index.model.entity';
 
 @Component({
   selector: 'app-pickings',
@@ -7,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PickingsComponent {
   @Input() isDisable: boolean = true;
+  @Input() fletes: FleteExcel[] = [];
 }

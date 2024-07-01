@@ -12,6 +12,7 @@ import { ModalService } from 'src/app/core/index.service.triggers';
 export class FormViajeComponent implements OnInit, OnDestroy {
   isActiveActionSave: boolean = true;
   viajeGet: ViajeExcel = new ViajeExcel();
+  fechaDeSalida: string = new Date().toISOString().split('T')[0];
 
   modalSubcription: Subscription = new Subscription();
   viajeTransfermSubcription: Subscription = new Subscription();
@@ -23,7 +24,10 @@ export class FormViajeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.modalSubcription = this.modalSrv.hasBtnEdit$.subscribe(isEditable => this.isActiveActionSave = !isEditable);
-    this.viajeTransfermSubcription = this.viajeTransfermSrv.viajeTransfer$.subscribe(viaje => this.viajeGet = viaje);
+    this.viajeTransfermSubcription = this.viajeTransfermSrv.viajeTransfer$.subscribe(viaje => {
+      this.viajeGet = viaje;
+      if (viaje.fechaDeSalida) this.fechaDeSalida = viaje.fechaDeSalida.split('T')[0];
+    });
   }
 
   ngOnDestroy(): void {

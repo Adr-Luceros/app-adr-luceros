@@ -16,5 +16,8 @@ export {
     PickingExcel,
     TipoExcel,
     TiendaExcel,
-    ViajeExcel
+    ViajeExcel,
+    CargoExcel,
+    PersonalExcel,
+    RolCargoExcel
 } from './model/Entity/Excel'

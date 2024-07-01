@@ -3,15 +3,16 @@
   <div>
     <label>
       <span>Placa</span>
-      <select id="placa" [(ngModel)]="placa" [disabled]="isDisable">
-        <option [value]="1">AVR-871</option>
+      <select id="placa" [disabled]="isDisable">
+        <option>{{ camion.placa ?? 'AXV-888' }}</option>
       </select>
     </label>
 
     <label>
       <span>Almacen</span>
       <select id="almacen" [(ngModel)]="almacen" [disabled]="isDisable">
-        <option [value]="1">Rosales</option>
+        <option [value]="'Rosales'">Rosales</option>
+        <option [value]="'Lurin'">Lurin</option>
       </select>
     </label>
 
