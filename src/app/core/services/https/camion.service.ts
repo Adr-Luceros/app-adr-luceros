@@ -7,7 +7,7 @@ import { Camion, Persona } from '../../index.model.entity';
   providedIn: 'root'
 })
 export class CamionService {
-  private url = 'http://localhost:8860/apicamion';
+  private url = 'http://localhost:8080/apicamion';
 
   constructor(private http: HttpClient) { }
 

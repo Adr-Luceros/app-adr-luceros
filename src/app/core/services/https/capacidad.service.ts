@@ -8,7 +8,7 @@ import { Capacidad } from '../../model/Entity/Capacidad';
   providedIn: 'root'
 })
 export class CapacidadService {
-  private url = 'http://localhost:8857/apicapacidad';
+  private url = 'http://localhost:8080/apicapacidad';
 
   constructor(private http: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RolcargoService {
-  private url = 'http://localhost:8856/apirolcargo';
+  private url = 'http://localhost:8080/apirolcargo';
 
   constructor(private http: HttpClient) { }
 

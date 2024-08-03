@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TiendaService {
-  private url = 'http://localhost:8854/apitienda';
+  private url = 'http://localhost:8080/apitienda';
 
   constructor(private http: HttpClient) { }
 

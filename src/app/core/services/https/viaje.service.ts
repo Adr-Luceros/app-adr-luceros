@@ -9,7 +9,7 @@ import { Message } from '../../index.model.system';
 })
 export class ViajeService {
 
-  private url: string = 'http://localhost:8866/api/v1/recopilar/';
+  private url: string = 'http://localhost:8080/api/v1/recopilar/';
 
   constructor(
     private httpClient: HttpClient

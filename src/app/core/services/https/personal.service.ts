@@ -12,7 +12,7 @@ interface Message {
 })
 export class PersonalService {
  
-  private url = 'http://localhost:8853/apipersonal';
+  private url = 'http://localhost:8080/apipersonal';
 
   constructor(private http: HttpClient) { }
 
